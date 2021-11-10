@@ -69,6 +69,25 @@
   #newsletter > div{
     width: 100%;
     justify-content: space-evenly;
+    text-align: center;
+    position: relative;
+  }
+  #newsletter > div > div{
+    width: 40%;
+  }
+  #newsBox form{
+    margin-right: 5%;
+  }
+  #newsBox form.active{
+    width: 100%;
+  }
+  #newsletter .d-flex div:last-child,
+  #newsBox>span:first-child{
+    margin-right: 0;
+    position: relative;
+  }
+  #newsletter .nextArrow-icon{
+    right:-30px;
   }
 }
 @media screen and (max-device-width: 767px){
@@ -89,5 +108,8 @@
   }
   #newsletter .d-flex div:last-child{
     margin: 25px auto;
+  }
+  #newsBox form{
+    margin-right: 0;
   }
 }

@@ -98,7 +98,7 @@
             <div id="newsBox">
                 <span>Seu melhor e-mail <span class="nextArrow-icon"></span></span>
                 <form action="">
-                    <input type="text">
+                    <input type="text" placeholder="exemplo@dominio.com">
                     <button type="submit">Enviar</button>
                 </form>
             </div>
