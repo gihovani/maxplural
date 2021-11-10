@@ -25,36 +25,14 @@ Sobre Nossas Linhas
         </div>
 
         <div class="linhas-cards d-flex mv-3 pv-3">
+            <?php foreach(['MAX-beach.png', 'MAX-compact.png', 'MAX-concept.png', 'pbqp.png', 'gptw.png'] as $img):?>
             <div class="linhas-cards__card text-center">
                 <div>
-                    <img src="<?= base_url('assets/imgs/linhas/MAX-beach.png')?>" />
+                    <img src="<?= base_url('assets/imgs/linhas/'.$img)?>" alt="<?= $img ?>" />
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis molestie elit. Nulla tristique mi at ligula eleifend, vitae tincidunt risus rutrum.</p>
                 </div>
             </div>
-            <div class="linhas-cards__card text-center">
-                <div>
-                    <img src="<?= base_url('assets/imgs/linhas/MAX-compact.png')?>" />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis molestie elit. Nulla tristique mi at ligula eleifend, vitae tincidunt risus rutrum.</p>
-                </div>
-            </div>
-            <div class="linhas-cards__card text-center">
-                <div>
-                    <img src="<?= base_url('assets/imgs/linhas/MAX-concept.png')?>" />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis molestie elit. Nulla tristique mi at ligula eleifend, vitae tincidunt risus rutrum.</p>
-                </div>
-            </div>
-            <div class="linhas-cards__card text-center">
-                <div>
-                    <img src="<?= base_url('assets/imgs/linhas/pbqp.png')?>" />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis molestie elit. Nulla tristique mi at ligula eleifend, vitae tincidunt risus rutrum.</p>
-                </div>
-            </div>
-            <div class="linhas-cards__card text-center">
-                <div>
-                    <img src="<?= base_url('assets/imgs/linhas/gptw.png')?>" />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis molestie elit. Nulla tristique mi at ligula eleifend, vitae tincidunt risus rutrum.</p>
-                </div>
-            </div>
+            <?php endforeach;?>
         </div>
     </div>
 </section>

@@ -6,6 +6,7 @@ Nossa História
 
 <?= $this->section('styles')?>
 <link rel="stylesheet" href="<?= base_url('assets/css/sobre.css')?>" />
+<link rel="stylesheet" href="<?= base_url('assets/css/tabs.css')?>" />
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
@@ -27,17 +28,17 @@ Nossa História
                     tecnologia e história, com a proposta do conforto unido ao valor estético.</p>
                 <p class="text-center">Nosso escritório está localizado no Empresarial Center 3, um complexo empresarial próximo ao Shopping Recife.</p>
                 <div class="d-flex logos">
-                    <div class="text-center">
-                        <img src="<?= base_url('assets/imgs/marcas/m-derby-logo.svg')?>" alt="">
+                    <div class="w-30 text-center">
+                        <img src="<?= base_url('assets/imgs/marcas/m-derby-logo.svg')?>" alt="Derby Logo" />
                     </div>
-                    <div class="text-center">
-                        <img src="<?= base_url('assets/imgs/marcas/m-carneiros-logo.svg')?>" alt="">
+                    <div class="w-30 text-center">
+                        <img src="<?= base_url('assets/imgs/marcas/m-carneiros-logo.svg')?>" alt="Carneiros Logo" />
                     </div>
-                    <div class="text-center">
-                        <img src="<?= base_url('assets/imgs/marcas/loft-logo.svg')?>" alt="">
+                    <div class="w-30 text-center">
+                        <img src="<?= base_url('assets/imgs/marcas/loft-logo.svg')?>" alt="Loft Logo" />
                     </div>
                     <div class="w-100 text-center">
-                        <img src="<?= base_url('assets/imgs/marcas/premio.png')?>" alt="">
+                        <img src="<?= base_url('assets/imgs/marcas/premio.png')?>" alt="Selo Premio" />
                     </div>
                 </div>
             </div>

@@ -26,36 +26,14 @@ Empreendimentos
         <div class="empreendimentos__contents pv-3">
             <div class="empreendimentos__contents--content tab-content active" data-target="tab-1">
                 <div class="d-flex">
+                    <?php for($i=1;$i<=6;$i++):?>
                     <div class="w-30 pv-1 ph-1 item">
                         <a href="#">
-                            <img src="<?= base_url('assets/imgs/empreendimento/emp-1.png')?>" alt="" class="w-100">
+                            <img src="<?= base_url('assets/imgs/empreendimento/emp-' . $i . '.png')?>" alt="Empreendimento <?= $i ?>" class="w-100" />
                         </a>
                     </div>
-                    <div class="w-30 pv-1 ph-1 item">
-                        <a href="#">
-                            <img src="<?= base_url('assets/imgs/empreendimento/emp-2.png')?>" alt="" class="w-100">
-                        </a>
-                    </div>
-                    <div class="w-30 pv-1 ph-1 item">
-                        <a href="#">
-                            <img src="<?= base_url('assets/imgs/empreendimento/emp-3.png')?>" alt="" class="w-100">
-                        </a>
-                    </div>
-                    <div class="w-30 pv-1 ph-1 item">
-                        <a href="#">
-                            <img src="<?= base_url('assets/imgs/empreendimento/emp-4.png')?>" alt="" class="w-100">
-                        </a>
-                    </div>
-                    <div class="w-30 pv-1 ph-1 item">
-                        <a href="#">
-                            <img src="<?= base_url('assets/imgs/empreendimento/emp-5.png')?>" alt="" class="w-100">
-                        </a>
-                    </div>
-                    <div class="w-30 pv-1 ph-1 item">
-                        <a href="#">
-                            <img src="<?= base_url('assets/imgs/empreendimento/emp-6.png')?>" alt="" class="w-100">
-                        </a>
-                    </div>
+                    <?php endfor;?>
+
                 </div>
             </div>
             <div class="empreendimentos__contents--content tab-content" data-target="tab-2">
