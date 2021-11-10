@@ -58,10 +58,14 @@
                 <h5 class="thin">(Fale conosco)</h5>
             </a>
         </div>
-        <div class="search">
-            <a href="#">
-                <img src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search" />
-            </a>
+        <div id="headerSearch" class="search">
+            <img class="icon-search" src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search" />
+            <form action="">
+                <input type="text" placeholder="Procurando por algum empreendimento?">
+                <button type="submit">
+                    <img src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search" />
+                </button>
+            </form>
         </div>
     </div>
     <?= $this->renderSection('header') ?>
@@ -87,12 +91,16 @@
     </div>
 
     <section id="newsletter">
-        <div class="d-flex">
+        <div class="d-flex relative">
             <div>
                 <img src="<?= base_url('assets/imgs/news-max.png') ?>" alt="Newsletter" />
             </div>
-            <div>
-                <a href="#" class="relative">Seu melhor e-mail <span class="nextArrow-icon"></span></a>
+            <div id="newsBox">
+                <span>Seu melhor e-mail <span class="nextArrow-icon"></span></span>
+                <form action="">
+                    <input type="text">
+                    <button type="submit">Enviar</button>
+                </form>
             </div>
         </div>
     </section>

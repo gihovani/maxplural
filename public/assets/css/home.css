@@ -317,7 +317,11 @@ span.nextArrow-icon{
   }
 }
 
-
+@media screen and (min-width: 1921px){
+  #sobre .content div.texto>div{
+    width: 560px;
+  }
+}
 @media screen and (max-width:1200px){
   #topo .slider-custom-theme .slick-current .slider-text h5{
     font-size: 30px;

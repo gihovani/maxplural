@@ -156,7 +156,6 @@ a {
 header{
   top: 0;
   left: 50%;
-  z-index: 2;
   width: 100.1%;
   margin: auto;
   padding:65px 0;
@@ -171,6 +170,7 @@ header.bg-opaco{
 }
 
 header .mutantMenu{
+  position: relative;
   justify-content: space-between;
   margin: auto;
 }
@@ -253,10 +253,58 @@ header .mutantMenu .central h5{
   margin: 0;
   color: #FFF;
 }
-
-header .mutantMenu .search img{
-  width: 32px
+header .mutantMenu #headerSearch form{
+  width: 0;
+  right: 0;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  overflow: hidden;
+  transition: width .3s;
 }
+header .mutantMenu #headerSearch .icon-search{
+  opacity: 1;
+  width: 32px;
+  transition: all 3s;
+  cursor: pointer;
+}
+header .mutantMenu #headerSearch form.active{
+  width: calc(100% - 350px);
+}
+
+header .mutantMenu #headerSearch form input{
+  height: 85px;
+  border-radius: 100px;
+  padding: 0 0 0 30px;
+  margin: 0;
+  border: 0;
+  width: calc(100% - 30px);
+  outline: none;
+  font-size: 1.7rem;
+  color: #333;
+}
+header .mutantMenu #headerSearch form button{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-16%);
+  background-color: #333;
+  border-radius: 50%;
+  transition: all .3s;
+  width: 70px;
+  height: 68px;
+  opacity: 0;
+}
+header .mutantMenu #headerSearch form.active button {
+  transition-delay: .3s;
+  opacity: 1;
+}
+header .mutantMenu #headerSearch form button img{
+  width: 32px;
+  margin-top: 5px;
+}
+
+
 nav{
   position: fixed;
   width: 100%;
@@ -264,14 +312,13 @@ nav{
   top: 0;
   left: 0;
   background:var(--third-bg-color);
-  z-index: 0;
   opacity: 0;
   transition: opacity .3s;
   z-index: -1;
 }
 nav.actived{
  opacity: 1;
- z-index: 10;
+ z-index: 12;
 }
 
 nav span{
@@ -416,7 +463,7 @@ footer .linha-3 a.destaque:hover{
     padding: 15px 0;
   }
 }
-@media screen and (max-width:1200px){
+@media screen and (max-width:1201px){
   .container{
     max-width: var(--responsive-container-width);
     margin: auto;
@@ -426,6 +473,9 @@ footer .linha-3 a.destaque:hover{
   }
   header.bg-opaco{
     padding: 10px 0;
+  }
+  header .mutantMenu #headerSearch form.active{
+    width: calc(100% - 230px);
   }
 }
 @media screen and (max-width:1024px){
