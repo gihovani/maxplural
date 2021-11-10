@@ -22,14 +22,14 @@ CI_ENVIRONMENT = development
 #--------------------------------------------------------------------
 
 # app.baseURL = 'https://maxplural.com.br/'
-app.baseURL = 'http://localhost/maxplural/public/'
+app.baseURL = 'http://localhost:8080/'
 app.indexPage = ''
 app.defaultLocale = 'pt-BR'
 app.appTimezone = 'America/Sao_Paulo'
 app.forceGlobalSecureRequests = false
 
-# app.sessionDriver = 'CodeIgniter\Session\Handlers\FileHandler'
-app.sessionDriver = 'CodeIgniter\Session\Handlers\DatabaseHandler'
+app.sessionDriver = 'CodeIgniter\Session\Handlers\FileHandler'
+# app.sessionDriver = 'CodeIgniter\Session\Handlers\DatabaseHandler'
 app.sessionCookieName = 'mp_session'
 app.sessionExpiration = 0
 app.sessionSavePath = 'mp_sessions'
