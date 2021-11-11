@@ -24,6 +24,11 @@ class Site extends BaseController
         return $this->show('empreendimentos');
     }
 
+    public function baixe_tabelas(): string
+    {
+        return $this->show('download');
+    }
+
     private function show(string $page): string
     {
         return view('pages/' . $page);

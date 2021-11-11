@@ -103,13 +103,15 @@ function checkUrlToHeader() {
 	var url = window.location.href;
 	var scroll = $(window).scrollTop();
 	if((url !== "http://localhost:8081/") && (url !== "http://localhost:8081/?")){
-		var headerHeight = $('header').innerHeight() - 57;
-		srollInterno(scroll);
-		$('.content').attr('style','padding-top:'+ headerHeight +'px;');
-		$(window).on('scroll', function(e){
-			scroll = $(window).scrollTop();
+		setTimeout(function(){
+			var headerHeight = $('header').innerHeight() - 57;
 			srollInterno(scroll);
-		});	
+			$('.content').attr('style','padding-top:'+ headerHeight +'px;');
+			$(window).on('scroll', function(e){
+				scroll = $(window).scrollTop();
+				srollInterno(scroll);
+			});
+		},90);
 	}else{
 		scrollHomePage(scroll);
 		$(window).on('scroll', function(e){
@@ -146,6 +148,11 @@ function closeToggledInputs(input,e) {
 		$('#headerSearch form, #newsBox form').removeClass('active');
 	}
 }
+function loader(){
+	setTimeout(function(){
+		$('.loader').fadeOut();
+	},120);
+}
 
 
 document.addEventListener('DOMContentLoaded',function(event){
@@ -156,4 +163,5 @@ document.addEventListener('DOMContentLoaded',function(event){
 	toggleTabs();
 	checkUrlToHeader();
 	toggleSearchInput();
+	loader();
 });

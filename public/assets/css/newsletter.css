@@ -17,7 +17,8 @@
   border-bottom: 1px solid #000;
 }
 #newsBox>span:first-child{
-  margin-right: 40px;
+  padding-right: 40px;
+  cursor: pointer;
 }
 
 #newsBox form.active{

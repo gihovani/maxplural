@@ -16,7 +16,7 @@
     <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/img/favicon.png') ?>"/>
 </head>
 <body class="relative">
-
+<div class="loader"></div>
 <header>
     <div class="mutantMenu d-flex container">
         <div class="hamburguerMenu">
