@@ -42,6 +42,9 @@ h1.title{
 .relative{
   position: relative;
 }
+.absolute{
+  position: absolute;
+}
 .no-style{
   list-style: none;
   text-decoration: none;
@@ -362,6 +365,41 @@ nav ul li:hover{
   background-position: center;
 }
 
+#btnwhats div{
+  right: 15%;
+  transform: translateY(-50%);
+  padding: 15px;
+  border-radius: 100px;
+  background-color: green;
+}
+
+#btnwhats div span{
+  margin-right: 0;
+  width: 0;
+  height: 30px;
+  overflow: hidden;
+  transition: all .3s ;
+  position: relative;
+}
+#btnwhats div:hover{
+  padding: 15px 15px 15px 25px;
+}
+#btnwhats div:hover span {
+  width: 226px;
+  margin-right: 7px;
+  font-size: 15px;
+  opacity: 1;
+}
+#btnwhats div span h4{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  width: 240px;
+}
+#btnwhats div img{
+  width: 48px;
+}
 footer{
   background-color: var(--fourth-bg-color);
   padding: 60px 0 0;
@@ -589,6 +627,14 @@ footer .linha-3 a.destaque:hover{
     font-size: 9vw;
     margin-top: 1.2em;
   }
+  #btnwhats div{
+    right: 0;
+    padding: 15px 15px 15px 35px;
+  }
+  #btnwhats div span{
+    width: 265px;
+  }
+
   footer .linha-1{
     padding-top: 0;
   }
@@ -597,10 +643,31 @@ footer .linha-3 a.destaque:hover{
     margin-bottom: 0;
   }
 }
+@media screen and (max-width: 376px){
+  #btnwhats div span{
+    width: 225px;
+  }
+  #btnwhats div span h4{
+    font-size: .85rem;
+  }
+}
 @media screen and (max-width: 325px){
   header .mutantMenu{
     margin: 0 5px;
   }
+  #btnwhats div {
+    padding: 15px;
+  }
+  #btnwhats div span{
+    width: 205px;
+  }
+  #btnwhats div span h4{
+    font-size: .75rem;
+  }
+  #btnwhats div img {
+    width: 32px;
+  }
+
   footer .linha-1 h4{
     font-size: 30px;
   }

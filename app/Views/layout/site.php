@@ -106,6 +106,14 @@
     </section>
 </main>
 <!-- FOOTER: DEBUG INFO + COPYRIGHTS -->
+<div id="btnwhats" class="container relative">
+    <a href="">
+        <div class="absolute d-flex">
+            <span><h4>VAMOS CONVERSAR AGORA?</h4></span>
+            <img src="<?= base_url('assets/imgs/whatsapp-64.png') ?>" alt="Logo WhatsApp" />
+        </div>
+    </a>
+</div>
 <footer>
     <div class="linha-1">
         <div class="container d-flex">
