@@ -23,7 +23,10 @@ class Site extends BaseController
     {
         return $this->show('empreendimentos');
     }
-
+    public function projeto(): string
+    {
+        return $this->show('projeto');
+    }
     public function baixe_tabelas(): string
     {
         return $this->show('download');

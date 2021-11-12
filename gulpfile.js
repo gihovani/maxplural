@@ -24,3 +24,8 @@ gulp.task('compile-scss', function () {
 // Default task
 gulp.task('styles', gulp.parallel('compile-scss'));
 gulp.task('default', gulp.parallel('styles'));
+
+gulp.task('watch', function () {
+    // Watch .scss files
+    gulp.watch('public/assets/sass/**/*.scss', gulp.parallel('compile-scss'));
+});
