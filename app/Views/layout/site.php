@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no"/>
     <?= $this->renderSection('meta') ?>
-    <link rel="stylesheet" href="<?= base_url('assets/css/newsletter.css') ?>"/>
+    <link rel="stylesheet" href="<?= base_url('assets/css/newsletter.min.css') ?>"/>
     <link rel="stylesheet" href="<?= base_url('assets/css/master.css') ?>"/>
     <link rel="stylesheet" href="<?= base_url('assets/slick-1.8.1/slick/slick.css') ?> "/>
     <?= $this->renderSection('styles') ?>

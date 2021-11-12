@@ -1,51 +1,50 @@
+#content.empreendimentos {
+  background-color: #fff;
+}
+#content.empreendimentos * {
+  color: var(--main-bg-color);
+}
+#content.empreendimentos .item a {
+  display: flex;
+}
+#content.empreendimentos .item img {
+  filter: brightness(50%) grayscale(100%);
+  transition: all .3s;
+}
+#content.empreendimentos .item img:hover {
+  filter: brightness(1) grayscale(0);
+  box-shadow: 0 -15px 40px #00000044;
+}
 
-#content.empreendimentos{
-	background-color: #fff;
+@media screen and (max-width: 415px) {
+  #content.empreendimentos .container {
+    margin: 0;
+  }
+  #content.empreendimentos .tab-content {
+    overflow-x: scroll;
+    padding-top: 30px;
+  }
+  #content.empreendimentos .tab-content > div {
+    width: calc(81.5vw * 6);
+    justify-content: space-evenly;
+    display: -webkit-inline-box;
+  }
+  #content.empreendimentos .item {
+    max-width: 70vw;
+    margin: 0 2.5vw 0 2.5vw;
+  }
+  #content.empreendimentos .item:first-child {
+    margin: 0 2.5vw 0 5vw;
+  }
+  #content.empreendimentos .item:last-child {
+    margin: 0 5vw 0 2.5vw;
+  }
+  #content.empreendimentos .item img:hover {
+    box-shadow: 0 -10px 20px #00000044;
+  }
 }
-#content.empreendimentos *{
-	color: var(--main-bg-color);
-}
-
-#content.empreendimentos .item img{
-	filter: brightness(50%)grayscale(100%);
-	transition: all .3s;
-}
-#content.empreendimentos .item a{
-	display: flex;
-}
-#content.empreendimentos .item img:hover{
-	filter: brightness(1.0)grayscale(0);
-	box-shadow: 0 -15px 40px #00000044;
-}
-@media screen and (max-width: 415px){
-	#content.empreendimentos .container{
-		margin: 0;
-	}
-	#content.empreendimentos .tab-content{
-		overflow-x: scroll;
-		padding-top: 30px;
-	}
-	#content.empreendimentos .tab-content>div{
-		width: calc(81.5vw * 6);
-		justify-content: space-evenly;
-		display: -webkit-inline-box;
-	}
-	#content.empreendimentos .item{
-		max-width: 70vw;
-		margin: 0 2.5vw 0 2.5vw;
-	}
-	#content.empreendimentos .item:first-child{
-		margin: 0 2.5vw 0 5vw;
-	}
-	#content.empreendimentos .item:last-child{
-		margin: 0 5vw 0 2.5vw;
-	}
-	#content.empreendimentos .item img:hover{
-		box-shadow: 0 -10px 20px #00000044;
-	}
-}
-@media screen and (max-width: 330px){
-	#content.empreendimentos .tab-content>div{
-		width: calc(82.5vw * 6);
-	}
+@media screen and (max-width: 330px) {
+  #content.empreendimentos .tab-content > div {
+    width: calc(82.5vw * 6);
+  }
 }

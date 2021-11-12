@@ -1,0 +1,126 @@
+
+#newsletter{
+  background-color: var(--second-bg-color);
+  padding: 50px 0 70px;
+  *{
+    color: var(--main-color);
+  }
+  .nextArrow-icon{
+    right: 0;
+  }
+  &  > div{
+    width: var(--reduced-container-width);
+    margin: auto;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+  }
+}
+#newsBox{
+  &>span:first-child{
+    padding-right: 40px;
+    cursor: pointer;
+  }
+  form{
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    transition:all .3s;
+    &.active{
+      width: 50%;
+      button {
+        transition-delay: .3s;
+        opacity: 1;
+      }
+    }
+    input{
+      width: calc(100% - 15px);
+      border-radius: 80px;
+      outline: none;
+      border:0;
+      padding: 10px 0 10px 15px;
+      color: #1c1c1c;
+    }
+    button{
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #1c1c1c;
+      border: 0;
+      border-radius: 40px;
+      padding: 7px 12px;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+  }
+}
+
+@media screen and (max-width:1200px){
+  #newsletter {
+    .d-flex {
+      div:last-child{
+        margin-right: 35px;
+      }
+    }
+  }
+}
+@media screen and (max-width:991px){
+  #newsletter {
+    > div{
+      width: 100%;
+      justify-content: space-evenly;
+      text-align: center;
+      position: relative;
+      > div{
+        width: 40%;
+      }
+    }
+    .d-flex div:last-child{
+      margin-right: 0;
+      position: relative;
+    }
+    .nextArrow-icon{
+      right:-30px;
+    }
+  }
+  #newsBox{
+    form{
+      margin-right: 5%;
+      &.active{
+        width: 100%;
+      }
+    }
+    &>span:first-child{
+      margin-right: 0;
+      position: relative;
+    }
+  }
+}
+@media screen and (max-device-width: 767px){
+  #newsletter a{
+    font-size: 3.5vw;
+  }
+}
+@media screen and (max-device-width: 520px){
+  #newsletter {
+    > div{
+      justify-content: center;
+      width: 100%;
+    }
+    .d-flex div {
+      max-width: 80%;
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      &:last-child{
+        margin: 25px auto;
+      }
+    }
+  }
+  #newsBox form{
+    margin-right: 0;
+  }
+}

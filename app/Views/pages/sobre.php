@@ -5,8 +5,8 @@ Nossa História
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
-<link rel="stylesheet" href="<?= base_url('assets/css/sobre.css')?>" />
-<link rel="stylesheet" href="<?= base_url('assets/css/tabs.css')?>" />
+<link rel="stylesheet" href="<?= base_url('assets/css/sobre.min.css')?>" />
+<link rel="stylesheet" href="<?= base_url('assets/css/tabs.min.css')?>" />
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>

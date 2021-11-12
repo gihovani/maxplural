@@ -5,8 +5,8 @@ Empreendimentos
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
-<link rel="stylesheet" href="<?= base_url('assets/css/empreendimentos.css')?>" />
-<link rel="stylesheet" href="<?= base_url('assets/css/tabs.css')?>" />
+<link rel="stylesheet" href="<?= base_url('assets/css/empreendimentos.min.css')?>" />
+<link rel="stylesheet" href="<?= base_url('assets/css/tabs.min.css')?>" />
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
