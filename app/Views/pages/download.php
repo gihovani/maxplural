@@ -5,7 +5,7 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
-    <link rel="stylesheet" href="<?= base_url('assets/css/download.css')?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/download.min.css')?>" />
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
