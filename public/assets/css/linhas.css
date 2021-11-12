@@ -1,58 +1,54 @@
-section#title-page{
-	background-image: url("../imgs/linhas/bg-title-nossas-linhas.png");
+section #title-page {
+  background-image: url("../imgs/linhas/bg-title-nossas-linhas.png");
 }
-section#title-page h1{
-	font-size: 2.5rem;
-	font-weight: 600;
-	margin: 10rem 0;
-}
-#content.linhas{
-	background: #fff;
-}
-#content.linhas *{
-	color: var(--main-bg-color);
-}
-#content.linhas .linhas-cards{
+section #title-page h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 10rem 0;
 }
 
-#content.linhas .linhas-cards .linhas-cards__card{
-	background-color: #F5F5F5;
-	border-radius: 80px;
-	width: 27%;
-	margin: 1.5%;
-	transition: all .3s;
+#content.linhas {
+  background: #fff;
 }
-#content.linhas .linhas-cards .linhas-cards__card:hover{
-	box-shadow: 0 20px 40px #00000044;
+#content.linhas * {
+  color: var(--main-bg-color);
 }
-#content.linhas .linhas-cards .linhas-cards__card > div{
-	padding: 40px 30px 20px;
-	min-height: 270px;
+#content.linhas-cards .linhas-cards__card {
+  background-color: #F5F5F5;
+  border-radius: 80px;
+  width: 27%;
+  margin: 1.5%;
+  transition: all .3s;
 }
-
-#content.linhas .linhas-cards .linhas-cards__card > div img{
-	max-width: 235px;
+#content.linhas-cards .linhas-cards__card:hover {
+  box-shadow: 0 20px 40px #00000044;
 }
-@media screen and (max-width: 1200px){
-	#content.linhas .linhas-cards .linhas-cards__card:nth-child(-n+3) > div img{
-		max-height: 55px;
-	}
+#content.linhas-cards .linhas-cards__card > div {
+  padding: 40px 30px 20px;
+  min-height: 270px;
 }
-
-@media screen and (max-width: 769px){
-	#content.linhas .linhas-cards .linhas-cards__card{
-		width: 47%;
-	}
-	#content.linhas .linhas-cards .linhas-cards__card > div{
-		min-height: 225px;
-	}
+#content.linhas-cards .linhas-cards__card > div img {
+  max-width: 235px;
 }
 
-@media screen and (max-width: 420px){
-	#content.linhas .linhas-cards .linhas-cards__card{
-		width: 97%;
-	}
-	#content.linhas .linhas-cards .linhas-cards__card > div{
-		min-height: 180px;
-	}
+@media screen and (max-width: 1200px) {
+  #content.linhas .linhas-cards__card:nth-child(-n+3) > div img {
+    max-height: 55px;
+  }
+}
+@media screen and (max-width: 769px) {
+  #content.linhas .linhas-cards__card {
+    width: 47%;
+  }
+  #content.linhas .linhas-cards__card > div {
+    min-height: 225px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #content.linhas .linhas-cards__card {
+    width: 97%;
+  }
+  #content.linhas .linhas-cards__card > div {
+    min-height: 180px;
+  }
 }
