@@ -3,3 +3,4 @@
 /writable/debugbar/*.json
 /.idea/
 /node_modules/
+/.sass-cache/
