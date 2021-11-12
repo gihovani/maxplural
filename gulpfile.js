@@ -4,11 +4,6 @@ var gulp = require('gulp'),
     gcmq = require('gulp-group-css-media-queries'),
     rename = require('gulp-rename');
 
-// function defaultTask(cb) {
-//     // place code for your default task here
-//     cb();
-// }
-
 gulp.task('compile-scss', function () {
     return gulp.src([
         'public/assets/sass/**/*.scss',
@@ -29,4 +24,3 @@ gulp.task('compile-scss', function () {
 // Default task
 gulp.task('styles', gulp.parallel('compile-scss'));
 gulp.task('default', gulp.parallel('styles'));
-// exports.default = defaultTask
