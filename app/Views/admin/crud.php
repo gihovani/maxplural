@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Crud</title>
+    <title>Painel Administrativo</title>
     <meta charset="utf-8" />
     <?php if (isset($css_files) && is_array($css_files)):?>
         <?php foreach($css_files as $file): ?>
@@ -18,7 +18,7 @@
 <body>
 <!-- Beginning header -->
 <div>
-    <a href='<?php echo site_url('crud/sessions')?>'>Customers</a>
+    <a href='<?php echo site_url('admin/sessions')?>'>Sessions</a>
 </div>
 <!-- End of header-->
 

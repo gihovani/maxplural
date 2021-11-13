@@ -15,3 +15,4 @@ Website da incorporadora Max Plural
 # Instalar a aplicação [php 7.3+]
 1) $ composer install
 2) $ php spark serve
+3) Acessar no browser 

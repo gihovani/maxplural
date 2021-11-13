@@ -1,6 +1,7 @@
 <?php
+declare(strict_types=1);
 
-namespace App\Controllers\Crud;
+namespace App\Controllers\Admin;
 
 class Index extends CrudAbstract
 {

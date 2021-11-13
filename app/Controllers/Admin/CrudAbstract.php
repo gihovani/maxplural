@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Controllers\Crud;
+namespace App\Controllers\Admin;
 
 include(APPPATH . 'Libraries/GroceryCrudEnterprise/autoload.php');
 
@@ -23,7 +23,7 @@ abstract class CrudAbstract extends BaseController
             exit;
         }
 
-        return view('crud/default', (array)$output);
+        return view('admin/crud', (array)$output);
     }
 
     private function getDatabaseParams(): array {
