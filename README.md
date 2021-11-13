@@ -15,3 +15,4 @@ Website da incorporadora Max Plural
 4) $ npm install gulp-clean-css
 5) $ npm install gulp-group-css-media-queries
 6) $ npm install gulp-rename
+7) $ gulp
