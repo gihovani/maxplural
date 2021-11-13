@@ -39,13 +39,13 @@ section:not(:first-child) {
   padding: 50px 0;
   background-color: #FFF;
 }
-section:not(:first-child) h1, section:not(:first-child) h2, section:not(:first-child) h3, section:not(:first-child) h4, section:not(:first-child) h5, section:not(:first-child) h6, section:not(:first-child) span, section:not(:first-child) p, section:not(:first-child) div {
+section:not(:first-child):not(#newsletter) h1, section:not(:first-child):not(#newsletter) h2, section:not(:first-child):not(#newsletter) h3, section:not(:first-child):not(#newsletter) h4, section:not(:first-child):not(#newsletter) h5, section:not(:first-child):not(#newsletter) h6, section:not(:first-child):not(#newsletter) span, section:not(:first-child):not(#newsletter) p, section:not(:first-child):not(#newsletter) div {
   color: #000 !important;
 }
-section:not(:first-child).bg-dark {
+section:not(:first-child):not(#newsletter).bg-dark {
   background-color: #000;
 }
-section:not(:first-child).bg-dark h1, section:not(:first-child).bg-dark h2, section:not(:first-child).bg-dark h3, section:not(:first-child).bg-dark h4, section:not(:first-child).bg-dark h5, section:not(:first-child).bg-dark h6, section:not(:first-child).bg-dark span, section:not(:first-child).bg-dark p, section:not(:first-child).bg-dark div {
+section:not(:first-child):not(#newsletter).bg-dark h1, section:not(:first-child):not(#newsletter).bg-dark h2, section:not(:first-child):not(#newsletter).bg-dark h3, section:not(:first-child):not(#newsletter).bg-dark h4, section:not(:first-child):not(#newsletter).bg-dark h5, section:not(:first-child):not(#newsletter).bg-dark h6, section:not(:first-child):not(#newsletter).bg-dark span, section:not(:first-child):not(#newsletter).bg-dark p, section:not(:first-child):not(#newsletter).bg-dark div {
   color: #FFF !important;
 }
 section#desc .title-section {
@@ -102,10 +102,10 @@ section#desc .descricao-box {
   padding: 100px 0 50px;
 }
 
-.titulo {
+section:not(.bg-dark, .bg-white) .titulo {
   position: relative;
 }
-.titulo *:after {
+section:not(.bg-dark, .bg-white) .titulo *:after {
   content: '';
   width: 75px;
   height: 3px;
@@ -114,6 +114,7 @@ section#desc .descricao-box {
   left: 0;
   background-color: #6a6a6a;
 }
+
 .titulo h2 {
   font-size: 2rem;
 }
@@ -125,4 +126,20 @@ section#desc .descricao-box {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: .5px;
+}
+.descricao-box ul {
+  padding: 0;
+}
+.descricao-box ul li {
+  width: 26%;
+  margin: 2%;
+  padding: 7px;
+  border-radius: 30px;
+  border: 1px solid #aaaaaa;
+  height: 110px;
+  transition: all .3s;
+}
+.descricao-box ul li:hover {
+  border: 1px solid transparent;
+  box-shadow: 0 10px 20px #aaaaaa;
 }
