@@ -28,7 +28,7 @@
             <span>MENU</span>
         </div>
         <div class="logo">
-            <a href="#">
+            <a href="<?= base_url() ?>">
                 <img src="<?= base_url('assets/imgs/logo.svg') ?>" alt="Logo Max Plural" />
             </a>
         </div>
@@ -53,7 +53,7 @@
             </a>
         </div>
         <div class="central">
-            <a href="#">
+            <a href="<?= base_url('site/contato')?>">
                 <h4>Central de Vendas</h4>
                 <h5 class="thin">(Fale conosco)</h5>
             </a>
