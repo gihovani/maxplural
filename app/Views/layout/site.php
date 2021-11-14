@@ -165,7 +165,7 @@
                     <li><a href="<?= base_url('site/empreendimentos') ?>">EMPREENDIMENTOS</a></li>
                     <li><a href="<?= base_url('site/noticias') ?>">NOTÍCIAS</a></li>
                     <li><a href="<?= base_url() ?>">CLIENTES</a></li>
-                    <li><a href="<?= base_url() ?>">TABELAS DE VALORES</a></li>
+                    <li><a href="<?= base_url('site/tabelas-de-valores') ?>">TABELAS DE VALORES</a></li>
                     <li><a href="<?= base_url('site/contato') ?>">CONTATO</a></li>
                 </ul>
             </div>
