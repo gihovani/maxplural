@@ -1,0 +1,248 @@
+section#title-page {
+  background-image: url("../imgs/blog/bg-blog.png");
+  background-position: bottom center;
+}
+section#title-page h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 10rem 0;
+}
+section#blog-box {
+  background: #fff;
+}
+section#blog-box * {
+  color: #111;
+}
+section#blog-box .filtros_e_buscas {
+  padding: 40px 0;
+  justify-content: space-between;
+  width: 100%;
+}
+section#blog-box .filtros_e_buscas div {
+  width: 50%;
+}
+section#blog-box .filtros_e_buscas #searchPost input {
+  margin-right: 60px;
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #000;
+  width: calc(100% - 80px);
+  font-size: .9rem;
+  padding: 15px 10px;
+  color: #111;
+}
+section#blog-box .filtros_e_buscas #searchPost button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  outline: none;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+section#blog-box .filtros_e_buscas #searchPost button img {
+  width: 16px;
+}
+section#blog-box .conteudo {
+  justify-content: space-between;
+}
+section#blog-box .conteudo .post-destaque {
+  width: 100%;
+  border-radius: 70px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 20px #00000033;
+}
+section#blog-box .conteudo .post-destaque .img-post {
+  overflow: hidden;
+  min-height: 388px;
+}
+section#blog-box .conteudo .post-destaque .img-post img {
+  transform: scale(1.2);
+}
+section#blog-box .conteudo .post-destaque .post-descricao {
+  padding: 40px;
+}
+section#blog-box .conteudo .post-destaque .post-descricao__info {
+  justify-content: space-between;
+}
+section#blog-box .conteudo .post-destaque .post-descricao__content h3 {
+  font-weight: 600;
+  position: relative;
+}
+section#blog-box .conteudo .post-destaque .post-descricao__content h3:after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  height: 80%;
+  width: 3px;
+  background-color: #555;
+}
+section#blog-box .conteudo .post-destaque .post-descricao__content p {
+  margin: 0;
+  line-height: 1.5;
+}
+section#blog-box .conteudo .post {
+  margin: 20px 0;
+  width: 47%;
+}
+section#blog-box .conteudo .post img {
+  transition: all .3s;
+  width: 100%;
+  border-radius: 45px;
+  filter: grayscale(1);
+}
+section#blog-box .conteudo .post:hover img {
+  filter: grayscale(0);
+  box-shadow: 0 5px 20px #00000055;
+}
+section#blog-box .conteudo .truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+section#blog-box .conteudo .leia-mais {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  margin-top: 40px;
+  padding: 15px 45px 15px 15px;
+  border-radius: 10px;
+  transition: all .3s;
+}
+section#blog-box .conteudo .leia-mais:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-100%, -50%);
+  width: 14px;
+  transition: all .3s;
+  height: 14px;
+  background-image: url("../imgs/nextArrow.svg");
+  filter: brightness(30%);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section#blog-box .conteudo .leia-mais:hover {
+  background-color: #111;
+  color: #fff;
+}
+section#blog-box .conteudo .leia-mais:hover:after {
+  filter: brightness(30%) invert(1);
+}
+section#blog-box .pagination {
+  padding: 50px;
+}
+section#blog-box .pagination .prev, section#blog-box .pagination .next {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #555;
+  background-size: 20%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+section#blog-box .pagination .prev {
+  background-image: url("../imgs/prevArrow.svg");
+  margin-right: 3vw;
+}
+section#blog-box .paginationItens a {
+  transition: all .3s;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+  line-height: 2;
+}
+section#blog-box .paginationItens a:hover {
+  background-color: #111;
+  color: #fff;
+}
+section#blog-box .pagination .next {
+  background-image: url("../imgs/nextArrow.svg");
+  background-position: 55% center;
+  margin-left: 3vw;
+}
+
+@media screen and (max-width: 1201px) {
+  section#blog-box .conteudo .post-destaque .img-post img {
+    transform: scale(1.4);
+  }
+}
+@media screen and (max-width: 1025px) {
+  section#blog-box .container {
+    margin: 0 10px;
+  }
+  section#blog-box .filtros_e_buscas div {
+    width: 100%;
+  }
+  section#blog-box .filtros_e_buscas div span {
+    display: block;
+    text-align: center;
+  }
+  section#blog-box .conteudo .post-destaque > div:first-child {
+    max-width: 30%;
+  }
+  section#blog-box .conteudo .post-destaque > div:first-child.img-post {
+    min-height: 298px;
+  }
+  section#blog-box .conteudo .post-destaque > div:first-child.img-post img {
+    transform: scale(2.4);
+  }
+  section#blog-box .conteudo .post-destaque > div:nth-child(2) {
+    max-width: 70%;
+  }
+  section#blog-box .conteudo .post-destaque > div:nth-child(2) .post-descricao {
+    padding: 15px;
+  }
+  section#blog-box .conteudo .post-destaque > div:nth-child(2) .post-descricao__content .leia-mais {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  section#blog-box .conteudo .post-destaque > div:first-child {
+    max-width: 100%;
+  }
+  section#blog-box .conteudo .post-destaque > div:first-child.img-post {
+    min-height: unset;
+  }
+  section#blog-box .conteudo .post-destaque > div:first-child.img-post img {
+    transform: scale(1);
+  }
+  section#blog-box .conteudo .post-destaque > div:nth-child(2) {
+    max-width: 100%;
+  }
+  section#blog-box .conteudo .post-destaque > div:nth-child(2) .post-descricao {
+    padding: 10px 25px;
+  }
+  section#blog-box .conteudo .post-destaque > div:nth-child(2) .post-descricao__info span {
+    font-size: .8rem;
+  }
+  section#blog-box .conteudo .post-destaque > div:nth-child(2) .post-descricao__content h3 {
+    font-size: 1.3rem;
+  }
+  section#blog-box .conteudo .post-destaque > div:nth-child(2) .post-descricao__content p {
+    font-size: .8rem;
+  }
+  section#blog-box .conteudo .post {
+    margin: 20px auto;
+    width: 97%;
+  }
+  section#blog-box .pagination {
+    padding: 50px 0;
+  }
+  section#blog-box .paginationItens a {
+    width: 20px;
+    height: 20px;
+  }
+}

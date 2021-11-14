@@ -36,6 +36,14 @@ class Site extends BaseController
     {
         return $this->show('contato');
     }
+    public function blog(): string
+    {
+        return $this->show('blog');
+    }
+    public function post(): string
+    {
+        return $this->show('blog_post');
+    }
 
     private function show(string $page): string
     {
