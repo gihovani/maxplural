@@ -67,8 +67,8 @@
                     </div>
                     <div class="input-group empreendimentos-tabelas w-100">
                         <label>ÁREA QUE DESEJA FALAR:</label>
-                        <div class="fake-input" data-selected="">SETOR 1</div>
-                        <ul id="lista-tabelas">
+                        <div class="fake-input" data-select-id="1">SETOR 1</div>
+                        <ul id="lista-tabelas-1" data-id="1" data-selected="">
                             <li class="tabela" data-value="tabela-1">SETOR 1</li>
                             <li class="tabela" data-value="tabela-2">SETOR 2</li>
                             <li class="tabela" data-value="tabela-3">SETOR 3</li>
@@ -76,7 +76,7 @@
                             <li class="tabela" data-value="tabela-5">SETOR 5</li>
                             <li class="tabela" data-value="tabela-6">SETOR 6</li>
                         </ul>
-                        <span class="dropdown-button" ><img src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt=""></span>
+                        <span class="dropdown-button" data-select-id="1"><img src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt=""></span>
                     </div>
                     <div class="formgroup w-100">
                         <label for="mensagem">MENSAGEM:</label>

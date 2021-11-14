@@ -23,6 +23,9 @@ body{
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
 }
+.mob-d-block{
+  display: none;
+}
 .loader{
   width: 100%;
   height: 100%;
@@ -546,7 +549,9 @@ footer .linha-3 a.destaque:hover{
   }
 }
 @media screen and (max-width:991px){
-
+  .mob-d-block{
+    display: block;
+  }
   .container{
     margin: 0 25px;
   }

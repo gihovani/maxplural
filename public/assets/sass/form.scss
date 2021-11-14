@@ -71,6 +71,14 @@ form{
       box-shadow: 0 15px 30px #00000055;
     }
   }
+  select.aberto{
+    position: relative;
+    option{
+      position: absolute;
+      width: 100%;
+      background-color: #0a53be;
+    }
+  }
   textarea{
     resize: none;
   }
@@ -109,8 +117,7 @@ form{
     }
   }
 }
-
-#lista-tabelas{
+[id^="lista-tabelas-"]{
   list-style: none;
   padding: 0;
   margin: 0;

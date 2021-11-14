@@ -31,8 +31,8 @@
                         </div>
                         <div class="input-group empreendimentos-tabelas">
                             <label>EMPREENDIMENTO:</label>
-                            <div class="fake-input" data-selected="">Empreendimento 1</div>
-                            <ul id="lista-tabelas">
+                            <div class="fake-input" data-select-id="1" data-selected="">Empreendimento 1</div>
+                            <ul id="lista-tabelas-1" data-id="1">
                                 <li class="tabela" data-value="tabela-1">Empreendimento 1</li>
                                 <li class="tabela" data-value="tabela-2">Empreendimento 2</li>
                                 <li class="tabela" data-value="tabela-3">Empreendimento 3</li>
@@ -40,7 +40,7 @@
                                 <li class="tabela" data-value="tabela-5">Empreendimento 5</li>
                                 <li class="tabela" data-value="tabela-6">Empreendimento 6</li>
                             </ul>
-                            <span class="dropdown-button" ><img src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt=""></span>
+                            <span class="dropdown-button" data-select-id="1"><img src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt=""></span>
                         </div>
                         <button class="d-flex download-btn">BAIXE AGORA <img src="<?= base_url('assets/imgs/download-icon.svg')?>" alt=""></button>
                     </form>

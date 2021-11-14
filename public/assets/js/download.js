@@ -1,12 +1,15 @@
 $(".fake-input, form .dropdown-button").on("click", function(){
-   $('form .dropdown-button,.fake-input,#lista-tabelas').toggleClass('active');
+   var selectToOpen = $(this).data('select-id');
+   $('form .dropdown-button[data-select-id="'+selectToOpen+'"],.fake-input[data-select-id="'+selectToOpen+'"],#lista-tabelas-'+selectToOpen).toggleClass('active');
 });
 (function selectTabela(){
-   $('#lista-tabelas li').on('click', function(){
+   $('form ul li').on('click', function(){
       var itemSelecionado = $(this).data('value');
       var nomeItemSelecionado = $(this).text();
-      var fakeInput = $('.fake-input');
-      $('form .dropdown-button,.fake-input,#lista-tabelas').toggleClass('active');
+      var selectId = $(this).parent("ul").data('id');
+
+      var fakeInput = $('.fake-input[data-select-id="'+selectId+'"]');
+      $('form .dropdown-button[data-select-id="'+selectId+'"],.fake-input[data-select-id="'+selectId+'"],#lista-tabelas-'+selectId).toggleClass('active');
       fakeInput.text(nomeItemSelecionado);
       fakeInput.attr('data-selected',itemSelecionado);
    });
