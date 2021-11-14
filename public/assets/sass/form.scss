@@ -13,7 +13,8 @@ form{
     margin-bottom: 20px;
   }
   input,
-  .fake-input{
+  .fake-input,
+  textarea{
     width: calc(450px - 30px);
   }
   .fake-input{
@@ -55,11 +56,12 @@ form{
   }
   input,
   select,
-  .fake-input{
+  .fake-input,
+  textarea{
     border: 1px solid #1c1c1c;
     margin: 10px 0;
     font-size: 1rem;
-    border-radius: 50px;
+    border-radius: 30px;
     background-color: #fff;
     padding: 5px 15px;
     outline: none;
@@ -68,6 +70,9 @@ form{
     &.active{
       box-shadow: 0 15px 30px #00000055;
     }
+  }
+  textarea{
+    resize: none;
   }
   .fake-input{
     &.active{
@@ -87,6 +92,20 @@ form{
     img{
       margin-left: 20px;
       width: 30px;
+    }
+  }
+  .last-form-section{
+    margin-top: 60px;
+    span{
+      padding: 10px 10px 10px 25px;
+      width: calc(100% - 230px);
+      font-size: .8rem;
+      color: #777777!important;
+      line-height: 1.2;
+    }
+    button{
+      margin-top: 0;
+      padding: 12px 60px 10px;
     }
   }
 }

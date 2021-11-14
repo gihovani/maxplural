@@ -32,6 +32,10 @@ class Site extends BaseController
     {
         return $this->show('download');
     }
+    public function contato(): string
+    {
+        return $this->show('contato');
+    }
 
     private function show(string $page): string
     {

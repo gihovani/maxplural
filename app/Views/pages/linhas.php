@@ -5,7 +5,7 @@ Sobre Nossas Linhas
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
-<link rel="stylesheet" href="<?= base_url('assets/css/linhas.css')?>" />
+<link rel="stylesheet" href="<?= base_url('assets/css/linhas.min.css')?>" />
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>

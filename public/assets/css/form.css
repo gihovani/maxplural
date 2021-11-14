@@ -14,7 +14,8 @@ form .input-group {
   margin-bottom: 20px;
 }
 form input,
-form .fake-input {
+form .fake-input,
+form textarea {
   width: calc(450px - 30px);
 }
 form .fake-input {
@@ -54,11 +55,12 @@ form .dropdown-button.active img {
 }
 form input,
 form select,
-form .fake-input {
+form .fake-input,
+form textarea {
   border: 1px solid #1c1c1c;
   margin: 10px 0;
   font-size: 1rem;
-  border-radius: 50px;
+  border-radius: 30px;
   background-color: #fff;
   padding: 5px 15px;
   outline: none;
@@ -68,8 +70,13 @@ form input:focus, form input.active,
 form select:focus,
 form select.active,
 form .fake-input:focus,
-form .fake-input.active {
+form .fake-input.active,
+form textarea:focus,
+form textarea.active {
   box-shadow: 0 15px 30px #00000055;
+}
+form textarea {
+  resize: none;
 }
 form .fake-input.active {
   border-radius: 18px 18px 0 0;
@@ -88,6 +95,20 @@ form button {
 form button img {
   margin-left: 20px;
   width: 30px;
+}
+form .last-form-section {
+  margin-top: 60px;
+}
+form .last-form-section span {
+  padding: 10px 10px 10px 25px;
+  width: calc(100% - 230px);
+  font-size: .8rem;
+  color: #777777 !important;
+  line-height: 1.2;
+}
+form .last-form-section button {
+  margin-top: 0;
+  padding: 12px 60px 10px;
 }
 
 #lista-tabelas {

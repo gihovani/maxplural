@@ -95,6 +95,18 @@ h2.subtitle{
   max-width: 100%;
   width: 100%;
 }
+.w-75{
+  max-width: 75%;
+  width: 100%;
+}
+.w-70{
+  max-width: 70%;
+  width: 100%;
+}
+.w-60{
+  max-width: 60%;
+  width: 100%;
+}
 .w-50{
   max-width: 50%;
   width: 100%;
