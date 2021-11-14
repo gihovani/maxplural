@@ -1,1 +1,1 @@
-function phonemask(){$("input.telefone").mask("(99) 9999-9999?9").focusout(function(e){var n,a,t;a=(n=e.currentTarget?e.currentTarget:e.srcElement).value.replace(/\D/g,""),(t=$(n)).unmask(),a.length>10?t.mask("(99) 99999-999?9"):t.mask("(99) 9999-9999?9")})}phonemask();
+function phonemask(){$("input.telefone").mask("(99) 9999-9999?9").focusout(function(e){let n,t,a;t=(n=e.currentTarget?e.currentTarget:e.srcElement).value.replace(/\D/g,""),(a=$(n)).unmask(),t.length>10?a.mask("(99) 99999-999?9"):a.mask("(99) 9999-9999?9")})}phonemask();

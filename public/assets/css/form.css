@@ -1,27 +1,27 @@
-form {
+.content form {
   padding: 50px 0 100px;
   width: 100%;
 }
-form label {
+.content form label {
   display: block;
   margin-left: 20px;
   font-style: italic;
   font-weight: 600;
   font-size: 1rem;
 }
-form .input-group {
+.content form .input-group {
   position: relative;
   margin-bottom: 20px;
 }
-form input,
-form .fake-input,
-form textarea {
+.content form input,
+.content form .fake-input,
+.content form textarea {
   width: calc(450px - 30px);
 }
-form .fake-input {
+.content form .fake-input {
   height: 23px;
 }
-form select {
+.content form select {
   width: 450px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -29,7 +29,7 @@ form select {
   text-overflow: '';
   position: relative;
 }
-form .dropdown-button {
+.content form .dropdown-button {
   content: "";
   width: 40px;
   height: 40px;
@@ -40,7 +40,7 @@ form .dropdown-button {
   border-radius: 50%;
   z-index: 2;
 }
-form .dropdown-button img {
+.content form .dropdown-button img {
   width: 12px;
   margin-top: 2px;
   margin-left: 1px;
@@ -50,13 +50,13 @@ form .dropdown-button img {
   transition: all .3s;
   transform: translate(-50%, -50%) rotate(-90deg);
 }
-form .dropdown-button.active img {
+.content form .dropdown-button.active img {
   transform: translate(-50%, -65%) rotate(90deg);
 }
-form input,
-form select,
-form .fake-input,
-form textarea {
+.content form input,
+.content form select,
+.content form .fake-input,
+.content form textarea {
   border: 1px solid #1c1c1c;
   margin: 10px 0;
   font-size: 1rem;
@@ -66,30 +66,30 @@ form textarea {
   outline: none;
   transition: all .3s;
 }
-form input:focus, form input.active,
-form select:focus,
-form select.active,
-form .fake-input:focus,
-form .fake-input.active,
-form textarea:focus,
-form textarea.active {
+.content form input:focus, .content form input.active,
+.content form select:focus,
+.content form select.active,
+.content form .fake-input:focus,
+.content form .fake-input.active,
+.content form textarea:focus,
+.content form textarea.active {
   box-shadow: 0 15px 30px #00000055;
 }
-form select.aberto {
+.content form select.aberto {
   position: relative;
 }
-form select.aberto option {
+.content form select.aberto option {
   position: absolute;
   width: 100%;
   background-color: #0a53be;
 }
-form textarea {
+.content form textarea {
   resize: none;
 }
-form .fake-input.active {
+.content form .fake-input.active {
   border-radius: 18px 18px 0 0;
 }
-form button {
+.content form button {
   float: right;
   margin-top: 15px;
   color: #fff !important;
@@ -100,21 +100,21 @@ form button {
   font-size: 1rem;
   cursor: pointer;
 }
-form button img {
+.content form button img {
   margin-left: 20px;
   width: 30px;
 }
-form .last-form-section {
+.content form .last-form-section {
   margin-top: 60px;
 }
-form .last-form-section span {
+.content form .last-form-section span {
   padding: 10px 10px 10px 25px;
   width: calc(100% - 230px);
   font-size: .8rem;
   color: #777777 !important;
   line-height: 1.2;
 }
-form .last-form-section button {
+.content form .last-form-section button {
   margin-top: 0;
   padding: 12px 60px 10px;
 }
