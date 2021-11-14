@@ -5,7 +5,7 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
-    <link rel="stylesheet" href="<?= base_url('assets/css/download.min.css')?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/tabelas-de-valores.min.css')?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/form.min.css')?>" />
 <?= $this->endSection() ?>
 
@@ -53,5 +53,5 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts')?>
-<script type="text/javascript" src="<?= base_url('assets/js/download.js') ?>"></script>
+<script type="text/javascript" src="<?= base_url('assets/js/tabelas-de-valores-min.js') ?>"></script>
 <?= $this->endSection() ?>

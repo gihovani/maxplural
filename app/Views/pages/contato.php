@@ -96,6 +96,6 @@
 
 <?= $this->section('scripts')?>
 <script type="text/javascript" src="<?= base_url('assets/jquery/phone-mask.min.js')?>" ></script>
-<script type="text/javascript" src="<?= base_url('assets/js/form.js')?>" ></script>
-<script type="text/javascript" src="<?= base_url('assets/js/download.js')?>" ></script>
+<script type="text/javascript" src="<?= base_url('assets/js/form-min.js')?>" ></script>
+<script type="text/javascript" src="<?= base_url('assets/js/tabelas-de-valores-min.js')?>" ></script>
 <?= $this->endSection() ?>

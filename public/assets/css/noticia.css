@@ -167,12 +167,9 @@ section#post-content .coluna-direita .busca .busca_por-select form select {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #fff;
     color: #000;
-    background-image: url(../imgs/close-dark.svg);
     background-size: 40%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #fff url("../imgs/close-dark.svg") no-repeat center;
     transition: all .5s;
     filter: invert(1);
   }

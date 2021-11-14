@@ -5,7 +5,7 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
-    <link rel="stylesheet" href="<?= base_url('assets/css/blog_post.min.css')?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/noticia.min.css')?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/form.min.css')?>" />
 <?= $this->endSection() ?>
 
@@ -51,7 +51,7 @@
                     <div class="busca_por-texto">
                         <h2 class="title">REALIZE SUA BUSCA:</h2>
                         <form id="busca-texto" action="">
-                            <input type="text" required>
+                            <input type="text" name="query" required="required" />
                             <button class="btn-default" type="submit">
                                 <img src="<?= base_url('assets/imgs/search-96.svg') ?>" alt=""> BUSCAR
                             </button>
@@ -82,16 +82,16 @@
                 </div>
             </div>
 
-            <span class="mob-d-block openBusca">
+            <div class="mob-d-block openBusca">
                 <div class="bg-filtro">
                     <img class="w-100" src="<?= base_url('assets/imgs/filter-icon.svg')?>" alt="">
                 </div>
-            </span>
+            </div>
         </div>
     </section>
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts')?>
-    <script type="text/javascript" src="<?= base_url('assets/js/download.js')?>" ></script>
-    <script type="text/javascript" src="<?= base_url('assets/js/blog_post.js')?>" ></script>
+    <script type="text/javascript" src="<?= base_url('assets/js/tabelas-de-valores-min.js')?>" ></script>
+    <script type="text/javascript" src="<?= base_url('assets/js/noticia-min.js')?>" ></script>
 <?= $this->endSection() ?>

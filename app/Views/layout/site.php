@@ -3,7 +3,7 @@
 <head>
     <title><?= $this->renderSection('title') ?></title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?= $this->renderSection('meta') ?>
     <link rel="stylesheet" href="<?= base_url('assets/css/newsletter.min.css') ?>"/>
     <link rel="stylesheet" href="<?= base_url('assets/css/master.css') ?>"/>
@@ -76,10 +76,10 @@
         <li class="closeMenu"><a href="<?= base_url('site/sobre') ?>">A MAXPLURAL</a></li>
         <li class="closeMenu"><a href="<?= base_url('site/linhas') ?>">NOSSAS LINHAS</a></li>
         <li class="closeMenu"><a href="<?= base_url('site/empreendimentos') ?>">EMPREENDIMENTOS</a></li>
-        <li class="closeMenu"><a href="<?= base_url() ?>">NOTÍCIAS</a></li>
+        <li class="closeMenu"><a href="<?= base_url('site/noticias') ?>">NOTÍCIAS</a></li>
         <li class="closeMenu"><a href="<?= base_url() ?>">CLIENTES</a></li>
-        <li class="closeMenu"><a href="<?= base_url() ?>">TABELAS DE VALORES</a></li>
-        <li class="closeMenu"><a href="<?= base_url() ?>">CONTATO</a></li>
+        <li class="closeMenu"><a href="<?= base_url('site/tabelas-de-valores') ?>">TABELAS DE VALORES</a></li>
+        <li class="closeMenu"><a href="<?= base_url('site/contato') ?>">CONTATO</a></li>
     </ul>
     <span class="closeMenu"></span>
 </nav>
@@ -163,10 +163,10 @@
                     <li><a href="<?= base_url('site/sobre') ?>">A MAXPLURAL</a></li>
                     <li><a href="<?= base_url('site/linhas') ?>">NOSSAS LINHAS</a></li>
                     <li><a href="<?= base_url('site/empreendimentos') ?>">EMPREENDIMENTOS</a></li>
-                    <li><a href="<?= base_url() ?>">NOTÍCIAS</a></li>
+                    <li><a href="<?= base_url('site/noticias') ?>">NOTÍCIAS</a></li>
                     <li><a href="<?= base_url() ?>">CLIENTES</a></li>
                     <li><a href="<?= base_url() ?>">TABELAS DE VALORES</a></li>
-                    <li><a href="<?= base_url() ?>">CONTATO</a></li>
+                    <li><a href="<?= base_url('site/contato') ?>">CONTATO</a></li>
                 </ul>
             </div>
             <div class="w-30 text-center">
@@ -189,7 +189,7 @@
 <!-- SCRIPTS -->
 <script type="text/javascript" src="<?= base_url('assets/jquery/jquery-v-3-6-0.min.js') ?>"></script>
 <script type="text/javascript" src="<?= base_url('assets/slick-1.8.1/slick/slick.min.js') ?>"></script>
-<script type="text/javascript" src="<?= base_url('assets/js/master.js') ?>"></script>
+<script type="text/javascript" src="<?= base_url('assets/js/master-min.js') ?>"></script>
 <?= $this->renderSection('scripts') ?>
 </body>
 </html>

@@ -3,12 +3,23 @@ declare(strict_types=1);
 
 namespace App\Controllers\Admin;
 
-class Index extends CrudAbstract
+use App\Controllers\BaseController;
+use CodeIgniter\HTTP\RedirectResponse;
+
+class Index extends BaseController
 {
-    public function index(): string
+    /**
+     * @return RedirectResponse|string
+     */
+    public function index()
     {
-        return $this->show([
-            'output' => ''
-        ]);
+        helper('form');
+        if ($this->validate([
+            'login' => 'required',
+            'senha' => 'required|min_length[10]'
+        ])) {
+            return redirect()->to('admin/sessions');
+        }
+        return view('admin/index', ['validation' => $this->validator]);
     }
 }

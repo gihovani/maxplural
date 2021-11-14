@@ -28,21 +28,21 @@ class Site extends BaseController
     {
         return $this->show('projeto');
     }
-    public function baixe_tabelas(): string
+    public function tabelas_de_valores(): string
     {
-        return $this->show('download');
+        return $this->show('tabelas-de-valores');
     }
     public function contato(): string
     {
         return $this->show('contato');
     }
-    public function blog(): string
+    public function noticias(): string
     {
-        return $this->show('blog');
+        return $this->show('noticias');
     }
-    public function post(): string
+    public function noticia(): string
     {
-        return $this->show('blog_post');
+        return $this->show('noticia');
     }
 
     private function show(string $page): string

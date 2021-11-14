@@ -13,7 +13,35 @@ use GroceryCrud\Core\GroceryCrud;
 
 abstract class CrudAbstract extends BaseController
 {
-    abstract public function index(): string;
+    protected $unsetFields = ['created_at', 'updated_at', 'deleted_at'];
+    protected $unsetColumns = ['deleted_at'];
+    abstract public function configureCrud(GroceryCrud $crud): void;
+    public function index(): string
+    {
+        try {
+            $crud = $this->getGroceryCrudEnterprise();
+        } catch (Exception $e) {
+            return $this->show([
+                'output' => $e->getMessage()
+            ]);
+        }
+
+        $crud->setCsrfTokenName(csrf_token());
+        $crud->setCsrfTokenValue(csrf_hash());
+        $this->configureCrud($crud);
+        $crud->unsetFields($this->unsetFields);
+        $crud->unsetColumns($this->unsetColumns);
+
+        try {
+            $output = $crud->render();
+        } catch (\Exception $e) {
+            return $this->show([
+                'output' => $e->getMessage()
+            ]);
+        }
+
+        return $this->show($output);
+    }
 
     protected function show($output = null): string
     {
@@ -26,7 +54,7 @@ abstract class CrudAbstract extends BaseController
         return view('admin/crud', (array)$output);
     }
 
-    private function getDatabaseParams(): array {
+    protected function getDatabaseParams(): array {
         $db = (new Database())->default;
         return [
             'adapter' => [

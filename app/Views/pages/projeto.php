@@ -307,8 +307,8 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts')?>
-    <script type="text/javascript" src="<?= base_url('assets/js/galeria.js')?>" ></script>
-    <script type="text/javascript" src="<?= base_url('assets/js/progress-bar.js')?>" ></script>
+    <script type="text/javascript" src="<?= base_url('assets/js/galeria-min.js')?>" ></script>
+    <script type="text/javascript" src="<?= base_url('assets/js/progress-bar-min.js')?>" ></script>
     <script type="text/javascript" src="<?= base_url('assets/jquery/phone-mask.min.js')?>" ></script>
-    <script type="text/javascript" src="<?= base_url('assets/js/form.js')?>" ></script>
+    <script type="text/javascript" src="<?= base_url('assets/js/form-min.js')?>" ></script>
 <?= $this->endSection() ?>
