@@ -34,6 +34,11 @@ h1.title{
   font-size: 5rem;
   letter-spacing: 2px;
 }
+h2.subtitle{
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 300;
+}
 .scrollYLock{
   overflow-y: hidden;
 }

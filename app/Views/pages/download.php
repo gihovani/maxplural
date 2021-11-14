@@ -6,6 +6,7 @@
 
 <?= $this->section('styles')?>
     <link rel="stylesheet" href="<?= base_url('assets/css/download.min.css')?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/form.min.css')?>" />
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
@@ -18,15 +19,15 @@
                     <form action="">
                         <div class="input-group">
                             <label for="nome">NOME:</label>
-                            <input type="text" id="nome" name="nome">
+                            <input type="text" id="nome" name="nome" required>
                         </div>
                         <div class="input-group">
                             <label for="email">E-MAIL:</label>
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email"  required>
                         </div>
                         <div class="input-group">
                             <label for="telefone">TELEFONE:</label>
-                            <input type="text" id="telefone" name="telefone">
+                            <input class="telefone" type="text" id="telefone" name="telefone" required>
                         </div>
                         <div class="input-group empreendimentos-tabelas">
                             <label>EMPREENDIMENTO:</label>
@@ -41,7 +42,7 @@
                             </ul>
                             <span class="dropdown-button" ><img src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt=""></span>
                         </div>
-                        <button class="d-flex">BAIXE AGORA <img src="<?= base_url('assets/imgs/downloadTabelas.svg')?>" alt=""></button>
+                        <button class="d-flex download-btn">BAIXE AGORA <img src="<?= base_url('assets/imgs/download-icon.svg')?>" alt=""></button>
                     </form>
                 </div>
             </div>

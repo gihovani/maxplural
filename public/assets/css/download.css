@@ -7,15 +7,15 @@
 #content.downloads .downloads__form-box {
   justify-content: flex-end;
 }
-#content.downloads .downloads__form-box div {
+#content.downloads .downloads__form-box > div {
   width: 450px;
   margin-right: 100px;
 }
-#content.downloads .downloads__form-box div h1 {
+#content.downloads .downloads__form-box > div h1 {
   font-size: 2.3rem;
   position: relative;
 }
-#content.downloads .downloads__form-box div h1:after {
+#content.downloads .downloads__form-box > div h1:after {
   content: '';
   position: absolute;
   left: 0;
@@ -24,99 +24,9 @@
   height: 4px;
   background-color: #777777;
 }
-#content.downloads .downloads__form-box div h4 {
+#content.downloads .downloads__form-box > div h4 {
   font-size: 1.2rem;
   font-weight: 400;
-}
-#content.downloads form {
-  padding: 50px 0 100px;
-  width: 100%;
-}
-#content.downloads form label {
-  display: block;
-  margin-left: 20px;
-  font-style: italic;
-  font-weight: 600;
-  font-size: 1rem;
-}
-#content.downloads form .input-group {
-  position: relative;
-  margin-bottom: 20px;
-}
-#content.downloads form input,
-#content.downloads form .fake-input {
-  width: calc(450px - 30px);
-}
-#content.downloads form .fake-input {
-  height: 23px;
-}
-#content.downloads form select {
-  width: 450px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-indent: 1px;
-  text-overflow: '';
-  position: relative;
-}
-#content.downloads form .dropdown-button {
-  content: "";
-  width: 40px;
-  height: 40px;
-  background-color: #777777;
-  position: absolute;
-  right: 25px;
-  bottom: -12px;
-  border-radius: 50%;
-  z-index: 2;
-}
-#content.downloads form .dropdown-button img {
-  width: 12px;
-  margin-top: 2px;
-  margin-left: 1px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transition: all .3s;
-  transform: translate(-50%, -50%) rotate(-90deg);
-}
-#content.downloads form .dropdown-button.active img {
-  transform: translate(-50%, -65%) rotate(90deg);
-}
-#content.downloads form input,
-#content.downloads form select,
-#content.downloads form .fake-input {
-  border: 1px solid #1c1c1c;
-  margin: 10px 0;
-  font-size: 1rem;
-  border-radius: 50px;
-  background-color: #fff;
-  padding: 5px 15px;
-  outline: none;
-  transition: all .3s;
-}
-#content.downloads form input:focus, #content.downloads form input.active,
-#content.downloads form select:focus,
-#content.downloads form select.active,
-#content.downloads form .fake-input:focus,
-#content.downloads form .fake-input.active {
-  box-shadow: 0 15px 30px #00000055;
-}
-#content.downloads form .fake-input.active {
-  border-radius: 18px 18px 0 0;
-}
-#content.downloads form button {
-  float: right;
-  margin-top: 15px;
-  color: #fff !important;
-  padding: 12px 30px 10px;
-  background-color: #111;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1rem;
-}
-#content.downloads form button img {
-  margin-left: 20px;
-  width: 30px;
 }
 #content.downloads .bg-download {
   background-position: center;
@@ -124,39 +34,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 800px;
-}
-#content #lista-tabelas {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #fff;
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity .3s;
-  position: absolute;
-  bottom: 0;
-  transform: translateY(100%);
-  z-index: -1;
-}
-#content #lista-tabelas.active {
-  opacity: 1;
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
-  width: 100%;
-  padding: 10px 0 5px 0;
-  z-index: 1;
-  bottom: 11px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  box-shadow: 0 15px 20px #00000033;
-}
-#content #lista-tabelas li {
-  cursor: pointer;
-  padding: 5px 15px;
-}
-#content #lista-tabelas li:hover {
-  background-color: #afafaf;
 }
 
 @media screen and (max-width: 1199px) {

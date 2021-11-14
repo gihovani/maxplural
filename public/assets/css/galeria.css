@@ -193,6 +193,9 @@ section#galeria .filter-box-content-item {
   section#galeria .filter-box-content-item.show:nth-child(5n+4) img, section#galeria .filter-box-content-item.show:nth-child(5n+5) img {
     transform: scale(2);
   }
+  section#galeria .filter-box-content-item.show:nth-child(5n+4) img:hover, section#galeria .filter-box-content-item.show:nth-child(5n+5) img:hover {
+    transform: scale(1.6);
+  }
 }
 @media screen and (max-width: 650px) {
   section#galeria .filter-box-content-item.show {
@@ -215,6 +218,9 @@ section#galeria .filter-box-content-item {
   }
 }
 @media screen and (max-width: 400px) {
+  section#galeria .filter-box-nav {
+    border-radius: 0;
+  }
   section#galeria .filter-box-content-item.show img {
     transform: scale(4.1);
   }

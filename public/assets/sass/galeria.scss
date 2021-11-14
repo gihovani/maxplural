@@ -211,6 +211,9 @@ section#galeria{
             width: 50%;
             img{
               transform: scale(2);
+              &:hover{
+                transform: scale(1.6);
+              }
             }
           }
         }
@@ -251,6 +254,9 @@ section#galeria{
 @media screen and (max-width: 400px){
   section#galeria{
     .filter-box{
+      &-nav{
+        border-radius: 0 ;
+      }
       &-content{
         &-item.show{
           img{
