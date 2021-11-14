@@ -44,13 +44,13 @@
                         <div class="post-descricao__content">
                             <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis</h3>
                             <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis ipsum massa. Vestibulum consectetur eleifend dictum. Sed libero quam, tempor vel tellus eget, sodales tincidunt lacus. Etiam sit amet tristique metus, vitae molestie erat. Duis blandit orci vel blandit maximus. Suspendisse potenti. Mauris non condimentum neque, vitae laoreet sem. Ut pharetra posuere tortor vel pulvinar. Mauris condimentum arcu justo, nec tempus nibh euismod id.</p>
-                            <a href="<?= base_url('site/post')?>" class="leia-mais">Leia mais</a>
+                            <a href="<?= base_url('site/noticia')?>" class="leia-mais">Leia mais</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="post">
-                <a href="">
+                <a href="<?= base_url('site/noticia') ?>">
                     <img src="<?= base_url('/assets/imgs/blog/img-post-destaque.png')?>" alt="">
                     <div class="post-descricao__info">
                         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis</h3>
@@ -60,7 +60,7 @@
                 </a>
             </div>
             <div class="post">
-                <a href="">
+                <a href="<?= base_url('site/noticia') ?>">
                     <img src="<?= base_url('/assets/imgs/blog/img-post-destaque.png')?>" alt="">
                     <div class="post-descricao__info">
                         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis</h3>
@@ -70,7 +70,7 @@
                 </a>
             </div>
             <div class="post">
-                <a href="">
+                <a href="<?= base_url('site/noticia') ?>">
                     <img src="<?= base_url('/assets/imgs/blog/img-post-destaque.png')?>" alt="">
                     <div class="post-descricao__info">
                         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis</h3>
