@@ -149,6 +149,7 @@ Admin Maxplural
         }
     }
 </style>
+<link rel="stylesheet" href="<?= base_url('assets/css/admin.css') ?>"/>
 <?= $this->endSection() ?>
 
 <?= $this->section('header') ?>

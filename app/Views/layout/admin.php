@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?= $this->renderSection('meta') ?>
     <?= $this->renderSection('styles') ?>
-    <link rel="stylesheet" href="<?= base_url('assets/css/admin.css') ?>"/>
     <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/img/favicon.png') ?>"/>
 </head>
 <body>

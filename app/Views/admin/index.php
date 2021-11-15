@@ -31,17 +31,17 @@ Login - Painel Administrativo
         border-radius: 50%;
     }
     .shape:first-child {
-        background: linear-gradient(#1845ad, #23a2f6);
+        background: linear-gradient(#74ad18, #e4f623);
         left: -80px;
         top: -80px;
     }
     .shape:last-child {
-        background: linear-gradient(to right, #ff512f, #f09819);
+        background: linear-gradient(to right, #2fff90, #19f0be);
         right: -30px;
         bottom: -80px;
     }
     form {
-        height: 520px;
+        height: 410px;
         width: 400px;
         background-color: rgba(255,255,255,0.13);
         position: absolute;
@@ -100,7 +100,15 @@ Login - Painel Administrativo
         border-radius: 5px;
         cursor: pointer;
     }
-
+    input[type=submit].btn-login{
+        color: #fff;
+        transition: all .3s;
+        background-color: forestgreen;
+    }
+    input[type=submit].btn-login:hover{
+        transform: scale(.97);
+        background-color: #009900;
+    }
     @media screen and (max-width: 400px) {
         form {
             width: 96%;
@@ -119,7 +127,7 @@ Login - Painel Administrativo
     <div class="shape"></div>
 </div>
 <?= form_open('admin/index') ?>
-    <h1>Painel Administrativo</h1>
+    <img src="<?= base_url('/assets/imgs/admin/admin-logo.svg')?>" style="width: 100%;">
     <?php if (isset($validation)): ?>
     <?= $validation->listErrors() ?>
     <?php endif;?>
@@ -130,6 +138,6 @@ Login - Painel Administrativo
     <?= form_label('Senha', 'senha') ?>
     <?= form_input('senha', set_value('senha'), ['placeholder' => 'Senha', 'id' => 'senha'], 'password') ?>
 
-    <?= form_submit('btn-login', 'Login') ?>
+    <?= form_submit('btn-login', 'Login','class="btn-login"') ?>
 <?= form_close() ?>
 <?= $this->endSection() ?>

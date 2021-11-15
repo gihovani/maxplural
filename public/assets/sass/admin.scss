@@ -1,5 +1,9 @@
 body,
 .gc-container{
+  .page-item .page-number-input{
+    height: 38.76px;
+    background-color: var(--gc-grid-background-color);
+  }
   header{
     box-shadow: 0 4px 15px #00000055;
   }
