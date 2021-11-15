@@ -53,6 +53,7 @@
                 <h2 class="text-center">Fale com a gente</h2>
                 <h3 class="text-center thin">Envie sua mensagem no formulário a seguir</h3>
                 <form action="" class="d-flex">
+                    <input type="hidden" class="select-input-1" id="setor" name="setor" value="">
                     <div class="formgroup w-100">
                         <label for="nome">NOME:</label>
                         <input type="text" id="nome" name="nome" required>
@@ -67,14 +68,14 @@
                     </div>
                     <div class="input-group empreendimentos-tabelas w-100">
                         <label>ÁREA QUE DESEJA FALAR:</label>
-                        <div class="fake-input" data-select-id="1">SETOR 1</div>
-                        <ul id="lista-tabelas-1" data-id="1" data-selected="">
-                            <li class="tabela" data-value="tabela-1">SETOR 1</li>
-                            <li class="tabela" data-value="tabela-2">SETOR 2</li>
-                            <li class="tabela" data-value="tabela-3">SETOR 3</li>
-                            <li class="tabela" data-value="tabela-4">SETOR 4</li>
-                            <li class="tabela" data-value="tabela-5">SETOR 5</li>
-                            <li class="tabela" data-value="tabela-6">SETOR 6</li>
+                        <div class="fake-input" data-select-id="1">Selecione o setor</div>
+                        <ul id="select-input-1" data-id="1" data-selected="">
+                            <li class="tabela" data-value="{{SETOR}}">{{SETOR}}</li>
+                            <li class="tabela" data-value="{{SETOR2}}">{{SETOR2}}</li>
+                            <li class="tabela" data-value="{{SETOR3}}">{{SETOR3}}</li>
+                            <li class="tabela" data-value="{{SETOR4}}">{{SETOR4}}</li>
+                            <li class="tabela" data-value="{{SETOR5}}">{{SETOR5}}</li>
+                            <li class="tabela" data-value="{{SETOR6}}">{{SETOR6}}</li>
                         </ul>
                         <span class="dropdown-button" data-select-id="1"><img src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt=""></span>
                     </div>
@@ -97,5 +98,6 @@
 <?= $this->section('scripts')?>
 <script type="text/javascript" src="<?= base_url('assets/jquery/phone-mask.min.js')?>" ></script>
 <script type="text/javascript" src="<?= base_url('assets/js/form-min.js')?>" ></script>
+<script type="text/javascript" src="<?= base_url('assets/js/mask-min.js')?>" ></script>
 <script type="text/javascript" src="<?= base_url('assets/js/tabelas-de-valores-min.js')?>" ></script>
 <?= $this->endSection() ?>

@@ -61,10 +61,12 @@
                         <h2 class="title">ENCONTRE SEU IMÓVEL</h2>
                         <h4 class="thin">A <strong>MAXPLURAL</strong> tem o imóvel perfeito para o seu sonho.</h4>
                         <form id="busca-select" action="">
+                            <input type="hidden" class="select-input-1" id="estado" name="estado-cidade" value="">
+                            <input type="hidden" class="select-input-2" id="bairro" name="bairro" value="">
                             <div class="formgroup">
                                 <label for="">Estado / Cidade</label>
                                 <div class="fake-input" data-select-id="1" data-selected="">Selecione</div>
-                                <ul id="lista-tabelas-1" data-id="1">
+                                <ul id="select-input-1" data-id="1">
                                     <li class="tabela" data-value="{{estado / cidade}}">{{estado / cidade}}</li>
                                 </ul>
                                 <span class="dropdown-button" data-select-id="1"><img src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt=""></span>
@@ -72,7 +74,7 @@
                             <div class="formgroup">
                                 <label for="">Bairro</label>
                                 <div class="fake-input" data-select-id="2" data-selected>Selecione</div>
-                                <ul id="lista-tabelas-2" data-id="2">
+                                <ul id="select-input-2" data-id="2">
                                     <li class="tabela" data-value="{{bairro}}">{{bairro}}</li>
                                 </ul>
                                 <span class="dropdown-button" data-select-id="2"><img src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt=""></span>
@@ -94,4 +96,5 @@
 <?= $this->section('scripts')?>
     <script type="text/javascript" src="<?= base_url('assets/js/tabelas-de-valores-min.js')?>" ></script>
     <script type="text/javascript" src="<?= base_url('assets/js/noticia-min.js')?>" ></script>
+    <script type="text/javascript" src="<?= base_url('assets/js/form-min.js')?>" ></script>
 <?= $this->endSection() ?>

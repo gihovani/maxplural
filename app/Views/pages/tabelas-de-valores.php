@@ -17,6 +17,7 @@
                     <h1>BAIXE AS TABELAS</h1>
                     <h4>Preencha o fomrulário e baixe nossas tabelas</h4>
                     <form action="">
+                        <input type="hidden" class="select-input-1" id="tabela" name="tabela" value="">
                         <div class="input-group">
                             <label for="nome">NOME:</label>
                             <input type="text" id="nome" name="nome" required>
@@ -32,7 +33,7 @@
                         <div class="input-group empreendimentos-tabelas">
                             <label>EMPREENDIMENTO:</label>
                             <div class="fake-input" data-select-id="1" data-selected="">Empreendimento 1</div>
-                            <ul id="lista-tabelas-1" data-id="1">
+                            <ul id="select-input-1" data-id="1">
                                 <li class="tabela" data-value="tabela-1">Empreendimento 1</li>
                                 <li class="tabela" data-value="tabela-2">Empreendimento 2</li>
                                 <li class="tabela" data-value="tabela-3">Empreendimento 3</li>
@@ -53,5 +54,8 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts')?>
+<script type="text/javascript" src="<?= base_url('assets/jquery/phone-mask.min.js')?>" ></script>
 <script type="text/javascript" src="<?= base_url('assets/js/tabelas-de-valores-min.js') ?>"></script>
+<script type="text/javascript" src="<?= base_url('assets/js/mask-min.js') ?>"></script>
+<script type="text/javascript" src="<?= base_url('assets/js/form-min.js') ?>"></script>
 <?= $this->endSection() ?>
