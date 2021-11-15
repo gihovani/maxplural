@@ -62,7 +62,8 @@
         <div id="headerSearch" class="search">
             <img class="icon-search" src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search" />
             <form action="">
-                <input type="text" placeholder="Procurando por algum empreendimento?">
+                <label for="headerSearchQuery" class="sr-only">E-mail</label>
+                <input id="headerSearchQuery" type="text" placeholder="Procurando por algum empreendimento?" name="q" />
                 <button type="submit">
                     <img src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search" />
                 </button>
@@ -78,7 +79,7 @@
         <li class="closeMenu"><a href="<?= base_url('site/linhas') ?>">NOSSAS LINHAS</a></li>
         <li class="closeMenu"><a href="<?= base_url('site/empreendimentos') ?>">EMPREENDIMENTOS</a></li>
         <li class="closeMenu"><a href="<?= base_url('site/noticias') ?>">NOTÍCIAS</a></li>
-        <li class="closeMenu"><a href="<?= base_url() ?>">CLIENTES</a></li>
+        <li class="closeMenu"><a href="<?= base_url('site/projeto') ?>">PROJETOS</a></li>
         <li class="closeMenu"><a href="<?= base_url('site/tabelas-de-valores') ?>">TABELAS DE VALORES</a></li>
         <li class="closeMenu"><a href="<?= base_url('site/contato') ?>">CONTATO</a></li>
     </ul>
@@ -99,7 +100,8 @@
             <div id="newsBox">
                 <span>Seu melhor e-mail <span class="nextArrow-icon"></span></span>
                 <form action="">
-                    <input type="text" placeholder="exemplo@dominio.com">
+                    <label for="newsBoxEmail" class="sr-only">E-mail</label>
+                    <input type="text" id="newsBoxEmail" placeholder="exemplo@dominio.com" name="email">
                     <button type="submit">Enviar</button>
                 </form>
             </div>
@@ -165,7 +167,7 @@
                     <li><a href="<?= base_url('site/linhas') ?>">NOSSAS LINHAS</a></li>
                     <li><a href="<?= base_url('site/empreendimentos') ?>">EMPREENDIMENTOS</a></li>
                     <li><a href="<?= base_url('site/noticias') ?>">NOTÍCIAS</a></li>
-                    <li><a href="<?= base_url() ?>">CLIENTES</a></li>
+                    <li><a href="<?= base_url('site/projeto') ?>">PROJETOS</a></li>
                     <li><a href="<?= base_url('site/tabelas-de-valores') ?>">TABELAS DE VALORES</a></li>
                     <li><a href="<?= base_url('site/contato') ?>">CONTATO</a></li>
                 </ul>

@@ -19,11 +19,11 @@ Nossa História
 <section id="content" class="pv-3 historia">
     <div class="container">
         <div id="tabs" class="historia__tabs d-flex">
-            <div class="tab active" id="tab-1">HISTÓRIA</div>
-            <div class="tab" id="tab-2">DIFERENCIAIS</div>
+            <div class="tab active" id="historia">HISTÓRIA</div>
+            <div class="tab" id="diferenciais">DIFERENCIAIS</div>
         </div>
         <div class="historia__contents">
-            <div class="historia__contents--content tab-content active" data-target="tab-1">
+            <div class="historia__contents--content tab-content active" data-target="historia">
                 <p class="text-center">Com a proposta de investir no conceito design na construção civil, a Maxplural conta com empreendimentos que chamam a atenção, agregando funcionalidade, flexibilidade,
                     tecnologia e história, com a proposta do conforto unido ao valor estético.</p>
                 <p class="text-center">Nosso escritório está localizado no Empresarial Center 3, um complexo empresarial próximo ao Shopping Recife.</p>
@@ -42,7 +42,7 @@ Nossa História
                     </div>
                 </div>
             </div>
-            <div class="historia__contents--content tab-content" data-target="tab-2">
+            <div class="historia__contents--content tab-content" data-target="diferenciais">
                 <p class="text-center">CONTEÚDO DIFERENCIAIS</p>
             </div>
         </div>

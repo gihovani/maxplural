@@ -57,11 +57,18 @@ function ancora() {
 
         return false;
     });
-    if (urlHash.length > 0) {
-        page.animate({
-            scrollTop: $('#' + urlHash).offset().top - 150
-        }, 500);
+    if (!urlHash.length) {
+        return false;
     }
+
+    let eHash = $('#' + urlHash);
+    if (!eHash.length) {
+        return false;
+    }
+
+    page.animate({
+        scrollTop: eHash.offset().top - 150
+    }, 500);
 
 }
 
@@ -86,6 +93,11 @@ function toggleTabs() {
         $('.tab-content[data-target="' + tab + '"]').addClass('active');
         $(this).addClass('active');
     });
+
+    let urlHash = window.location.hash;
+    if ($(urlHash).length) {
+        $(urlHash).trigger('click');
+    }
 }
 
 function scrollPage(scroll, scrollPos) {

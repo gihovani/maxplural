@@ -7,7 +7,6 @@ const gulp = require('gulp'),
 
 gulp.task('compile-scss', function () {
     return gulp.src([
-        'public/assets/sass/**/*.scss',
         'public/assets/sass/*.scss',
     ])
 
@@ -37,5 +36,6 @@ gulp.task('default', gulp.parallel('styles', 'javascript'));
 
 gulp.task('watch', function () {
     // Watch .scss files
-    gulp.watch('public/assets/sass/**/*.scss', gulp.parallel('compile-scss'));
+    gulp.watch('public/assets/sass/*.scss', gulp.parallel('compile-scss'));
+    gulp.watch('public/assets/src_js/*.js', gulp.parallel('compile-js'));
 });
