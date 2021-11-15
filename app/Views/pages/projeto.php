@@ -283,7 +283,7 @@
                 </div>
             </div>
             <div class="w-50 orcamento-form">
-                <div class=" mv-3 pv-3">
+                <div class="form mv-3 pv-3">
                     <h2 class="title text-center">SIMULE SEU FINANCIAMENTO</h2>
                     <form action="">
                         <div class="formgroup">
@@ -298,8 +298,14 @@
                             <label for="telefone">TELEFONE:</label>
                             <input class="telefone" id="telefone" type="text" required>
                         </div>
-                        <button class="btn-default">ENVIAR</button>
+                        <button class="btn-default" onclick="submitForm(this)">ENVIAR</button>
                     </form>
+                    <div class="card">
+                        <div class="card-success">
+                            <h3 class="pv-3 mv-3 text-center">MENSAGEM ENVIADA COM SUCESSO!</h3>
+                            <img style="width: 150px;margin: auto; display: block;" src="<?= base_url('assets/imgs/sucess.svg')?>" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

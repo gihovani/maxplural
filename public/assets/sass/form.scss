@@ -1,7 +1,21 @@
 .content{
+  .form{
+    position: relative;
+  }
   form{
     padding: 50px 0 100px;
     width: 100%;
+    .formgroup,.input-group{
+      position: relative;
+      span.error{
+        position: absolute;
+        color: red!important;
+        right: 0;
+        top: 0;
+        font-size: .7rem;
+        transform: translateY(100%);
+      }
+    }
     label{
       display: block;
       margin-left: 20px;
@@ -153,10 +167,27 @@ ul[id^="select-input-"]{
     }
   }
 }
-
+form.sucesso{
+  transition: all .3s;
+  overflow: hidden;
+  animation: slideUp forwards .5s .3s;
+}
 .download-btn{
   img{
     filter: invert(1);
+  }
+}
+.card{
+  justify-content: center;
+  min-height: 400px;
+  align-items: center;
+  display: none;
+  opacity: 0;
+  z-index: -1;
+  width: 100%;
+  &.show{
+    display: flex;
+    animation: fadeUp forwards 1s .2s;
   }
 }
 @media screen and (max-width: 1025px){
@@ -174,5 +205,27 @@ ul[id^="select-input-"]{
     button{
       margin-right: 2.5%;
     }
+  }
+}
+
+@keyframes slideUp {
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(0);
+    padding: 0;
+  }
+}
+
+
+@keyframes fadeUp {
+  from{
+    opacity: 0;
+    z-index: 0;
+  }
+  to{
+    opacity: 1;
+    z-index: 2;
   }
 }

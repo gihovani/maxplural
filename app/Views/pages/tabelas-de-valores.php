@@ -13,7 +13,7 @@
     <section id="content" class="downloads">
         <div class="d-flex">
             <div class="w-50 d-flex downloads__form-box">
-                <div class="">
+                <div class="form">
                     <h1>BAIXE AS TABELAS</h1>
                     <h4>Preencha o fomrulário e baixe nossas tabelas</h4>
                     <form action="">
@@ -43,8 +43,14 @@
                             </ul>
                             <span class="dropdown-button" data-select-id="1"><img src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt=""></span>
                         </div>
-                        <button class="d-flex download-btn">BAIXE AGORA <img src="<?= base_url('assets/imgs/download-icon.svg')?>" alt=""></button>
+                        <button class="d-flex download-btn" onclick="submitForm(this)">BAIXE AGORA <img src="<?= base_url('assets/imgs/download-icon.svg')?>" alt=""></button>
                     </form>
+                    <div class="card">
+                        <div class="card-success">
+                            <h3 class="pv-3 mv-3 text-center">MENSAGEM ENVIADA COM SUCESSO!</h3>
+                            <img style="width: 150px;margin: auto; display: block;" src="<?= base_url('assets/imgs/sucess.svg')?>" />
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="w-50 bg-download">

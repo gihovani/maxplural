@@ -85,9 +85,15 @@
                     </div>
                     <div class="w-100 d-flex last-form-section">
                         <span>Ao clicar em enviar, você concorda com os termos de uso e política de privacidade da Rottas Construtora e Incorporadora.</span>
-                        <button class="default-btn" type="submit">ENVIAR</button>
+                        <button class="default-btn" type="submit" onclick="submitForm(this)">ENVIAR</button>
                     </div>
                 </form>
+                <div class="card">
+                    <div class="card-success">
+                        <h3 class="pv-3 mv-3 text-center">MENSAGEM ENVIADA COM SUCESSO!</h3>
+                        <img style="width: 150px;margin: auto; display: block;" src="<?= base_url('assets/imgs/sucess.svg')?>" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
