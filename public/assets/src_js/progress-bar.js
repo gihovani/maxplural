@@ -1,14 +1,5 @@
-// $('.status-box-itens__item').each(function(){
-//     let i;
-//
-//     for (i = 0; i < status; i++){
-//
-//
-//         console.log(i)
-//     }
-// });
-function increment() {
-    let etapas = $(".status-box-itens__item");
+$(function() {
+    let etapas = $('.status-box-itens__item');
     let statusTotal = 0;
     let t = 0;
     let $valorTotal = $('.status-box-total .etapa-status span.value');
@@ -16,8 +7,8 @@ function increment() {
     etapas.each(function (index) {
         let i = 0;
         let status = $('.status-box-itens__item').eq(index).find('.etapa-status').data('status');
-        let progress = $(".status-box-itens__item:eq(" + index + ") span.value");
-        let progressBar = $(".status-box-itens__item:eq(" + index + ") span.progress");
+        let progress = $('.status-box-itens__item:eq(' + index + ') span.value');
+        let progressBar = $('.status-box-itens__item:eq(' + index + ') span.progress');
         statusTotal = statusTotal + (status / etapas.length);
         setTimeout(function () {
             setInterval(function () {
@@ -32,7 +23,7 @@ function increment() {
                         progress.addClass('colorWhite')
                     }
                     if (i > 15) {
-                        progress.attr('style', 'margin-left:' + marginValue + "%;");
+                        progress.attr('style', 'margin-left:' + marginValue + '%;');
                     }
                     (++i);
                 }
@@ -46,18 +37,16 @@ function increment() {
             } else {
                 let progressTotal = t - 100;
                 let progressTotalValueMargin = t - 5;
-                $valorTotal.text(t + "%");
-                $barraTotal.css('transform', 'translateX(' + progressTotal + "%)");
+                $valorTotal.text(t + '%');
+                $barraTotal.css('transform', 'translateX(' + progressTotal + '%)');
                 if (t > 2) {
                     $valorTotal.addClass('colorWhite')
                 }
                 if (t > 5) {
-                    $valorTotal.attr('style', 'margin-left:' + progressTotalValueMargin + "%;");
+                    $valorTotal.attr('style', 'margin-left:' + progressTotalValueMargin + '%;');
                 }
                 (++t);
             }
         }, 50);
     }, 2500);
-}
-
-increment();
+});

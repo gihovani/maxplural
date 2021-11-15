@@ -1,57 +1,43 @@
-
-#content{
-  .historia{
+#content {
+  .historia {
     background-image: url('../imgs/sobre/bg-tabs.png');
     background-size: cover;
     background-position: center;
-    *{
+
+    * {
       color: var(--main-bg-color);
     }
-    .historia__contents{
-      .historia__contents--content{
-        .logos {
-          div:not(:last-child) {
-            width: 15%;
-            padding: 40px 20px;
-            img{
-              filter: brightness(0);
-              width: 100%;
-            }
-          }
-        }
+  }
+
+  .logos {
+    div:not(:last-child) {
+      width: 15%;
+      padding: 40px 20px;
+
+      img {
+        filter: brightness(.5);
+        width: 100%;
       }
     }
   }
 }
 
-@media screen and (max-width: 768px){
-  #content{
-    .historia{
-      .historia__contents{
-        .historia__contents--content{
-          .logos {
-            div:not(:last-child) {
-              width: 25%;
-            }
-          }
-        }
+@media screen and (max-width: 768px) {
+  #content {
+    .logos {
+      div:not(:last-child) {
+        width: 25%;
       }
     }
   }
 }
 
-@media screen and (max-width: 520px){
-  #content{
-    .historia{
-      .historia__contents{
-        .historia__contents--content{
-          .logos {
-            div:not(:last-child) {
-              width: 41%;
-              padding: 20px;
-            }
-          }
-        }
+@media screen and (max-width: 520px) {
+  #content {
+    .logos {
+      div:not(:last-child) {
+        width: 41%;
+        padding: 20px;
       }
     }
   }

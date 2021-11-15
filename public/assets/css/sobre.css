@@ -6,22 +6,22 @@
 #content .historia * {
   color: var(--main-bg-color);
 }
-#content .historia .historia__contents .historia__contents--content .logos div:not(:last-child) {
+#content .logos div:not(:last-child) {
   width: 15%;
   padding: 40px 20px;
 }
-#content .historia .historia__contents .historia__contents--content .logos div:not(:last-child) img {
-  filter: brightness(0);
+#content .logos div:not(:last-child) img {
+  filter: brightness(0.5);
   width: 100%;
 }
 
 @media screen and (max-width: 768px) {
-  #content .historia .historia__contents .historia__contents--content .logos div:not(:last-child) {
+  #content .logos div:not(:last-child) {
     width: 25%;
   }
 }
 @media screen and (max-width: 520px) {
-  #content .historia .historia__contents .historia__contents--content .logos div:not(:last-child) {
+  #content .logos div:not(:last-child) {
     width: 41%;
     padding: 20px;
   }

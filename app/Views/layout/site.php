@@ -2,6 +2,7 @@
 <html lang="pt-BR" dir="ltr">
 <head>
     <title><?= $this->renderSection('title') ?></title>
+    <base id="baseUrl" href="<?= base_url() ?>" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?= $this->renderSection('meta') ?>

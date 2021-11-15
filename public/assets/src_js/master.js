@@ -21,32 +21,29 @@ function initSlider() {
         arrows: false,
         dots: false,
         autoplay: false,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false,
-                    autoplay: true,
-                    autoplaySpeed: 5000,
-                    speed: 600
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false,
-                    autoplay: true,
-                    autoplaySpeed: 5000,
-                    speed: 600
-                }
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 600
             }
-        ]
+        }, {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 600
+            }
+        }]
     });
 }
 
@@ -85,46 +82,33 @@ function toggleMenu() {
 function toggleTabs() {
     $('#tabs .tab').click(function () {
         let tab = $(this).attr('id');
-        $("#tabs .tab, .tab-content").removeClass('active');
-        $(".tab-content[data-target='" + tab + "']").addClass('active');
+        $('#tabs .tab, .tab-content').removeClass('active');
+        $('.tab-content[data-target="' + tab + '"]').addClass('active');
         $(this).addClass('active');
     });
 }
 
-function scrollHomePage(scroll) {
-    if (scroll >= 180) {
-        $('header').addClass('bg-opaco');
-    } else {
-        $('header').removeClass('bg-opaco');
-    }
-}
-
-function srollInterno(scroll) {
-    if (scroll >= 120) {
-        $('header').addClass('bg-opaco');
-    } else {
-        $('header').addClass('bg-opaco');
-    }
+function scrollPage(scroll, scrollPos) {
+    $('header').toggleClass('bg-opaco', (scroll >= scrollPos));
 }
 
 function checkUrlToHeader() {
     let url = window.location.href;
     let scroll = $(window).scrollTop();
-    if ((url !== "http://localhost:8081/") && (url !== "http://localhost:8081/?")) {
-        setTimeout(function () {
-            let headerHeight = $('header').innerHeight() - 57;
-            srollInterno(scroll);
-            $('.content').attr('style', 'padding-top:' + headerHeight + 'px;');
-            $(window).on('scroll', function () {
-                scroll = $(window).scrollTop();
-                srollInterno(scroll);
-            });
-        }, 90);
-    } else {
-        scrollHomePage(scroll);
+    let baseUrl = $('#baseUrl').attr('href') + '/';
+    if ((url !== baseUrl) && (url !== baseUrl + '?')) {
+        let headerHeight = $('header').innerHeight() - 57;
+        scrollPage(scroll, 0);
+        $('.content').attr('style', 'padding-top:' + headerHeight + 'px;');
         $(window).on('scroll', function () {
             scroll = $(window).scrollTop();
-            scrollHomePage(scroll);
+            scrollPage(scroll, 0);
+        });
+    } else {
+        scrollPage(scroll, 180);
+        $(window).on('scroll', function () {
+            scroll = $(window).scrollTop();
+            scrollPage(scroll, 180);
         });
     }
 }
@@ -144,7 +128,6 @@ function toggleSearchInput() {
     $('body').click(function (e) {
         closeToggledInputs(input, e);
     });
-
 }
 
 function closeToggledInputs(input, e) {
@@ -161,11 +144,10 @@ function closeToggledInputs(input, e) {
 function loader() {
     setTimeout(function () {
         $('.loader').fadeOut();
-    }, 120);
+    }, 300);
 }
 
-
-document.addEventListener('DOMContentLoaded', function () {
+$(window).on('load', function () {
     initSlider();
     hoverEmpreendimentos();
     toggleMenu();

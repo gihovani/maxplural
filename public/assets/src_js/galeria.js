@@ -1,4 +1,4 @@
-let filtro = $('.filter-box-nav .active').data('filter');
+let filtro = null;
 let changeShowcase = false;
 
 function checkFilteredPhotos() {
@@ -47,9 +47,9 @@ function desmontaModal() {
 }
 
 function montaModal(srcImg) {
-    let body = $("body");
+    let body = $('body');
     body.remove('.zoomModal');
-    body.append('<div class="zoomModal d-flex" >' +
+    body.append('<div class="zoomModal d-flex">' +
         '<div class="backdrop" onclick="desmontaModal()"></div>' +
         '<div class="container relative" id="zoomModalWrapper">' +
         '<span class="closeModal" onclick="desmontaModal()"><img src="../assets/imgs/close-dark.svg" alt=""></span>' +
@@ -80,7 +80,8 @@ function zoom() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+$(window).on('load', function () {
+    filtro = $('.filter-box-nav .active').data('filter');
     checkFilteredPhotos();
     zoom();
 });
