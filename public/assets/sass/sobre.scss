@@ -1,9 +1,9 @@
 #content {
-  .historia {
+  background-color: #fff;
+  &.historia {
     background-image: url('../imgs/sobre/bg-tabs.png');
     background-size: cover;
     background-position: center;
-
     * {
       color: var(--main-bg-color);
     }

@@ -1,9 +1,12 @@
-#content .historia {
+#content {
+  background-color: #fff;
+}
+#content.historia {
   background-image: url("../imgs/sobre/bg-tabs.png");
   background-size: cover;
   background-position: center;
 }
-#content .historia * {
+#content.historia * {
   color: var(--main-bg-color);
 }
 #content .logos div:not(:last-child) {

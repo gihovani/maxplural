@@ -1,0 +1,103 @@
+body,
+.gc-container{
+  header{
+    box-shadow: 0 4px 15px #00000055;
+  }
+  header,header ul{
+    background-color: #232323;
+    li{
+      a{
+        transition: all .3s;
+        color: #fff;
+        border-right: 1px solid #111;
+        &:hover{
+          background-color: #111;
+        }
+      }
+    }
+  }
+}
+body{
+  background-color: #333;
+}
+main{
+  h1{
+    margin: 15px 30px;
+    color: #fafafa;
+  }
+  & > div:first-child{
+    opacity: 0;
+    transform: scale(.95);
+    width: 90%;
+    margin: 25px auto 15px;
+    padding: 15px;
+    border: 2px solid #999;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px #ffffff33;
+    animation: fadeIn forwards .5s .5s;
+    .gc-caption-title{
+      font-size: 2rem;
+      background-color: transparent;
+      position: relative;
+      padding: 10px;
+      font-weight: 600;
+      &:after{
+        content: '';
+        position: absolute;
+        height: 50px;
+        width: 3px;
+        top: 0;
+        left: 0;
+        background-color: #222;
+      }
+    }
+    .gc-add-button-container{
+      a{
+        border-radius: 0;
+        background-color: #228B22;
+        color: #fff;
+        border-color: #228B22;
+        transition: all .3s;
+        &:hover{
+          background-color: #006900;
+          border-color: #006900;
+        }
+      }
+    }
+  }
+}
+.btn-check{
+  &:checked,
+  &:active{
+   & + .gc-container .btn-outline-dark{
+     color: #fff;
+     background-color: #212529;
+     border-color: #212529;
+   }
+  }
+}
+.gc-container{
+  .btn{
+
+  }
+  .btn-outline-dark{
+    &:active,
+    &.active,
+    .dropdown-toggle.show{
+      color: #fff;
+      background-color: #212529;
+      border-color: #212529;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+    transform: scale(.95);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}

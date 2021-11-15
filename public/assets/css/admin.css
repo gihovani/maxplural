@@ -1,0 +1,92 @@
+body header,
+.gc-container header {
+  box-shadow: 0 4px 15px #00000055;
+}
+body header, body header ul,
+.gc-container header,
+.gc-container header ul {
+  background-color: #232323;
+}
+body header li a, body header ul li a,
+.gc-container header li a,
+.gc-container header ul li a {
+  transition: all .3s;
+  color: #fff;
+  border-right: 1px solid #111;
+}
+body header li a:hover, body header ul li a:hover,
+.gc-container header li a:hover,
+.gc-container header ul li a:hover {
+  background-color: #111;
+}
+
+body {
+  background-color: #333;
+}
+
+main h1 {
+  margin: 15px 30px;
+  color: #fafafa;
+}
+main > div:first-child {
+  opacity: 0;
+  transform: scale(0.95);
+  width: 90%;
+  margin: 25px auto 15px;
+  padding: 15px;
+  border: 2px solid #999;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px #ffffff33;
+  animation: fadeIn forwards .5s .5s;
+}
+main > div:first-child .gc-caption-title {
+  font-size: 2rem;
+  background-color: transparent;
+  position: relative;
+  padding: 10px;
+  font-weight: 600;
+}
+main > div:first-child .gc-caption-title:after {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 3px;
+  top: 0;
+  left: 0;
+  background-color: #222;
+}
+main > div:first-child .gc-add-button-container a {
+  border-radius: 0;
+  background-color: #228B22;
+  color: #fff;
+  border-color: #228B22;
+  transition: all .3s;
+}
+main > div:first-child .gc-add-button-container a:hover {
+  background-color: #006900;
+  border-color: #006900;
+}
+
+.btn-check:checked + .gc-container .btn-outline-dark, .btn-check:active + .gc-container .btn-outline-dark {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+
+.gc-container .btn-outline-dark:active, .gc-container .btn-outline-dark.active,
+.gc-container .btn-outline-dark .dropdown-toggle.show {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
