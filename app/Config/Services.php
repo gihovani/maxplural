@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Libraries\MyAuth;
 use CodeIgniter\Config\BaseService;
 
 /**
@@ -29,4 +30,16 @@ class Services extends BaseService
      *     return new \CodeIgniter\Example();
      * }
      */
+    /**
+     * @param bool $getShared
+     * @return MyAuth
+     */
+    public static function myAuth(bool $getShared = true): MyAuth
+    {
+        if ($getShared) {
+            return static::getSharedInstance('myAuth');
+        }
+        return new MyAuth();
+    }
+
 }

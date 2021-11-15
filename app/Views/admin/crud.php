@@ -129,7 +129,7 @@ Painel Administrativo
     }
 
     main {
-        padding-top: 25px;
+        padding-top: 60px;
     }
 
     @media (min-width: 1200px) {

@@ -13,7 +13,7 @@ class AdminModel extends BaseModel
     protected $validationRules = [
         'avatar' => [
             'label' => 'Avatar',
-            'rules' => 'permity_empty'
+            'rules' => 'permit_empty'
         ],
         'nome' => [
             'label' => 'Nome',

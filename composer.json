@@ -1,22 +1,28 @@
 {
-    "name": "gg2/maxplural",
-    "description": "Website da incorporadora Max Plural",
-    "type": "project",
-    "homepage": "https://maxplural.com.br",
-    "license": "Apache 2.0",
-    "authors": [
-        {
-            "name": "Gihovani Filipp Pereira Demetrio",
-            "email": "gihovani@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {        "php": "^7.3 || ^8.0",
-        "ext-curl": "*",
-        "ext-intl": "*",
-        "ext-json": "*",
-        "ext-mbstring": "*",
-        "codeigniter4/framework": "dev-master",
-        "codeigniter4/translations": "4.x-dev"
+  "name": "gg2/maxplural",
+  "description": "Website da incorporadora Max Plural",
+  "type": "project",
+  "homepage": "https://maxplural.com.br",
+  "license": "Apache 2.0",
+  "authors": [
+    {
+      "name": "Gihovani Filipp Pereira Demetrio",
+      "email": "gihovani@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.3 || ^8.0",
+    "ext-curl": "*",
+    "ext-intl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "codeigniter4/framework": "dev-master",
+    "codeigniter4/translations": "4.x-dev"
+  },
+  "require-dev": {
+    "fakerphp/faker": "^1.16",
+    "mikey179/vfsstream": "^1.6",
+    "phpunit/phpunit": "^9.1"
+  }
 }

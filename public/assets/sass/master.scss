@@ -643,6 +643,9 @@ footer .linha-3 a.destaque:hover {
   header.bg-opaco {
     padding: 10px 0;
   }
+  header .mutantMenu > div {
+    padding: 0 8px;
+  }
 }
 
 @media screen and (max-width: 1024px) {

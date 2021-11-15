@@ -2,7 +2,7 @@
 <html lang="pt-BR" dir="ltr">
 <head>
     <title><?= $this->renderSection('title') ?></title>
-    <base id="baseUrl" href="<?= base_url() ?>" />
+    <base id="baseUrl" href="<?= base_url() ?>"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?= $this->renderSection('meta') ?>
@@ -30,42 +30,48 @@
         </div>
         <div class="logo">
             <a href="<?= base_url() ?>">
-                <img src="<?= base_url('assets/imgs/logo.svg') ?>" alt="Logo Max Plural" />
+                <img src="<?= base_url('assets/imgs/logo.svg') ?>" alt="Logo Max Plural"/>
             </a>
         </div>
-        <div class="contact">
+        <a class="contact" href="<?= $config->whatsapp ?>" target="_blank">
             <div>
-                <img src="<?= base_url('assets/imgs/whatsapp-64.png') ?>" alt="Logo WhatsApp" />
+                <img src="<?= base_url('assets/imgs/whatsapp-64.png') ?>" alt="Logo WhatsApp"/>
             </div>
             <div class="contact__text-number">
                 <h4>Fale Conosco</h4>
-                <h4><span class="thin">(81)</span> <strong>9 9827.0035</strong></h4>
+                <h4>
+                    <?php list($ddd, $phone) = explode(' ', $config->telefone_whatsapp) ?>
+                    <?= sprintf('<span class="thin">%s</span> <strong>%s</strong>', $ddd, $phone) ?>
+                </h4>
             </div>
-        </div>
+        </a>
         <div class="social d-flex">
-            <a href="#">
-                <img src="<?= base_url('assets/imgs/facebook-64.svg') ?>" alt="Logo Facebook" />
+            <a href="<?= $config->facebook ?>" target="_blank">
+                <img src="<?= base_url('assets/imgs/facebook-64.svg') ?>" alt="Logo Facebook"/>
             </a>
-            <a href="#">
-                <img src="<?= base_url('assets/imgs/instagram-64.svg') ?>" alt="Logo Instagram" />
+            <a href="<?= $config->instagram ?>" target="_blank">
+                <img src="<?= base_url('assets/imgs/instagram-64.svg') ?>" alt="Logo Instagram"/>
             </a>
-            <a href="#">
-                <img src="<?= base_url('assets/imgs/youtube-64.svg') ?>" alt="Logo Youtube" />
+            <a href="<?= $config->linkedin ?>" target="_blank">
+                <img src="<?= base_url('assets/imgs/linkedin-64.svg') ?>" alt="Logo Linkedin"/>
+            </a>
+            <a href="<?= $config->youtube ?>" target="_blank">
+                <img src="<?= base_url('assets/imgs/youtube-64.svg') ?>" alt="Logo Youtube"/>
             </a>
         </div>
         <div class="central">
-            <a href="<?= base_url('site/contato')?>">
+            <a href="<?= base_url('site/contato') ?>">
                 <h4>Central de Vendas</h4>
                 <h5 class="thin">(Fale conosco)</h5>
             </a>
         </div>
         <div id="headerSearch" class="search">
-            <img class="icon-search" src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search" />
+            <img class="icon-search" src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search"/>
             <form action="">
                 <label for="headerSearchQuery" class="sr-only">E-mail</label>
-                <input id="headerSearchQuery" type="text" placeholder="Procurando por algum empreendimento?" name="q" />
+                <input id="headerSearchQuery" type="text" placeholder="Procurando por algum empreendimento?" name="q"/>
                 <button type="submit">
-                    <img src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search" />
+                    <img src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search"/>
                 </button>
             </form>
         </div>
@@ -95,7 +101,7 @@
     <section id="newsletter">
         <div class="d-flex relative">
             <div>
-                <img src="<?= base_url('assets/imgs/news-max.png') ?>" alt="Newsletter" />
+                <img src="<?= base_url('assets/imgs/news-max.png') ?>" alt="Newsletter"/>
             </div>
             <div id="newsBox">
                 <span>Seu melhor e-mail <span class="nextArrow-icon"></span></span>
@@ -110,10 +116,10 @@
 </main>
 <!-- FOOTER: DEBUG INFO + COPYRIGHTS -->
 <div id="btnwhats" class="container relative">
-    <a href="">
+    <a href="<?= $config->whatsapp ?>">
         <div class="absolute d-flex">
             <span><h4>VAMOS CONVERSAR AGORA?</h4></span>
-            <img src="<?= base_url('assets/imgs/whatsapp-64.png') ?>" alt="Logo WhatsApp" />
+            <img src="<?= base_url('assets/imgs/whatsapp-64.png') ?>" alt="Logo WhatsApp"/>
         </div>
     </a>
 </div>
@@ -122,31 +128,34 @@
         <div class="container d-flex">
             <div class="w-30 text-center">
                 <p class="destaque">PLANTÃO DE VENDAS</p>
-                <h4><span class="thin">(81)</span> <strong>3032.2261</strong></h4>
+                <h4>
+                    <?php list($ddd, $phone) = explode(' ', $config->telefone_fixo) ?>
+                    <?= sprintf('<span class="thin">%s</span> <strong>%s</strong>', $ddd, $phone) ?>
+                </h4>
             </div>
             <div class="w-30  text-center">
                 <a href="<?= base_url() ?>#topo" class="anchor logo backToTop">
-                    <img src="<?= base_url('assets/imgs/logo.svg') ?>" alt="Logo Max Plural" />
+                    <img src="<?= base_url('assets/imgs/logo.svg') ?>" alt="Logo Max Plural"/>
                     <p class="relative">
                         <span>VOLTAR PARA O TOPO</span>
-                        <img class="btt" src="<?= base_url('assets/imgs/prevArrow.svg') ?>" alt="Seta Topo" />
+                        <img class="btt" src="<?= base_url('assets/imgs/prevArrow.svg') ?>" alt="Seta Topo"/>
                     </p>
                 </a>
             </div>
             <div class="w-30 redes text-center">
                 <p class="text-center destaque">ACOMPANHE NOSSOS PERFIS</p>
                 <div class="d-flex">
-                    <a href="#" target="_blank">
-                        <img src="<?= base_url('assets/imgs/facebook-64.svg') ?>" alt="Logo Facebook" />
+                    <a href="<?= $config->facebook ?>" target="_blank">
+                        <img src="<?= base_url('assets/imgs/facebook-64.svg') ?>" alt="Logo Facebook"/>
                     </a>
-                    <a href="#" target="_blank">
-                        <img src="<?= base_url('assets/imgs/instagram-64.svg') ?>" alt="Logo Instagram" />
+                    <a href="<?= $config->instagram ?>" target="_blank">
+                        <img src="<?= base_url('assets/imgs/instagram-64.svg') ?>" alt="Logo Instagram"/>
                     </a>
-                    <a href="#" target="_blank">
-                        <img src="<?= base_url('assets/imgs/linkedin-64.svg') ?>" alt="Logo Linkedin" />
+                    <a href="<?= $config->linkedin ?>" target="_blank">
+                        <img src="<?= base_url('assets/imgs/linkedin-64.svg') ?>" alt="Logo Linkedin"/>
                     </a>
-                    <a href="#" target="_blank">
-                        <img src="<?= base_url('assets/imgs/youtube-64.svg') ?>" alt="Logo Youtube" />
+                    <a href="<?= $config->youtube ?>" target="_blank">
+                        <img src="<?= base_url('assets/imgs/youtube-64.svg') ?>" alt="Logo Youtube"/>
                     </a>
                 </div>
             </div>
@@ -155,10 +164,7 @@
     <div class="linha-2">
         <div class="container d-flex">
             <div class="w-30 text-center">
-                <p>Rua Antonio Lumack de Monte, 128.</p>
-                <p>Salas 1501 e 1502</p>
-                <p>Empresatial Center 3</p>
-                <p>Boa Viagem - Recife/PE - CEP 51020-350</p>
+                <p><?= $config->endereco ?></p>
             </div>
             <div class="w-25 text-center v-divider">
                 <ul class="no-style">
@@ -174,15 +180,16 @@
             </div>
             <div class="w-30 text-center">
                 <p class="destaque mv-2">HORÁRIOS DE FUNCIONAMENTO</p>
-                <p>Segunda-Quinta: 08h ás 18h</p>
-                <p>Sexta: 08h ás 17h</p>
+                <p><?= $config->horario_atendimento ?></p>
             </div>
         </div>
     </div>
     <div class="linha-3">
         <div class="container d-flex">
-            <div class="w-50">© MaxPlural - Todos os direitos reservados | <a href="#" class="destaque">Termos de Privacidade</a></div>
-            <div class="w-40 d-flex"><img class="mh-1" src="<?= base_url('assets/imgs/logo-2.svg') ?>" alt="Logo Explay"> Certificado e desenvolvido por <a href="#" class="destaque mh-1"> Explay Web Agency</a>
+            <div class="w-50">© MaxPlural - Todos os direitos reservados | <a href="<?= base_url('site/privacidade') ?>" class="destaque">Termos de Privacidade</a></div>
+            <div class="w-40 d-flex">
+                <img class="mh-1" src="<?= base_url('assets/imgs/logo-2.svg') ?>" alt="Logo Explay"> Certificado e desenvolvido por
+                <a href="https://www.explay.com.br/" class="destaque mh-1" target="_blank"> Explay Web Agency</a>
             </div>
         </div>
     </div>

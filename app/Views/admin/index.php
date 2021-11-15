@@ -120,7 +120,9 @@ Login - Painel Administrativo
 </div>
 <?= form_open('admin/index') ?>
     <h1>Painel Administrativo</h1>
+    <?php if (isset($validation)): ?>
     <?= $validation->listErrors() ?>
+    <?php endif;?>
 
     <?= form_label('Login', 'login') ?>
     <?= form_input('login', set_value('login'), ['placeholder' => 'Login', 'id' => 'login', 'autofocus' => 'true']) ?>

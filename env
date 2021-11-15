@@ -21,15 +21,16 @@ CI_ENVIRONMENT = development
 # APP
 #--------------------------------------------------------------------
 
-# app.baseURL = 'https://maxplural.com.br/'
+# app.baseURL = 'https://www.maxplural.com.br'
+# app.baseURL = 'http://localhost/maxplural/public/'
 app.baseURL = 'http://localhost:8080/'
 app.indexPage = ''
 app.defaultLocale = 'pt-BR'
 app.appTimezone = 'America/Sao_Paulo'
 app.forceGlobalSecureRequests = false
 
-app.sessionDriver = 'CodeIgniter\Session\Handlers\FileHandler'
-# app.sessionDriver = 'CodeIgniter\Session\Handlers\DatabaseHandler'
+# app.sessionDriver = 'CodeIgniter\Session\Handlers\FileHandler'
+app.sessionDriver = 'CodeIgniter\Session\Handlers\DatabaseHandler'
 app.sessionCookieName = 'mp_session'
 app.sessionExpiration = 0
 app.sessionSavePath = 'mp_sessions'
@@ -43,11 +44,11 @@ app.sessionRegenerateDestroy = false
 # DATABASE
 #--------------------------------------------------------------------
 
-# database.default.hostname = localhost
-# database.default.database = maxplural
-# database.default.username = root
-# database.default.password = root
-# database.default.DBDriver = MySQLi
+database.default.hostname = localhost
+database.default.database = maxplural
+database.default.username = root
+database.default.password =
+database.default.DBDriver = MySQLi
 # database.default.DBPrefix =
 
 # database.tests.hostname = localhost

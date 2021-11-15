@@ -24,7 +24,7 @@ class PaginaModel extends BaseModel
     protected $validationRules = [
         'imagem' => [
             'label' => 'Imagem',
-            'rules' => 'permity_empty'
+            'rules' => 'permit_empty'
         ],
         'tipo' => [
             'label' => 'Tipo',
@@ -48,15 +48,15 @@ class PaginaModel extends BaseModel
         ],
         'palavras_chave' => [
             'label' => 'Palavras-chave',
-            'rules' => 'permity_empty'
+            'rules' => 'permit_empty'
         ],
         'style' => [
             'label' => 'Style/CSS',
-            'rules' => 'permity_empty'
+            'rules' => 'permit_empty'
         ],
         'javascript' => [
             'label' => 'JavaScript',
-            'rules' => 'permity_empty'
+            'rules' => 'permit_empty'
         ],
         'situacao' => [
             'label' => 'Situação',

@@ -13,13 +13,26 @@ class Index extends BaseController
      */
     public function index()
     {
-        helper('form');
-        if ($this->validate([
-            'login' => 'required',
-            'senha' => 'required|min_length[10]'
-        ])) {
-            return redirect()->to('admin/sessions');
+        $myAuth = \Config\Services::myAuth();
+        if ($myAuth->isLoggedIn()) {
+            return redirect()->to('admin/dashboard');
         }
-        return view('admin/index', ['validation' => $this->validator]);
+
+        helper('form');
+        if ($this->request->getMethod() === 'post' && $this->validate([
+            'login' => 'required',
+            'senha' => 'required|valid_admin[{login}]'
+        ])) {
+            return redirect()->to('admin/dashboard');
+        }
+        return view('admin/index', ['validation' =>  \Config\Services::validation()]);
+    }
+
+    public function logout(): RedirectResponse
+    {
+        $myAuth = \Config\Services::myAuth();
+        $myAuth->logout();
+        return redirect()->to('/admin')
+            ->with('success', 'Você foi descontectado com sucesso.');
     }
 }

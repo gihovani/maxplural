@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
+use App\Models\ConfiguracaoModel;
+
 class Site extends BaseController
 {
     public function index(): string
@@ -45,8 +47,10 @@ class Site extends BaseController
         return $this->show('noticia');
     }
 
-    private function show(string $page): string
+    private function show(string $page, array $params = []): string
     {
-        return view('pages/' . $page);
+        $config = new ConfiguracaoModel();
+        $params['config'] = $config->first();
+        return view('pages/' . $page, $params);
     }
 }
