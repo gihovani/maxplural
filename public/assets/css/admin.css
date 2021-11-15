@@ -7,6 +7,14 @@ body header,
 .gc-container header {
   box-shadow: 0 4px 15px #00000055;
 }
+body header .logo,
+.gc-container header .logo {
+  width: 300px;
+}
+body header .logo img,
+.gc-container header .logo img {
+  width: 100%;
+}
 body header, body header ul,
 .gc-container header,
 .gc-container header ul {
@@ -85,6 +93,47 @@ main > div:first-child .gc-add-button-container a:hover {
   border-color: #212529;
 }
 
+@media screen and (max-width: 769px) {
+  header .menu-icon {
+    position: absolute;
+    right: 85px;
+  }
+  header .logo {
+    max-width: 220px;
+  }
+  header .logo img {
+    width: 100%;
+  }
+  header .menu-icon .navicon,
+  header .menu-icon .navicon:after,
+  header .menu-icon .navicon:before {
+    background-color: #fff;
+  }
+}
+@media screen and (max-width: 520px) {
+  header .menu-icon {
+    right: 15px;
+  }
+
+  .gc-filtering-row.even {
+    background-color: #222;
+  }
+
+  .gc-header-tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .gc-header-tools > div:first-child {
+    width: 100%;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 340px) {
+  header .menu-icon {
+    right: 0;
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;

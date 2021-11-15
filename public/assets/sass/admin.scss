@@ -5,6 +5,12 @@ body,
     background-color: var(--gc-grid-background-color);
   }
   header{
+    .logo{
+      width: 300px;
+      img{
+        width: 100%;
+      }
+    }
     box-shadow: 0 4px 15px #00000055;
   }
   header,header ul{
@@ -94,7 +100,55 @@ main{
     }
   }
 }
+@media screen and (max-width: 769px){
+  header {
+    .menu-icon{
+      position: absolute;
+      right: 85px;
+    }
+    .logo {
+      max-width: 220px;
 
+      img {
+        width: 100%;
+      }
+    }
+    .menu-icon {
+      .navicon,
+      .navicon:after,
+      .navicon:before{
+        background-color: #fff;
+      }
+    }
+  }
+}
+@media screen and (max-width: 520px) {
+  header {
+    .menu-icon{
+      right: 15px;
+    }
+  }
+  .gc-filtering-row.even{
+    background-color: #222;
+  }
+  .gc-header-tools{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & > div:first-child{
+      width: 100%;
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  header {
+    .menu-icon{
+      right: 0;
+    }
+  }
+}
 @keyframes fadeIn {
   from{
     opacity: 0;
