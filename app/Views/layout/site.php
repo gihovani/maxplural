@@ -85,7 +85,7 @@
         <li class="closeMenu"><a href="<?= base_url('site/linhas') ?>">NOSSAS LINHAS</a></li>
         <li class="closeMenu"><a href="<?= base_url('site/empreendimentos') ?>">EMPREENDIMENTOS</a></li>
         <li class="closeMenu"><a href="<?= base_url('site/noticias') ?>">NOTÍCIAS</a></li>
-        <li class="closeMenu"><a href="<?= base_url('site/projeto') ?>">PROJETOS</a></li>
+        <!--<li class="closeMenu"><a href="<?= base_url('site/projeto') ?>">PROJETOS</a></li>-->
         <li class="closeMenu"><a href="<?= base_url('site/tabelas-de-valores') ?>">TABELAS DE VALORES</a></li>
         <li class="closeMenu"><a href="<?= base_url('site/contato') ?>">CONTATO</a></li>
     </ul>
@@ -175,7 +175,7 @@
                     <li><a href="<?= base_url('site/linhas') ?>">NOSSAS LINHAS</a></li>
                     <li><a href="<?= base_url('site/empreendimentos') ?>">EMPREENDIMENTOS</a></li>
                     <li><a href="<?= base_url('site/noticias') ?>">NOTÍCIAS</a></li>
-                    <li><a href="<?= base_url('site/projeto') ?>">PROJETOS</a></li>
+                    <!--<li><a href="<?= base_url('site/projeto') ?>">PROJETOS</a></li>-->
                     <li><a href="<?= base_url('site/tabelas-de-valores') ?>">TABELAS DE VALORES</a></li>
                     <li><a href="<?= base_url('site/contato') ?>">CONTATO</a></li>
                 </ul>
