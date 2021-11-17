@@ -6,6 +6,7 @@
 
 <?= $this->section('styles')?>
     <link rel="stylesheet" href="<?= base_url('assets/css/noticias.min.css')?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/pagination.min.css') ?>"/>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>

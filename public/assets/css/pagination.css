@@ -1,0 +1,45 @@
+.pagination {
+  padding: 50px;
+}
+.pagination .prev, .pagination .next {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #555;
+  background-size: 20%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.pagination .prev {
+  background-image: url("../imgs/prevArrow.svg");
+  margin-right: 3vw;
+}
+.paginationItens a {
+  transition: all .3s;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+  line-height: 2;
+}
+.paginationItens a:hover, .paginationItens a.active {
+  background-color: #111;
+  color: #fff !important;
+}
+.pagination .next {
+  background-image: url("../imgs/nextArrow.svg");
+  background-position: 55% center;
+  margin-left: 3vw;
+}
+
+@media screen and (max-width: 769px) {
+  section .pagination {
+    padding: 50px 0;
+  }
+  section .paginationItens a {
+    width: 20px;
+    height: 20px;
+  }
+}

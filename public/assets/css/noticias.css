@@ -142,41 +142,6 @@ section#blog-box .conteudo .leia-mais:hover {
 section#blog-box .conteudo .leia-mais:hover:after {
   filter: brightness(30%) invert(1);
 }
-section#blog-box .pagination {
-  padding: 50px;
-}
-section#blog-box .pagination .prev, section#blog-box .pagination .next {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: #555;
-  background-size: 20%;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-section#blog-box .pagination .prev {
-  background-image: url("../imgs/prevArrow.svg");
-  margin-right: 3vw;
-}
-section#blog-box .paginationItens a {
-  transition: all .3s;
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin: 0 5px;
-  line-height: 2;
-}
-section#blog-box .paginationItens a:hover {
-  background-color: #111;
-  color: #fff;
-}
-section#blog-box .pagination .next {
-  background-image: url("../imgs/nextArrow.svg");
-  background-position: 55% center;
-  margin-left: 3vw;
-}
 
 @media screen and (max-width: 1201px) {
   section#blog-box .conteudo .post-destaque .img-post img {
@@ -244,12 +209,5 @@ section#blog-box .pagination .next {
   section#blog-box .conteudo .post {
     margin: 20px auto;
     width: 97%;
-  }
-  section#blog-box .pagination {
-    padding: 50px 0;
-  }
-  section#blog-box .paginationItens a {
-    width: 20px;
-    height: 20px;
   }
 }
