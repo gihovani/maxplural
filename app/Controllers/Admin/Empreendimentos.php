@@ -33,6 +33,15 @@ class Empreendimentos extends CrudAbstract
         $crud->displayAs('situacao', 'Situação');
         $crud->fieldType('situacao', 'dropdown', ['Inativo', 'Ativo']);
         $crud->setRule('situacao', 'in', [[0, 1]]);
+        $crud->setActionButton('Imagens', 'fa fa-picture-o', function ($row) {
+            return 'empreendimentoImagens/index/' . $row->id;
+        }, false);
+        $crud->setActionButton('Arquivos', 'fa fa-dropbox', function ($row) {
+            return 'empreendimentoArquivos/index/' . $row->id;
+        }, false);
+        $crud->setActionButton('Status', 'fa fa-sliders', function ($row) {
+            return 'empreendimentoStatus/index/' . $row->id;
+        }, false);
         $crud->callbackBeforeInsert(function ($stateParameters) {
             $admin = new EmpreendimentoModel();
             $stateParameters->data = $admin->defineValor((array)$stateParameters)['data'];
