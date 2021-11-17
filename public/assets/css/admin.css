@@ -32,9 +32,7 @@ body header li a:hover, body header ul li a:hover,
 .gc-container header ul li a:hover {
   background-color: #111;
 }
-.gc-container .modal {
-  overflow: initial;
-}
+
 body {
   background-color: #333;
 }

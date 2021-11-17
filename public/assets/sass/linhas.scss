@@ -14,7 +14,7 @@ section{
     *{
       color: var(--main-bg-color);
     }
-    &-cards{
+    .linhas-cards{
       .linhas-cards__card{
         background-color: #F5F5F5;
         border-radius: 80px;
@@ -40,9 +40,9 @@ section{
 @media screen and (max-width: 1200px){
   #content{
     &.linhas{
-      .linhas{
-        &-cards{
-          &__card:nth-child(-n+3){
+      .linhas-cards {
+        .linhas-cards__card {
+          &:nth-child(-n+3){
             & > div{
               img{
                 max-height: 55px;
@@ -57,14 +57,12 @@ section{
 
 @media screen and (max-width: 769px){
   #content{
-    &.linhas {
-      .linhas{
-        &-cards{
-          &__card{
-            width: 47%;
-            & > div{
-              min-height: 225px;
-            }
+    &.linhas{
+      .linhas-cards {
+        .linhas-cards__card{
+          width: 47%;
+          & > div{
+            min-height: 225px;
           }
         }
       }
@@ -74,14 +72,12 @@ section{
 
 @media screen and (max-width: 420px){
   #content{
-    &.linhas {
-      .linhas{
-        &-cards{
-          &__card{
-            width: 97%;
-            & > div{
-              min-height: 180px;
-            }
+    &.linhas{
+      .linhas-cards {
+        .linhas-cards__card{
+          width: 97%;
+          & > div{
+            min-height: 180px;
           }
         }
       }

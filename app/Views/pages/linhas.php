@@ -5,6 +5,8 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
+
+<link rel="stylesheet" href="<?= base_url('assets/css/linhas.min.css') ?>"/>
 <style>
     <?= $pagina->style ?>
 </style>
@@ -30,7 +32,6 @@
                     <h3 class="sr-only"><?=$linha->titulo?></h3>
                     <p><?=$linha->descricao?></p>
                 </div>
-                <hr/>
             </div>
             <?php endforeach;?>
         </div>
