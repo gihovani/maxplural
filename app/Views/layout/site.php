@@ -67,13 +67,13 @@
         </div>
         <div id="headerSearch" class="search">
             <img class="icon-search" src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search"/>
-            <form action="">
-                <label for="headerSearchQuery" class="sr-only">E-mail</label>
+            <?= form_open('site/noticias', ['method' => 'get']) ?>
+                <label for="headerSearchQuery" class="sr-only">Termo</label>
                 <input id="headerSearchQuery" type="text" placeholder="Procurando por algum empreendimento?" name="q"/>
                 <button type="submit">
                     <img src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search"/>
                 </button>
-            </form>
+            <?= form_close() ?>
         </div>
     </div>
     <?= $this->renderSection('header') ?>
@@ -105,11 +105,11 @@
             </div>
             <div id="newsBox">
                 <span>Seu melhor e-mail <span class="nextArrow-icon"></span></span>
-                <form action="">
+                <?= form_open('#form', ['name' => 'form']) ?>
                     <label for="newsBoxEmail" class="sr-only">E-mail</label>
                     <input type="text" id="newsBoxEmail" placeholder="exemplo@dominio.com" name="email">
                     <button type="submit">Enviar</button>
-                </form>
+                <?= form_close() ?>
             </div>
         </div>
     </section>

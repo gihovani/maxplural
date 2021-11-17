@@ -41,28 +41,34 @@ Página Inicial
         </ul>
     </div>
 </section>
+<?php if (isset($destaques) && count($destaques)): ?>
 <section id="empreendimentos" class="relative">
     <div class="navegacao">
-        <a href="#" class="relative">Lançamentos <span class="nextArrow-icon"></span></a>
-        <a href="#" class="relative">Obras entregues <span class="nextArrow-icon"></span></a>
-        <a href="#" class="relative">Obras em andamento <span class="nextArrow-icon"></span></a>
+        <a class="relative" href="<?= site_url('site/noticias/?q=Lancamentos') ?>">Lançamentos <span class="nextArrow-icon"></span></a>
+        <a class="relative" href="<?= site_url('site/noticias/?q=Entregue') ?>">Obras Entregues <span class="nextArrow-icon"></span></a>
+        <a class="relative" href="<?= site_url('site/noticias/?q=Construcao') ?>">Obras em Construção <span class="nextArrow-icon"></span></a>
     </div>
     <div class="empreendimentos__box d-flex">
-        <?php for($i=1;$i<=4;$i++):?>
+        <?php foreach ($destaques as $i => $emp):?>
         <div class="item relative" data-item="item<?= $i ?>">
-            <img src="<?= base_url('assets/imgs/empreendimento/item-'. $i .'.png')?>" alt="Empreendimento <?= $i?>" />
+            <img src="<?= base_url(\App\Models\EmpreendimentoModel::IMG_PATH . $emp->imagem)?>" alt="<?= $emp->titulo?>" />
             <div class="hover">
-                <img src="<?= base_url('assets/imgs/marcas/m-derby-logo.svg')?>" alt="Derby Logo" />
-                <div class="local relative"><i>Boa viagem</i></div>
+<!--                <img src="<?= base_url('assets/imgs/marcas/m-derby-logo.svg')?>" alt="Derby Logo" />-->
+                <div class="local relative"><i><?= $emp->titulo?></i></div>
+                <?php $caracteristicas = explode(',', $emp->palavras_chave) ?>
                 <ul class="desc">
-                    <li class="quartos relative">3 suites</li>
+                    <?php foreach ($caracteristicas as $c) :?>
+                    <?php list($key, $value) = explode(':', $c);?>
+                    <li class="<?= $key;?> relative"><?= $value;?></li>
+                    <?php endforeach; ?>
                 </ul>
-                <a href="#" class="saiba-mais relative">Saiba mais <span class="nextArrow-icon"></span></a>
+                <a href="<?= base_url('site/empreendimento/'.$emp->slug) ?>" class="saiba-mais relative">Saiba mais <span class="nextArrow-icon"></span></a>
             </div>
         </div>
-        <?php endfor;?>
+        <?php endforeach;?>
     </div>
 </section>
+<?php endif; ?>
 <section id="sobre" class="relative">
     <div class="content d-flex">
         <div class="texto d-flex">
@@ -88,33 +94,35 @@ Página Inicial
             </div>
         </div>
         <div class="links relative">
-            <a href="#" class="relative">Nossa História <span class="nextArrow-icon"></span></a>
-            <a href="#" class="relative">Diferenciais <span class="nextArrow-icon"></span></a>
+            <a href="<?= base_url('site/sobre') ?>#historia" class="relative">Nossa História <span class="nextArrow-icon"></span></a>
+            <a href="<?= base_url('site/sobre') ?>#diferenciais" class="relative">Diferenciais <span class="nextArrow-icon"></span></a>
         </div>
     </div>
 </section>
+<?php if (isset($empreendimentos) && count($empreendimentos)): ?>
 <section id="noticias" class="relative">
     <div class="container">
         <div class="noticias-header d-flex">
-            <h4 class="thin"><i>Notícias e novidades para você</i></h4>
-            <a href="#" class="relative">Ir para o Blog <span class="nextArrow-icon dark"></span></a>
+            <h4 class="thin"><i>Novidades para você</i></h4>
+            <a href="<?= base_url('site/noticias') ?>" class="relative">Ir para o Blog <span class="nextArrow-icon dark"></span></a>
         </div>
         <div class="noticias-content">
             <div class="slider-3">
-                <?php for($i=1;$i<=3;$i++):?>
+                <?php foreach ($empreendimentos as $emp):?>
                 <div>
-                    <a href="#">
-                        <img class="w-100" src="<?= base_url('assets/imgs/noticias/noticia-' . $i . '.png')?>" alt="Notícia <?= $i ?>" />
+                    <a href="<?= base_url('site/empreendimento/'.$emp->slug) ?>">
+                        <img class="w-100" src="<?= base_url(\App\Models\EmpreendimentoModel::IMG_PATH . $emp->imagem)?>" alt="<?= $emp->titulo ?>" />
                         <div class="noticias-content__box">
-                            <p class="noticias-content__title">Lorem ipsum dolor sit amet, consectetur adispiscing elit, sed do eiusmod</p>
-                            <p class="noticias-content__desc">Lorem ipsum dolor sit amet, consectetur adispiscing elit, sed tempor incidunt</p>
+                            <p class="noticias-content__title"><?= $emp->titulo ?></p>
+                            <p class="noticias-content__desc"><?= $emp->descricao ?></p>
                             <p class="relative">saiba mais <span class="nextArrow-icon dark"></span></p>
                         </div>
                     </a>
                 </div>
-                <?php endfor;?>
+                <?php endforeach;?>
             </div>
         </div>
     </div>
 </section>
+<?php endif;?>
 <?= $this->endSection() ?>

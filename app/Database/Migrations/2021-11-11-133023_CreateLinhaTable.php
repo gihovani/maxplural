@@ -4,9 +4,9 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class CreatePaginaTable extends Migration
+class CreateLinhaTable extends Migration
 {
-    private $table = 'pagina';
+    private $table = 'linha';
 
     public function up()
     {
@@ -17,53 +17,25 @@ class CreatePaginaTable extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'tipo' => [
-                'type' => 'ENUM',
-                'constraint' => ['Página', 'Notícias'],
-                'default' => 'pagina',
-            ],
             'imagem' => [
                 'type' => 'VARCHAR',
                 'constraint' => '100',
                 'null' => true
             ],
-            'slug' => [
+            'titulo' => [
                 'type' => 'VARCHAR',
                 'constraint' => '100',
                 'null' => false,
                 'unique' => true
             ],
-            'titulo' => [
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-                'null' => false
-            ],
-            'palavras_chave' => [
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-                'null' => true
-            ],
             'descricao' => [
-                'type' => 'VARCHAR',
-                'constraint' => '200',
+                'type' => 'TEXT',
                 'null' => false
             ],
-            'conteudo' => [
-                'type' => 'LONGTEXT',
+            'prioridade' => [
+                'type' => 'INT',
+                'constraint' => 11,
                 'null' => false
-            ],
-            'style' => [
-                'type' => 'TEXT',
-                'null' => true
-            ],
-            'javascript' => [
-                'type' => 'TEXT',
-                'null' => true
-            ],
-            'situacao' => [
-                'type' => 'ENUM',
-                'constraint' => ['1', '0'],
-                'default' => '1',
             ],
             'updated_at datetime default current_timestamp on update current_timestamp',
             'created_at datetime default current_timestamp',

@@ -18,89 +18,69 @@
     <div class="container">
         <div class="filtros_e_buscas d-flex">
             <div>
-                <span>Categorias</span>
-                <a class="mh-1" href="">TODOS</a>
-                <a class="mh-1" href="">EMPREENDIMENTOS</a>
-                <a class="mh-1" href="">EVENTOS</a>
+                <span>Categorias:</span>
+                <a class="mh-1" href="<?= site_url('site/noticias/?q=Lancamentos') ?>">Lançamentos</a>
+                <a class="mh-1" href="<?= site_url('site/noticias/?q=Entregue') ?>">Entregues</a>
+                <a class="mh-1" href="<?= site_url('site/noticias/?q=Construcao') ?>">Em Construção</a>
             </div>
             <div>
                 <form id="searchPost" class="relative" action="">
-                    <input type="text" placeholder="o que você procura?">
+                <?= form_open('site/noticias/', ['id' => 'searchPost', 'method' => 'get', 'class' => 'relative']);?>
+                <label for="searchPostInput" class="sr-only">Termo</label>
+                    <input type="text" placeholder="o que você procura?" id="searchPostInput" />
                     <button class="d-flex" type="submit"><img class="icon-search" src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search" /></button>
-                </form>
+                <?= form_close(); ?>
             </div>
         </div>
+        <?php if (isset($empreendimentos) && count($empreendimentos)): ?>
+        <?php $emp = array_shift($empreendimentos);?>
         <div class="d-flex conteudo">
             <div class="post-destaque d-flex w-100">
                 <div class="w-50 img-post d-flex">
-                    <img class="w-100" src="<?= base_url('/assets/imgs/blog/img-post-destaque.png')?>" alt="">
+                    <img class="w-100" src="<?= base_url(\App\Models\EmpreendimentoModel::IMG_PATH . $emp->imagem)?>" alt="<?= $emp->titulo?>">
                 </div>
                 <div class="w-50">
                     <div class="post-descricao">
                         <div class="post-descricao__info d-flex">
-                            <span class="cat">categoria</span>
-                            <span class="data">{{tempo}} minutos atrás</span>
+                            <span class="cat"><?= $emp->tipo;?></span>
+                            <span class="data"><?= $emp->created_at; ?></span>
                         </div>
                         <div class="post-descricao__content">
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis</h3>
-                            <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis ipsum massa. Vestibulum consectetur eleifend dictum. Sed libero quam, tempor vel tellus eget, sodales tincidunt lacus. Etiam sit amet tristique metus, vitae molestie erat. Duis blandit orci vel blandit maximus. Suspendisse potenti. Mauris non condimentum neque, vitae laoreet sem. Ut pharetra posuere tortor vel pulvinar. Mauris condimentum arcu justo, nec tempus nibh euismod id.</p>
-                            <a href="<?= base_url('site/noticia')?>" class="leia-mais">Leia mais</a>
+                            <h3><?= $emp->titulo?></h3>
+                            <p class="truncate"><?= $emp->descricao ?></p>
+                            <a href="<?= base_url('site/empreendimento/'.$emp->slug) ?>" class="leia-mais">Leia mais</a>
                         </div>
                     </div>
                 </div>
             </div>
+            <?php foreach ($empreendimentos as $emp) : ?>
             <div class="post">
-                <a href="<?= base_url('site/noticia') ?>">
-                    <img src="<?= base_url('/assets/imgs/blog/img-post-destaque.png')?>" alt="">
+                <a href="<?= base_url('site/empreendimento/'.$emp->slug) ?>">
+                    <div class="w-100 img-post2 d-flex">
+                        <img src="<?= base_url(\App\Models\EmpreendimentoModel::IMG_PATH . $emp->imagem)?>" alt="<?= $emp->titulo?>">
+                    </div>
                     <div class="post-descricao__info">
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis</h3>
-                        <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis ipsum massa. Vestibulum consectetur eleifend dictum. Sed libero quam, tempor vel tellus eget, sodales tincidunt lacus. Etiam sit amet tristique metus, vitae molestie erat. Duis blandit orci vel blandit maximus. Suspendisse potenti. Mauris non condimentum neque, vitae laoreet sem. Ut pharetra posuere tortor vel pulvinar. Mauris condimentum arcu justo, nec tempus nibh euismod id.</p>
+                        <h3><?= $emp->titulo?></h3>
+                        <p class="truncate"><?= $emp->descricao ?></p>
                         <span class="leia-mais">Leia mais</span>
                     </div>
                 </a>
             </div>
-            <div class="post">
-                <a href="<?= base_url('site/noticia') ?>">
-                    <img src="<?= base_url('/assets/imgs/blog/img-post-destaque.png')?>" alt="">
-                    <div class="post-descricao__info">
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis</h3>
-                        <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis ipsum massa. Vestibulum consectetur eleifend dictum. Sed libero quam, tempor vel tellus eget, sodales tincidunt lacus. Etiam sit amet tristique metus, vitae molestie erat. Duis blandit orci vel blandit maximus. Suspendisse potenti. Mauris non condimentum neque, vitae laoreet sem. Ut pharetra posuere tortor vel pulvinar. Mauris condimentum arcu justo, nec tempus nibh euismod id.</p>
-                        <span class="leia-mais">Leia mais</span>
-                    </div>
-                </a>
-            </div>
-            <div class="post">
-                <a href="<?= base_url('site/noticia') ?>">
-                    <img src="<?= base_url('/assets/imgs/blog/img-post-destaque.png')?>" alt="">
-                    <div class="post-descricao__info">
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis</h3>
-                        <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis ipsum massa. Vestibulum consectetur eleifend dictum. Sed libero quam, tempor vel tellus eget, sodales tincidunt lacus. Etiam sit amet tristique metus, vitae molestie erat. Duis blandit orci vel blandit maximus. Suspendisse potenti. Mauris non condimentum neque, vitae laoreet sem. Ut pharetra posuere tortor vel pulvinar. Mauris condimentum arcu justo, nec tempus nibh euismod id.</p>
-                        <span class="leia-mais">Leia mais</span>
-                    </div>
-                </a>
-            </div>
-            <div class="post">
-                <a href="">
-                    <img src="<?= base_url('/assets/imgs/blog/img-post-destaque.png')?>" alt="">
-                    <div class="post-descricao__info">
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis</h3>
-                        <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium porttitor nulla non dapibus. Proin quis ipsum massa. Vestibulum consectetur eleifend dictum. Sed libero quam, tempor vel tellus eget, sodales tincidunt lacus. Etiam sit amet tristique metus, vitae molestie erat. Duis blandit orci vel blandit maximus. Suspendisse potenti. Mauris non condimentum neque, vitae laoreet sem. Ut pharetra posuere tortor vel pulvinar. Mauris condimentum arcu justo, nec tempus nibh euismod id.</p>
-                        <span class="leia-mais">Leia mais</span>
-                    </div>
-                </a>
+            <?php endforeach; ?>
+        </div>
+        <?php if (isset($pager)) :?>
+        <?= $pager->links() ?>
+        <?php endif; ?>
+        <?php else: ?>
+        <div class="d-flex conteudo">
+            <div class="w-100 text-center">
+                <h3>Nenhum registro encontrado.</h3>
+                <p>
+                    Verifique os parâmetros informados e tente novamente.
+                </p>
             </div>
         </div>
-        <div class="pagination d-flex">
-            <span class="prev"></span>
-            <div class="paginationItens d-flex">
-                <a href="">1</a>
-                <a href="">2</a>
-                <a href="">3</a>
-                <a href="">4</a>
-                <a href="">5</a>
-            </div>
-            <span class="next"></span>
-        </div>
+        <?php endif; ?>
     </div>
 </section>
 <?= $this->endSection() ?>

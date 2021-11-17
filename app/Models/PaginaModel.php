@@ -28,7 +28,7 @@ class PaginaModel extends BaseModel
         ],
         'tipo' => [
             'label' => 'Tipo',
-            'rules' => 'required|in_list[pagina,noticias,empreendimentos]'
+            'rules' => 'required|in_list[Página,Notícias]'
         ],
         'titulo' => [
             'label' => 'Título',
@@ -81,7 +81,7 @@ class PaginaModel extends BaseModel
         }
         $data['data']['slug'] = $slug;
         $data['data']['situacao'] = $data['data']['situacao'] ?? '0';
-        $data['data']['tipo'] = $data['data']['tipo'] ?? 'pagina';
+        $data['data']['tipo'] = $data['data']['tipo'] ?? 'Página';
 
         return $data;
     }

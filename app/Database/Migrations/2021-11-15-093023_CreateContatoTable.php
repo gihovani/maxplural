@@ -4,9 +4,9 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class CreatePaginaTable extends Migration
+class CreateContatoTable extends Migration
 {
-    private $table = 'pagina';
+    private $table = 'contato';
 
     public function up()
     {
@@ -17,59 +17,42 @@ class CreatePaginaTable extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'tipo' => [
-                'type' => 'ENUM',
-                'constraint' => ['Página', 'Notícias'],
-                'default' => 'pagina',
-            ],
-            'imagem' => [
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-                'null' => true
-            ],
-            'slug' => [
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-                'null' => false,
-                'unique' => true
-            ],
-            'titulo' => [
+            'nome' => [
                 'type' => 'VARCHAR',
                 'constraint' => '100',
                 'null' => false
             ],
-            'palavras_chave' => [
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-                'null' => true
-            ],
-            'descricao' => [
+            'email' => [
                 'type' => 'VARCHAR',
                 'constraint' => '200',
                 'null' => false
             ],
-            'conteudo' => [
-                'type' => 'LONGTEXT',
+            'telefone' => [
+                'type' => 'VARCHAR',
+                'constraint' => '20',
+                'null' => true
+            ],
+            'assunto' => [
+                'type' => 'VARCHAR',
+                'constraint' => '200',
                 'null' => false
             ],
-            'style' => [
+            'mensagem' => [
                 'type' => 'TEXT',
                 'null' => true
             ],
-            'javascript' => [
-                'type' => 'TEXT',
-                'null' => true
-            ],
-            'situacao' => [
-                'type' => 'ENUM',
-                'constraint' => ['1', '0'],
-                'default' => '1',
+            'empreendimento_id' => [
+                'type' => 'INT',
+                'constraint' => 11,
+                'unsigned' => true,
+                'null' => false
             ],
             'updated_at datetime default current_timestamp on update current_timestamp',
             'created_at datetime default current_timestamp',
             'deleted_at datetime default null'
         ]);
         $this->forge->addPrimaryKey('id');
+        $this->forge->addForeignKey('empreendimento_id', 'empreendimento', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable($this->table);
     }
 

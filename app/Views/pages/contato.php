@@ -1,7 +1,7 @@
 <?= $this->extend('layout/site') ?>
 
 <?= $this->section('title') ?>
-    Contato
+Fale Conosco
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
@@ -22,17 +22,17 @@
             <div class="corretor">
                 <h2 class="text-center">CONVERSE AGOR COM<br />UM CORRETOR MAXPLURAL</h2>
                 <div class="contato-btns">
-                    <a href="" class="contato d-flex">
-                        <img class="icon-invert" src="<?= base_url('assets/imgs/whatsapp-64.png')?>" alt="">
+                    <a href="<?= $config->whatsapp ?>" class="contato d-flex">
+                        <img class="icon-invert" src="<?= base_url('assets/imgs/whatsapp-64.png')?>" alt="whatsapp">
                         <div>
                             <h4>Whatsapp:</h4>
-                            <p>(00) 0 0000 0000</p>
+                            <p><?= $config->telefone_whatsapp ?></p>
                         </div>
                     </a>
                 </div>
                 <div class="contato-btns">
-                    <a href="" class="contato d-flex">
-                        <img src="<?= base_url('assets/imgs/chat-icon.svg')?>" alt="">
+                    <a href="<?= $config->chat_online ?>" class="contato d-flex">
+                        <img src="<?= base_url('assets/imgs/chat-icon.svg')?>" alt="chat">
                         <div class="relative">
                             <h4>Chat Online:</h4>
                             <p>Fale com um<br/>atendente</p>
@@ -40,8 +40,8 @@
                     </a>
                 </div>
                 <div class="contato-btns">
-                    <a href="" class="contato d-flex">
-                        <img src="<?= base_url('assets/imgs/contato/atendente-icon.svg')?>" alt="">
+                    <a href="<?= $config->central_vendas ?>" class="contato d-flex">
+                        <img src="<?= base_url('assets/imgs/contato/atendente-icon.svg')?>" alt="atendente">
                         <div>
                             <h4>Central de Vendas:</h4>
                             <p>Nós ligamos pra você</p>
@@ -52,19 +52,19 @@
             <div class="form">
                 <h2 class="text-center">Fale com a gente</h2>
                 <h3 class="text-center thin">Envie sua mensagem no formulário a seguir</h3>
-                <form action="" class="d-flex">
+                <?= form_open('site/contato', ['class' => 'd-flex', 'name' => 'form']) ?>
                     <input type="hidden" class="select-input-1" id="setor" name="setor" value="">
                     <div class="formgroup w-100">
-                        <label for="nome">NOME:</label>
-                        <input type="text" id="nome" name="nome" required>
+                        <label for="form-nome">NOME:</label>
+                        <input type="text" id="form-nome" name="nome" required>
                     </div>
                     <div class="formgroup w-50">
-                        <label for="telefone">TELEFONE:</label>
-                        <input type="text" class="telefone" id="telefone" name="telefone" required>
+                        <label for="form-telefone">TELEFONE:</label>
+                        <input type="text" class="telefone" id="form-telefone" name="telefone" required>
                     </div>
                     <div class="formgroup w-50">
-                        <label for="email">E-MAIL:</label>
-                        <input type="email" required>
+                        <label for="form-email">E-MAIL:</label>
+                        <input type="email" id="form-email" name="email" required>
                     </div>
                     <div class="input-group empreendimentos-tabelas w-100">
                         <label>ÁREA QUE DESEJA FALAR:</label>
@@ -80,18 +80,18 @@
                         <span class="dropdown-button" data-select-id="1"><img src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt=""></span>
                     </div>
                     <div class="formgroup w-100">
-                        <label for="mensagem">MENSAGEM:</label>
-                        <textarea name="mensagem" id="mensagem" rows="6" required></textarea>
+                        <label for="form-mensagem">MENSAGEM:</label>
+                        <textarea name="mensagem" id="form-mensagem" rows="6" required></textarea>
                     </div>
                     <div class="w-100 d-flex last-form-section">
                         <span>Ao clicar em enviar, você concorda com os termos de uso e política de privacidade da Rottas Construtora e Incorporadora.</span>
-                        <button class="default-btn" type="submit" onclick="submitForm(this)">ENVIAR</button>
+                        <button class="default-btn" type="submit">ENVIAR</button>
                     </div>
-                </form>
+                <?= form_close() ?>
                 <div class="card">
                     <div class="card-success">
                         <h3 class="pv-3 mv-3 text-center">MENSAGEM ENVIADA COM SUCESSO!</h3>
-                        <img style="width: 150px;margin: auto; display: block;" src="<?= base_url('assets/imgs/sucess.svg')?>" />
+                        <img style="width: 150px;margin: auto; display: block;" src="<?= base_url('assets/imgs/sucess.svg')?>" alt="Mensagem Enviada com Sucesso" />
                     </div>
                 </div>
             </div>

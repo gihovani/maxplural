@@ -49,6 +49,10 @@ section#blog-box .filtros_e_buscas #searchPost button img {
 section#blog-box .conteudo {
   justify-content: space-between;
 }
+section#blog-box .conteudo .img-post2 {
+  height: 250px;
+  overflow: hidden;
+}
 section#blog-box .conteudo .post-destaque {
   width: 100%;
   border-radius: 70px;
@@ -58,7 +62,7 @@ section#blog-box .conteudo .post-destaque {
 }
 section#blog-box .conteudo .post-destaque .img-post {
   overflow: hidden;
-  min-height: 388px;
+  height: 350px;
 }
 section#blog-box .conteudo .post-destaque .img-post img {
   transform: scale(1.2);
@@ -190,11 +194,14 @@ section#blog-box .pagination .next {
     display: block;
     text-align: center;
   }
+  section#blog-box .conteudo .img-post2 {
+    height: 150px;
+  }
   section#blog-box .conteudo .post-destaque > div:first-child {
     max-width: 30%;
   }
   section#blog-box .conteudo .post-destaque > div:first-child.img-post {
-    min-height: 298px;
+    height: 250px;
   }
   section#blog-box .conteudo .post-destaque > div:first-child.img-post img {
     transform: scale(2.4);

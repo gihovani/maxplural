@@ -4,9 +4,9 @@
 Empreendimentos
 <?= $this->endSection() ?>
 
-<?= $this->section('styles')?>
-<link rel="stylesheet" href="<?= base_url('assets/css/empreendimentos.min.css')?>" />
-<link rel="stylesheet" href="<?= base_url('assets/css/tabs.min.css')?>" />
+<?= $this->section('styles') ?>
+<link rel="stylesheet" href="<?= base_url('assets/css/empreendimentos.min.css') ?>"/>
+<link rel="stylesheet" href="<?= base_url('assets/css/tabs.min.css') ?>"/>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
@@ -15,34 +15,32 @@ Empreendimentos
         <h1 class="title"><i>EMPREENDIMENTOS</i></h1>
     </div>
 </section>
-
-<section id="content" class="pv-3 empreendimentos">
-    <div class="container">
-        <div id="tabs" class="empreendimentos__tabs d-flex">
-            <div class="tab active" id="tab-1">ENTREGUES</div>
-            <div class="tab" id="tab-2">OBRAS EM ANDAMENTO</div>
-            <div class="tab" id="tab-3">LANÇAMENTOS</div>
-        </div>
-        <div class="empreendimentos__contents pv-3">
-            <div class="empreendimentos__contents--content tab-content active" data-target="tab-1">
-                <div class="d-flex">
-                    <?php for($i=1;$i<=6;$i++):?>
-                    <div class="w-30 pv-1 ph-1 item">
-                        <a href="#">
-                            <img src="<?= base_url('assets/imgs/empreendimento/emp-' . $i . '.png')?>" alt="Empreendimento <?= $i ?>" class="w-100" />
-                        </a>
+<?php if (isset($empreendimentos) && count($empreendimentos)): ?>
+    <section id="content" class="pv-3 empreendimentos">
+        <div class="container">
+            <div id="tabs" class="empreendimentos__tabs d-flex">
+                <div class="tab <?= $active === 'Lancamentos' ? 'active' : '';?>"><a href="<?= site_url('site/empreendimentos/?q=Lancamentos') ?>">Lançamentos</a></div>
+                <div class="tab <?= $active === 'Entregue' ? 'active' : '';?>"><a href="<?= site_url('site/empreendimentos/?q=Entregue') ?>">Entregues</a></div>
+                <div class="tab <?= $active === 'Construcao' ? 'active' : '';?>"><a href="<?= site_url('site/empreendimentos/?q=Construcao') ?>">Em Construção</a></div>
+            </div>
+            <div class="empreendimentos__contents pv-3">
+                <div class="empreendimentos__contents--content tab-content active">
+                    <div class="d-flex">
+                        <?php foreach ($empreendimentos as $emp): ?>
+                            <div class="w-30 pv-1 ph-1 item">
+                                <a href="<?= base_url('site/empreendimento/' . $emp->slug) ?>">
+                                    <img class="w-100" src="<?= base_url(\App\Models\EmpreendimentoModel::IMG_PATH . $emp->imagem) ?>" alt="<?= $emp->titulo ?>"/>
+                                    <h3><?= $emp->titulo; ?></h3>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                    <?php endfor;?>
-
                 </div>
             </div>
-            <div class="empreendimentos__contents--content tab-content" data-target="tab-2">
-                t2
-            </div>
-            <div class="empreendimentos__contents--content tab-content" data-target="tab-3">
-                t3
-            </div>
         </div>
-    </div>
-</section>
+        <?php if (isset($pager)) :?>
+            <?= $pager->links() ?>
+        <?php endif; ?>
+    </section>
+<?php endif; ?>
 <?= $this->endSection() ?>

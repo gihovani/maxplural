@@ -17,18 +17,3 @@ $(function () {
         fakeInput.attr('data-selected', itemSelecionado);
     })
 });
-
-function submitForm(button) {
-    let formSubmetido = button.closest('form');
-
-    if (1 === 1) {
-        formSubmetido.classList.add('sucesso');
-
-        setTimeout(function () {
-            formSubmetido.remove();
-            $('.card').addClass('show');
-        }, 1000);
-    } else {
-        $('.formgroup,.input-group').append('<span class="error">dado inválido ou incorreto</span>');
-    }
-}

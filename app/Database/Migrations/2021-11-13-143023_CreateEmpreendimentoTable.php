@@ -4,9 +4,9 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class CreatePaginaTable extends Migration
+class CreateEmpreendimentoTable extends Migration
 {
-    private $table = 'pagina';
+    private $table = 'empreendimento';
 
     public function up()
     {
@@ -17,14 +17,25 @@ class CreatePaginaTable extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
+            'linha_id' => [
+                'type' => 'INT',
+                'constraint' => 11,
+                'unsigned' => true,
+                'null' => false,
+            ],
             'tipo' => [
                 'type' => 'ENUM',
-                'constraint' => ['Página', 'Notícias'],
-                'default' => 'pagina',
+                'constraint' => ['Lançamento', 'Entregue', 'Construção'],
+                'default' => 'Lançamento',
             ],
             'imagem' => [
                 'type' => 'VARCHAR',
                 'constraint' => '100',
+                'null' => true
+            ],
+            'video' => [
+                'type' => 'VARCHAR',
+                'constraint' => '200',
                 'null' => true
             ],
             'slug' => [
@@ -52,6 +63,18 @@ class CreatePaginaTable extends Migration
                 'type' => 'LONGTEXT',
                 'null' => false
             ],
+            'especificacoes_tecnicas' => [
+                'type' => 'TEXT',
+                'null' => true
+            ],
+            'endereco' => [
+                'type' => 'TEXT',
+                'null' => true
+            ],
+            'google_map' => [
+                'type' => 'TEXT',
+                'null' => true
+            ],
             'style' => [
                 'type' => 'TEXT',
                 'null' => true
@@ -70,6 +93,7 @@ class CreatePaginaTable extends Migration
             'deleted_at datetime default null'
         ]);
         $this->forge->addPrimaryKey('id');
+        $this->forge->addForeignKey('linha_id', 'linha', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable($this->table);
     }
 

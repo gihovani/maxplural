@@ -50,15 +50,19 @@ section{
     }
     .conteudo{
       justify-content: space-between;
+      .img-post2 {
+        height: 250px;
+        overflow: hidden;
+      }
       .post-destaque{
         width: 100%;
         border-radius: 70px;
         overflow: hidden;
         margin-bottom: 40px;
         box-shadow: 0 10px 20px #00000033;
-        .img-post{
+        .img-post {
           overflow: hidden;
-          min-height: 388px;
+          height: 350px;
           img{
             transform: scale(1.2);
           }
@@ -211,12 +215,15 @@ section{
       }
     }
     .conteudo{
+      .img-post2 {
+        height: 150px;
+      }
       .post-destaque{
         &>div{
           &:first-child{
             max-width: 30%;
-            &.img-post{
-              min-height: 298px;
+            &.img-post {
+              height: 250px;
               img{
                 transform: scale(2.4);
               }

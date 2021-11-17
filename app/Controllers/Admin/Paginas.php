@@ -22,7 +22,6 @@ class Paginas extends CrudAbstract
         $crud->setRule('descricao', 'lengthBetween', ['1', '200']);
         $crud->displayAs('descricao', 'Descrição');
         $crud->setRule('conteudo', 'lengthMin', ['1']);
-        $crud->setTexteditor(['conteudo']);
         $crud->displayAs('conteudo', 'Conteúdo');
         $crud->displayAs('situacao', 'Situação');
         $crud->fieldType('situacao', 'dropdown', ['Inativo', 'Ativo']);

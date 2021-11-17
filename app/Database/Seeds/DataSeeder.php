@@ -9,5 +9,8 @@ class DataSeeder extends \CodeIgniter\Database\Seeder
     {
         $this->call('AdminSeeder');
         $this->call('ConfiguracaoSeeder');
+        $this->call('LinhaSeeder');
+        $this->call('CaracteristicaSeeder');
+        $this->call('EmpreendimentoSeeder');
     }
 }
