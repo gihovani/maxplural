@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use App\Models\ConfiguracaoModel;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
@@ -68,16 +67,19 @@ class Site extends BaseController
             'active' => $search
         ];
     }
+
     public function empreendimentos(): string
     {
         return $this->show('empreendimentos', $this->getEmpreendimentos());
     }
+
     private function saveForm(): bool
     {
         $data = $this->request->getPost();
         $model = new \App\Models\ContatoModel();
         return $data && (bool)$model->insert($data);
     }
+
     public function empreendimento(string $slug = '')
     {
         $model = new \App\Models\EmpreendimentoModel();
@@ -88,16 +90,29 @@ class Site extends BaseController
         $success = $this->saveForm();
         return $this->show('empreendimento', ['emp' => $empreendimento, 'success' => $success]);
     }
-    public function tabelas_de_valores(): string
+
+    public function tabelas_de_valores()
     {
-        $success = $this->saveForm();
-        return $this->show('tabelas-de-valores', ['success' => $success]);
+        $model = new \App\Models\EmpreendimentoArquivoModel();
+        if ($success = $this->saveForm()) {
+            $arquivo = $this->request->getPost('assunto');
+            if (file_exists(\App\Models\EmpreendimentoArquivoModel::IMG_PATH . $arquivo)) {
+                return $this->response->download(\App\Models\EmpreendimentoArquivoModel::IMG_PATH . $arquivo);
+            }
+            return $this->response->download($arquivo . '.txt', 'Arquivo não encontrado, em breve nossa equipe entrará em contato!');
+        }
+        return $this->show('tabelas-de-valores', [
+            'success' => $success,
+            'arquivos' => $model->getTabelaValores()
+        ]);
     }
+
     public function contato(): string
     {
         $success = $this->saveForm();
         return $this->show('contato', ['success' => $success]);
     }
+
     public function newsletter(): string
     {
         $success = $this->saveForm();
@@ -107,10 +122,12 @@ class Site extends BaseController
             'pagina' => $pagina->getBySlug('newsletter')
         ]);
     }
+
     public function noticias(): string
     {
         return $this->show('noticias', $this->getEmpreendimentos(7));
     }
+
     public function noticia_bkp(): string
     {
         return $this->show('noticia.bkp');
@@ -118,7 +135,7 @@ class Site extends BaseController
 
     private function show(string $page, array $params = []): string
     {
-        $config = new ConfiguracaoModel();
+        $config = new \App\Models\ConfiguracaoModel();
         $params['config'] = $config->first();
         return view('pages/' . $page, $params);
     }

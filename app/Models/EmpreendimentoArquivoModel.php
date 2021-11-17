@@ -35,4 +35,11 @@ class EmpreendimentoArquivoModel extends BaseModel
         $data['data']['tabela_valores'] = $data['data']['tabela_valores'] ?? '0';
         return $data;
     }
+
+    public function getTabelaValores(): array
+    {
+        return $this->select('e.titulo empreendimento, empreendimento_arquivo.arquivo arquivo')
+            ->join('empreendimento e', 'e.id = empreendimento_arquivo.empreendimento_id', 'inner')
+            ->getWhere(['tabela_valores' => '1'])->getResult();
+    }
 }

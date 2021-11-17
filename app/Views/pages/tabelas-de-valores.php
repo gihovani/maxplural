@@ -15,42 +15,44 @@
             <div class="w-50 d-flex downloads__form-box">
                 <div class="form">
                     <h1>BAIXE AS TABELAS</h1>
+                    <?php if (!$success):?>
                     <h4>Preencha o fomrulário e baixe nossas tabelas</h4>
-                    <form action="">
-                        <input type="hidden" class="select-input-1" id="tabela" name="tabela" value="">
+                    <?= form_open('site/tabelas-de-valores', ['name' => 'form', 'target' => '_blank']) ?>
+                        <input type="hidden" class="select-input-1" id="tabela" name="assunto">
                         <div class="input-group">
-                            <label for="nome">NOME:</label>
-                            <input type="text" id="nome" name="nome" required>
+                            <label for="form-nome">NOME:</label>
+                            <input type="text" id="form-nome" name="nome" required>
                         </div>
                         <div class="input-group">
-                            <label for="email">E-MAIL:</label>
-                            <input type="email" id="email" name="email"  required>
+                            <label for="form-email">E-MAIL:</label>
+                            <input type="email" id="form-email" name="email" required>
                         </div>
                         <div class="input-group">
-                            <label for="telefone">TELEFONE:</label>
-                            <input class="telefone" type="text" id="telefone" name="telefone" required>
+                            <label for="form-telefone">TELEFONE:</label>
+                            <input class="telefone" type="text" id="form-telefone" name="telefone" required>
                         </div>
+                        <?php if (isset($arquivos) && count($arquivos)) :?>
                         <div class="input-group empreendimentos-tabelas">
                             <label>EMPREENDIMENTO:</label>
-                            <div class="fake-input" data-select-id="1" data-selected="">Empreendimento 1</div>
+                            <div class="fake-input" data-select-id="1" data-selected="">Selecione...</div>
                             <ul id="select-input-1" data-id="1">
-                                <li class="tabela" data-value="tabela-1">Empreendimento 1</li>
-                                <li class="tabela" data-value="tabela-2">Empreendimento 2</li>
-                                <li class="tabela" data-value="tabela-3">Empreendimento 3</li>
-                                <li class="tabela" data-value="tabela-4">Empreendimento 4</li>
-                                <li class="tabela" data-value="tabela-5">Empreendimento 5</li>
-                                <li class="tabela" data-value="tabela-6">Empreendimento 6</li>
+                                <?php foreach ($arquivos as $a):?>
+                                <li class="tabela" data-value="<?=$a->arquivo?>"><?=$a->empreendimento?></li>
+                                <?php endforeach; ?>
                             </ul>
-                            <span class="dropdown-button" data-select-id="1"><img src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt=""></span>
+                            <span class="dropdown-button" data-select-id="1"><img src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt="prevArrow"></span>
                         </div>
-                        <button class="d-flex download-btn" onclick="submitForm(this)">BAIXE AGORA <img src="<?= base_url('assets/imgs/download-icon.svg')?>" alt=""></button>
-                    </form>
-                    <div class="card">
+                        <?php endif;?>
+                        <button class="d-flex download-btn" type="submit">BAIXE AGORA <img src="<?= base_url('assets/imgs/download-icon.svg')?>" alt="download"></button>
+                    <?= form_close() ?>
+                    <?php else : ?>
+                    <div class="card show">
                         <div class="card-success">
                             <h3 class="pv-3 mv-3 text-center">MENSAGEM ENVIADA COM SUCESSO!</h3>
-                            <img style="width: 150px;margin: auto; display: block;" src="<?= base_url('assets/imgs/sucess.svg')?>" />
+                            <img style="width: 150px;margin: auto; display: block;" src="<?= base_url('assets/imgs/sucess.svg')?>" alt="MENSAGEM ENVIADA COM SUCESSO" />
                         </div>
                     </div>
+                    <?php endif;?>
                 </div>
             </div>
             <div class="w-50 bg-download">
