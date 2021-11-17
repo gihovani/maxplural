@@ -10,10 +10,10 @@
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+  display: block;
 }
 .pagination .prev {
   background-image: url("../imgs/prevArrow.svg");
-  margin-right: 3vw;
 }
 .paginationItens a {
   transition: all .3s;
@@ -31,7 +31,6 @@
 .pagination .next {
   background-image: url("../imgs/nextArrow.svg");
   background-position: 55% center;
-  margin-left: 3vw;
 }
 
 @media screen and (max-width: 769px) {
