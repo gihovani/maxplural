@@ -1,7 +1,7 @@
-section #title-page {
+section#title-page {
   background-image: url("../imgs/linhas/bg-title-nossas-linhas.png");
 }
-section #title-page h1 {
+section#title-page h1 {
   font-size: 2.5rem;
   font-weight: 600;
   margin: 10rem 0;
