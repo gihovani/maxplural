@@ -80,7 +80,7 @@ function zoom() {
     });
 }
 
-$(window).on('load', function () {
+$(function () {
     filtro = $('.filter-box-nav .active').data('filter');
     checkFilteredPhotos();
     zoom();

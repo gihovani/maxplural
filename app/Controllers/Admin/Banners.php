@@ -6,7 +6,7 @@ namespace App\Controllers\Admin;
 use App\Models\BannerImagemModel;
 use GroceryCrud\Core\GroceryCrud;
 
-class BannerImagens extends CrudAbstract
+class Banners extends CrudAbstract
 {
     public function configureCrud(GroceryCrud $crud): void
     {

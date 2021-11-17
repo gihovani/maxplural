@@ -159,7 +159,7 @@ Admin Maxplural
 <input class="menu-btn" type="checkbox" id="menu-btn" />
 <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 <ul class="menu">
-    <li><a href="<?= site_url('admin/bannerimagens') ?>">Banners</a></li>
+    <li><a href="<?= site_url('admin/banners') ?>">Banners</a></li>
     <li><a href="<?= site_url('admin/paginas') ?>">Páginas</a></li>
     <li><a href="<?= site_url('admin/linhas') ?>">Linhas</a></li>
     <li><a href="<?= site_url('admin/empreendimentos') ?>">Empreendimentos</a></li>

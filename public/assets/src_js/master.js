@@ -159,7 +159,7 @@ function loader() {
     }, 300);
 }
 
-$(window).on('load', function () {
+$(function () {
     initSlider();
     hoverEmpreendimentos();
     toggleMenu();
