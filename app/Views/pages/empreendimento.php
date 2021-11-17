@@ -26,8 +26,8 @@
     <section id="desc">
         <div class="container relative">
             <div class="title-section d-flex w-100">
-                <div class="logo">
-                    <img src="<?= base_url('assets/imgs/marcas/m-derby-logo.svg')?>" alt="">
+                <div class="logo" style="background-color: white">
+                    <img src="<?= base_url(\App\Models\LinhaModel::IMG_PATH . $emp->linha->imagem)?>" alt="<?=$emp->linha->titulo?>">
                 </div>
                 <div class="titulo-box">
                     <div class="nome titulo">
@@ -270,6 +270,8 @@
                     <?php if (!$success):?>
                     <h2 class="title text-center">SIMULE SEU FINANCIAMENTO</h2>
                     <?= form_open('site/empreendimento/'.$emp->slug. '#form', ['name' => 'form']) ?>
+                        <input type="hidden" name="assunto" value="SIMULE SEU FINANCIAMENTO: <?= $emp->titulo?>">
+                        <input type="hidden" name="empreendimento_id" value="<?= $emp->id?>">
                         <div class="formgroup">
                             <label for="form-nome">NOME:</label>
                             <input id="form-nome" type="text" required name="nome">
@@ -285,7 +287,7 @@
                         <button type="submit" class="btn-default">ENVIAR</button>
                     <?= form_close() ?>
                     <?php else: ?>
-                    <div class="card">
+                    <div class="card show">
                         <div class="card-success">
                             <h3 class="pv-3 mv-3 text-center">MENSAGEM ENVIADA COM SUCESSO!</h3>
                             <img style="width: 150px;margin: auto; display: block;" src="<?= base_url('assets/imgs/sucess.svg')?>" alt="Mensagem Enviada com Sucesso" />

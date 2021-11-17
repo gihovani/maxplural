@@ -11,14 +11,20 @@ section {
       font-weight: 500;
       cursor: pointer;
       transition: all .3s;
+      a {
+        color: #FFF;
+      }
       &:not(.active):hover{
         box-shadow: 0 5px 10px #00000077;
         background-color: #333;
       }
-      &.active{
+      &.active {
         color: #000;
         background-color: #E3E3E3;
         box-shadow: 0 10px 20px #00000077;
+        a {
+          color: #000;
+        }
       }
     }
   }

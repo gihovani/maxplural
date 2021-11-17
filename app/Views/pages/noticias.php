@@ -19,7 +19,7 @@
         <div class="filtros_e_buscas d-flex">
             <div>
                 <span>Categorias:</span>
-                <a class="mh-1" href="<?= site_url('site/noticias/?q=Lancamentos') ?>">Lançamentos</a>
+                <a class="mh-1" href="<?= site_url('site/noticias/?q=Lancamento') ?>">Lançamentos</a>
                 <a class="mh-1" href="<?= site_url('site/noticias/?q=Entregue') ?>">Entregues</a>
                 <a class="mh-1" href="<?= site_url('site/noticias/?q=Construcao') ?>">Em Construção</a>
             </div>

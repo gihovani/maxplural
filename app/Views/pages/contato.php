@@ -22,7 +22,7 @@ Fale Conosco
             <div class="corretor">
                 <h2 class="text-center">CONVERSE AGOR COM<br />UM CORRETOR MAXPLURAL</h2>
                 <div class="contato-btns">
-                    <a href="<?= $config->whatsapp ?>" class="contato d-flex">
+                    <a href="<?= $config->whatsapp ?>" class="contato d-flex" target="_blank">
                         <img class="icon-invert" src="<?= base_url('assets/imgs/whatsapp-64.png')?>" alt="whatsapp">
                         <div>
                             <h4>Whatsapp:</h4>
@@ -31,7 +31,7 @@ Fale Conosco
                     </a>
                 </div>
                 <div class="contato-btns">
-                    <a href="<?= $config->chat_online ?>" class="contato d-flex">
+                    <a href="<?= $config->chat_online ?>" class="contato d-flex" target="_blank">
                         <img src="<?= base_url('assets/imgs/chat-icon.svg')?>" alt="chat">
                         <div class="relative">
                             <h4>Chat Online:</h4>
@@ -40,7 +40,7 @@ Fale Conosco
                     </a>
                 </div>
                 <div class="contato-btns">
-                    <a href="<?= $config->central_vendas ?>" class="contato d-flex">
+                    <a href="<?= $config->central_vendas ?>" class="contato d-flex" target="_blank">
                         <img src="<?= base_url('assets/imgs/contato/atendente-icon.svg')?>" alt="atendente">
                         <div>
                             <h4>Central de Vendas:</h4>
@@ -51,8 +51,9 @@ Fale Conosco
             </div>
             <div class="form">
                 <h2 class="text-center">Fale com a gente</h2>
+                <?php if (!$success):?>
                 <h3 class="text-center thin">Envie sua mensagem no formulário a seguir</h3>
-                <?= form_open('site/contato', ['class' => 'd-flex', 'name' => 'form']) ?>
+                <?= form_open('site/contato#form', ['class' => 'd-flex', 'name' => 'form']) ?>
                     <input type="hidden" class="select-input-1" id="setor" name="setor" value="">
                     <div class="formgroup w-100">
                         <label for="form-nome">NOME:</label>
@@ -67,17 +68,18 @@ Fale Conosco
                         <input type="email" id="form-email" name="email" required>
                     </div>
                     <div class="input-group empreendimentos-tabelas w-100">
-                        <label>ÁREA QUE DESEJA FALAR:</label>
-                        <div class="fake-input" data-select-id="1">Selecione o setor</div>
-                        <ul id="select-input-1" data-id="1" data-selected="">
-                            <li class="tabela" data-value="{{SETOR}}">{{SETOR}}</li>
-                            <li class="tabela" data-value="{{SETOR2}}">{{SETOR2}}</li>
-                            <li class="tabela" data-value="{{SETOR3}}">{{SETOR3}}</li>
-                            <li class="tabela" data-value="{{SETOR4}}">{{SETOR4}}</li>
-                            <li class="tabela" data-value="{{SETOR5}}">{{SETOR5}}</li>
-                            <li class="tabela" data-value="{{SETOR6}}">{{SETOR6}}</li>
-                        </ul>
-                        <span class="dropdown-button" data-select-id="1"><img src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt=""></span>
+                        <label for="form-assunto">ASSUNTO:</label>
+                        <input type="text" id="form-assunto" name="assunto" required>
+<!--                        <div class="fake-input" data-select-id="1">Selecione o setor</div>-->
+<!--                        <ul id="select-input-1" data-id="1" data-selected="">-->
+<!--                            <li class="tabela" data-value="{{SETOR}}">{{SETOR}}</li>-->
+<!--                            <li class="tabela" data-value="{{SETOR2}}">{{SETOR2}}</li>-->
+<!--                            <li class="tabela" data-value="{{SETOR3}}">{{SETOR3}}</li>-->
+<!--                            <li class="tabela" data-value="{{SETOR4}}">{{SETOR4}}</li>-->
+<!--                            <li class="tabela" data-value="{{SETOR5}}">{{SETOR5}}</li>-->
+<!--                            <li class="tabela" data-value="{{SETOR6}}">{{SETOR6}}</li>-->
+<!--                        </ul>-->
+<!--                        <span class="dropdown-button" data-select-id="1"><img src="--><?//= base_url('assets/imgs/prevArrow.svg')?><!--" alt=""></span>-->
                     </div>
                     <div class="formgroup w-100">
                         <label for="form-mensagem">MENSAGEM:</label>
@@ -88,12 +90,14 @@ Fale Conosco
                         <button class="default-btn" type="submit">ENVIAR</button>
                     </div>
                 <?= form_close() ?>
-                <div class="card">
+                <?php else: ?>
+                <div class="card show">
                     <div class="card-success">
                         <h3 class="pv-3 mv-3 text-center">MENSAGEM ENVIADA COM SUCESSO!</h3>
                         <img style="width: 150px;margin: auto; display: block;" src="<?= base_url('assets/imgs/sucess.svg')?>" alt="Mensagem Enviada com Sucesso" />
                     </div>
                 </div>
+                <?php endif;?>
             </div>
         </div>
     </div>

@@ -20,4 +20,4 @@ Website da incorporadora Max Plural
 5) $ php spark db:seed DataSeeder
 6) $ php spark serve
 7) Acessar o site ex: "http://localhost:8080/"
-8) Acessar o painel adm ex: "http://localhost:8080/admin/" (login: gihovani ou kleverton / Senha: senha)
+8) Acessar o painel adm ex: "http://localhost:8080/admin/" (login: gihovani / Senha: senha)

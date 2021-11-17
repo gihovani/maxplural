@@ -109,6 +109,7 @@ Admin Maxplural
 
     header .menu-btn:checked ~ .menu {
         max-height: 240px;
+        overflow: scroll;
     }
 
     header .menu-btn:checked ~ .menu-icon .navicon {
@@ -129,7 +130,8 @@ Admin Maxplural
     }
 
     main {
-        padding-top: 60px;
+        padding-top: 50px;
+        padding-bottom: 10px;
     }
 
     @media (min-width: 1200px) {
@@ -137,7 +139,7 @@ Admin Maxplural
             float: left;
         }
         header li a {
-            padding: 20px 30px;
+            padding: 20px 10px;
         }
         header .menu {
             clear: none;
@@ -157,9 +159,11 @@ Admin Maxplural
 <input class="menu-btn" type="checkbox" id="menu-btn" />
 <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 <ul class="menu">
-    <li><a href="<?= site_url('admin/dashboard') ?>">Dashboard</a></li>
+    <li><a href="<?= site_url('admin/bannerimagens') ?>">Banners</a></li>
     <li><a href="<?= site_url('admin/paginas') ?>">Páginas</a></li>
+    <li><a href="<?= site_url('admin/linhas') ?>">Linhas</a></li>
     <li><a href="<?= site_url('admin/empreendimentos') ?>">Empreendimentos</a></li>
+    <li><a href="<?= site_url('admin/caracteristicas') ?>">Características</a></li>
     <li><a href="<?= site_url('admin/contatos') ?>">Contatos</a></li>
     <li><a href="<?= site_url('admin/admins') ?>">Admins</a></li>
     <li><a href="<?= site_url('admin/configuracoes') ?>">Configurações</a></li>

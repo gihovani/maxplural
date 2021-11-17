@@ -5,7 +5,6 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
-<link rel="stylesheet" href="<?= base_url('assets/css/tabs.min.css')?>" />
 <style>
     <?= $pagina->style ?>
 </style>
@@ -18,7 +17,7 @@
     </div>
 </section>
 
-<section id="content" class="pv-3 historia">
+<section id="content" class="pv-3 privacidade">
     <div class="container">
         <?= $pagina->conteudo ?>
     </div>

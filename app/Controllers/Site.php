@@ -18,8 +18,10 @@ class Site extends BaseController
 
     public function index(): string
     {
+        $banner = new \App\Models\BannerImagemModel();
         $model = new \App\Models\EmpreendimentoModel();
         $data = [
+            'banners' => $banner->orderBy('prioridade')->findAll(),
             'destaques' => $model->paginate(4),
             'empreendimentos' => $model->paginate(4, 'default', 2)
         ];
@@ -28,13 +30,24 @@ class Site extends BaseController
 
     public function sobre(): string
     {
-        return $this->show('sobre');
+        $pagina = new \App\Models\PaginaModel();
+        return $this->show('sobre', ['pagina' => $pagina->getBySlug('sobre')]);
+    }
+
+    public function privacidade(): string
+    {
+        $pagina = new \App\Models\PaginaModel();
+        return $this->show('privacidade', ['pagina' => $pagina->getBySlug('privacidade')]);
     }
 
     public function linhas(): string
     {
-        $model = new \App\Models\LinhaModel();
-        return $this->show('linhas', ['linhas' => $model->findAll()]);
+        $linha = new \App\Models\LinhaModel();
+        $pagina = new \App\Models\PaginaModel();
+        return $this->show('linhas', [
+            'linhas' => $linha->findAll(),
+            'pagina' => $pagina->getBySlug('linhas')
+        ]);
     }
 
     private function getEmpreendimentos(int $page = 6): array
@@ -61,7 +74,9 @@ class Site extends BaseController
     }
     private function saveForm(): bool
     {
-        return false;
+        $data = $this->request->getPost();
+        $model = new \App\Models\ContatoModel();
+        return $data && (bool)$model->insert($data);
     }
     public function empreendimento(string $slug = '')
     {
@@ -82,6 +97,15 @@ class Site extends BaseController
     {
         $success = $this->saveForm();
         return $this->show('contato', ['success' => $success]);
+    }
+    public function newsletter(): string
+    {
+        $success = $this->saveForm();
+        $pagina = new \App\Models\PaginaModel();
+        return $this->show('newsletter', [
+            'success' => $success,
+            'pagina' => $pagina->getBySlug('newsletter')
+        ]);
     }
     public function noticias(): string
     {

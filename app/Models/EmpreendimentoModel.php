@@ -101,6 +101,7 @@ class EmpreendimentoModel extends BaseModel
             $item->arquivos = $this->getArquivos($id);
             $item->imagens = $this->getImagens($id);
             $item->status = $this->getStatus($id);
+            $item->linha = $this->getLinha((int)$item->linha_id);
         }
         return $item;
     }
@@ -158,5 +159,11 @@ class EmpreendimentoModel extends BaseModel
     {
         $model = new EmpreendimentoStatusModel();
         return $model->getWhere(['empreendimento_id' => $id])->getFirstRow();
+    }
+
+    private function getLinha(int $id)
+    {
+        $model = new LinhaModel();
+        return $model->getWhere(['id' => $id])->getFirstRow();
     }
 }

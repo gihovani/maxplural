@@ -105,9 +105,11 @@
             </div>
             <div id="newsBox">
                 <span>Seu melhor e-mail <span class="nextArrow-icon"></span></span>
-                <?= form_open('#form', ['name' => 'form']) ?>
-                    <label for="newsBoxEmail" class="sr-only">E-mail</label>
-                    <input type="text" id="newsBoxEmail" placeholder="exemplo@dominio.com" name="email">
+                <?= form_open('site/newsletter', ['name' => 'form']) ?>
+                <input type="hidden" name="assunto" value="Inscrição NewsLetter" />
+                <input type="hidden" name="nome" value="Guest" />
+                <label for="newsBoxEmail" class="sr-only">E-mail</label>
+                    <input type="email" id="newsBoxEmail" placeholder="exemplo@dominio.com" name="email">
                     <button type="submit">Enviar</button>
                 <?= form_close() ?>
             </div>

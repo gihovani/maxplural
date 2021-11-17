@@ -19,7 +19,7 @@ Empreendimentos
     <section id="content" class="pv-3 empreendimentos">
         <div class="container">
             <div id="tabs" class="empreendimentos__tabs d-flex">
-                <div class="tab <?= $active === 'Lancamentos' ? 'active' : '';?>"><a href="<?= site_url('site/empreendimentos/?q=Lancamentos') ?>">Lançamentos</a></div>
+                <div class="tab <?= $active === 'Lancamento' ? 'active' : '';?>"><a href="<?= site_url('site/empreendimentos/?q=Lancamento') ?>">Lançamentos</a></div>
                 <div class="tab <?= $active === 'Entregue' ? 'active' : '';?>"><a href="<?= site_url('site/empreendimentos/?q=Entregue') ?>">Entregues</a></div>
                 <div class="tab <?= $active === 'Construcao' ? 'active' : '';?>"><a href="<?= site_url('site/empreendimentos/?q=Construcao') ?>">Em Construção</a></div>
             </div>
@@ -30,7 +30,7 @@ Empreendimentos
                             <div class="w-30 pv-1 ph-1 item">
                                 <a href="<?= base_url('site/empreendimento/' . $emp->slug) ?>">
                                     <img class="w-100" src="<?= base_url(\App\Models\EmpreendimentoModel::IMG_PATH . $emp->imagem) ?>" alt="<?= $emp->titulo ?>"/>
-                                    <h3><?= $emp->titulo; ?></h3>
+                                    <!--<h3><?= $emp->titulo; ?></h3> -->
                                 </a>
                             </div>
                         <?php endforeach; ?>

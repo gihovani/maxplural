@@ -4,9 +4,9 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class CreateContatoTable extends Migration
+class CreateBannerImagemTable extends Migration
 {
-    private $table = 'contato';
+    private $table = 'banner_imagem';
 
     public function up()
     {
@@ -17,34 +17,33 @@ class CreateContatoTable extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'nome' => [
+            'imagem' => [
                 'type' => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => 200,
                 'null' => false
             ],
-            'email' => [
+            'imagem_mobile' => [
                 'type' => 'VARCHAR',
-                'constraint' => '200',
-                'null' => false
-            ],
-            'telefone' => [
-                'type' => 'VARCHAR',
-                'constraint' => '20',
+                'constraint' => 200,
                 'null' => true
             ],
-            'assunto' => [
+            'link' => [
                 'type' => 'VARCHAR',
-                'constraint' => '200',
+                'constraint' => 200,
+                'null' => true
+            ],
+            'titulo' => [
+                'type' => 'VARCHAR',
+                'constraint' => 200,
                 'null' => false
             ],
-            'mensagem' => [
+            'conteudo' => [
                 'type' => 'TEXT',
                 'null' => true
             ],
-            'empreendimento_id' => [
+            'prioridade' => [
                 'type' => 'INT',
                 'constraint' => 11,
-                'unsigned' => true,
                 'null' => true
             ],
             'updated_at datetime default current_timestamp on update current_timestamp',
@@ -52,7 +51,6 @@ class CreateContatoTable extends Migration
             'deleted_at datetime default null'
         ]);
         $this->forge->addPrimaryKey('id');
-        $this->forge->addForeignKey('empreendimento_id', 'empreendimento', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable($this->table);
     }
 

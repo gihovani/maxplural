@@ -32,7 +32,9 @@ body header li a:hover, body header ul li a:hover,
 .gc-container header ul li a:hover {
   background-color: #111;
 }
-
+.gc-container .modal {
+  overflow: initial;
+}
 body {
   background-color: #333;
 }
@@ -44,7 +46,8 @@ main h1 {
 main > div:first-child {
   opacity: 0;
   transform: scale(0.95);
-  width: 90%;
+  width: 95%;
+  min-height: 580px;
   margin: 25px auto 15px;
   padding: 15px;
   border: 2px solid #999;
