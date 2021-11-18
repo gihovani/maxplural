@@ -16,25 +16,25 @@ span.nextArrow-icon {
   transform: translateY(-50%);
 }
 
-#topo .slider-custom-theme .slick-slide {
+section .slider-custom-theme .slick-slide {
   position: relative;
 }
 
-#topo .slider-custom-theme .slick-slide img {
+section .slider-custom-theme .slick-slide img {
   width: 100%;
 }
 
-#topo .slider-custom-theme .slider-text {
+section .slider-custom-theme .slider-text {
   position: absolute;
   top: 50%;
   transform: translate(0%, -50%);
 }
 
-#topo .slider-custom-theme .slider-text * {
+section .slider-custom-theme .slider-text * {
   margin: 0;
 }
 
-#topo .slider-custom-theme .slick-current .slider-text h5 {
+section .slider-custom-theme .slick-current .slider-text h5 {
   opacity: 0;
   font-size: 40px;
   font-weight: 500;
@@ -44,7 +44,7 @@ span.nextArrow-icon {
   animation-delay: .7s;
 }
 
-#topo .slider-custom-theme .slick-current .slider-text h4 {
+section .slider-custom-theme .slick-current .slider-text h4 {
   opacity: 0;
   font-size: 60px;
   animation-name: fadeUpLTR;
@@ -54,27 +54,27 @@ span.nextArrow-icon {
   line-height: 1;
 }
 
-#topo .slider-custom-theme a {
+section .slider-custom-theme a {
   text-decoration: none;
 }
 
-#topo .slider-custom-theme .marca-saiba-mais {
+section .slider-custom-theme .marca-saiba-mais {
   position: absolute;
   bottom: 30px;
   justify-content: flex-start;
 }
 
-#topo .slider-custom-theme .marca-saiba-mais img {
+section .slider-custom-theme .marca-saiba-mais img {
   width: 30%;
 }
 
-#topo .slider-custom-theme .marca-saiba-mais a {
+section .slider-custom-theme .marca-saiba-mais a {
   width: 20%;
   position: relative;
   margin-left: 3%;
 }
 
-#topo ul.navigation {
+section ul.navigation {
   right: 60px;
   bottom: 30px;
   padding: 20px;
@@ -84,7 +84,7 @@ span.nextArrow-icon {
   background-color: #00000066;
 }
 
-#topo ul.navigation li {
+section ul.navigation li {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -96,16 +96,16 @@ span.nextArrow-icon {
   cursor: default;
 }
 
-#topo ul.navigation li:not(.slick-disabled) {
+section ul.navigation li:not(.slick-disabled) {
   background-color: #333333AA;
   cursor: pointer;
 }
 
-#topo ul.navigation li.prev img {
+section ul.navigation li.prev img {
   margin-left: -3px;
 }
 
-#topo ul.navigation li.next img {
+section ul.navigation li.next img {
   margin-right: -3px;
 }
 
@@ -370,10 +370,10 @@ span.nextArrow-icon {
 }
 
 @media screen and (max-width: 1200px) {
-  #topo .slider-custom-theme .slick-current .slider-text h5 {
+  section .slider-custom-theme .slick-current .slider-text h5 {
     font-size: 30px;
   }
-  #topo .slider-custom-theme .slick-current .slider-text h4 {
+  section .slider-custom-theme .slick-current .slider-text h4 {
     font-size: 45px;
   }
   #sobre .content div.texto > div {
@@ -398,17 +398,17 @@ span.nextArrow-icon {
 }
 
 @media screen and (max-width: 991px) {
-  #topo .slider-custom-theme .slider-text {
+  section .slider-custom-theme .slider-text {
     top: unset;
     bottom: 10%;
   }
-  #topo .slider-custom-theme .slick-current .slider-text h5 {
+  section .slider-custom-theme .slick-current .slider-text h5 {
     font-size: 7vw;
   }
-  #topo .slider-custom-theme .slick-current .slider-text h4 {
+  section .slider-custom-theme .slick-current .slider-text h4 {
     font-size: 9vw;
   }
-  #topo .slider-custom-theme .marca-saiba-mais {
+  section .slider-custom-theme .marca-saiba-mais {
     left: 25px;
   }
   #empreendimentos .navegacao {
@@ -451,23 +451,23 @@ span.nextArrow-icon {
 
 @media screen and (max-device-width: 767px) {
 
-  #topo .slider-custom-theme .marca-saiba-mais {
+  section .slider-custom-theme .marca-saiba-mais {
     width: 100%;
     max-width: 45%;
   }
 
-  #topo .slider-custom-theme .marca-saiba-mais a {
+  section .slider-custom-theme .marca-saiba-mais a {
     font-size: 3vw;
   }
   span.nextArrow-icon {
     right: -10px;
   }
-  #topo ul.navigation {
+  section ul.navigation {
     right: 10px;
     bottom: 10px;
     padding: 10px;
   }
-  #topo ul.navigation li {
+  section ul.navigation li {
     width: 35px;
     height: 35px;
   }

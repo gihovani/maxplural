@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,200&display=swap" rel="stylesheet"/>
     <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/img/favicon.png') ?>"/>
 </head>
-<body class="relative">
+<body id="topo" class="relative">
 <div class="loader"></div>
 <header>
     <div class="mutantMenu d-flex container">
@@ -136,7 +136,7 @@
                 </h4>
             </div>
             <div class="w-30  text-center">
-                <a href="<?= base_url() ?>#topo" class="anchor logo backToTop">
+                <a href="#topo" class="anchor logo backToTop">
                     <img src="<?= base_url('assets/imgs/logo.svg') ?>" alt="Logo Max Plural"/>
                     <p class="relative">
                         <span>VOLTAR PARA O TOPO</span>

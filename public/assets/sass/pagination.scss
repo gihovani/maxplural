@@ -13,6 +13,9 @@
   }
   .prev{
     background-image: url("../imgs/prevArrow.svg");
+    &Box{
+      margin-right: 20px;
+    }
   }
   &Itens{
     a{
@@ -33,6 +36,9 @@
   .next{
     background-image: url("../imgs/nextArrow.svg");
     background-position: 55% center;
+    &Box{
+      margin-left: 20px;
+    }
   }
 }
 

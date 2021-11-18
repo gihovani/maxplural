@@ -10,7 +10,7 @@ Página Inicial
 
 <?= $this->section('content') ?>
 <?php if (isset($banners) && count($banners)): ?>
-    <section id="topo" class="relative">
+    <section class="relative">
         <div class="slider-1 slider-custom-theme">
             <?php foreach ($banners as $b): ?>
                 <div>

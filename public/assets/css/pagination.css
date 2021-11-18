@@ -15,6 +15,9 @@
 .pagination .prev {
   background-image: url("../imgs/prevArrow.svg");
 }
+.pagination .prevBox {
+  margin-right: 20px;
+}
 .paginationItens a {
   transition: all .3s;
   text-align: center;
@@ -31,6 +34,9 @@
 .pagination .next {
   background-image: url("../imgs/nextArrow.svg");
   background-position: 55% center;
+}
+.pagination .nextBox {
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 769px) {
