@@ -3,12 +3,6 @@ declare(strict_types=1);
 
 namespace App\Database\Seeds;
 
-use App\Models\CaracteristicaModel;
-use App\Models\EmpreendimentoArquivoModel;
-use App\Models\EmpreendimentoCaracteristicaModel;
-use App\Models\EmpreendimentoImagemModel;
-use App\Models\EmpreendimentoModel;
-use App\Models\EmpreendimentoStatusModel;
 use App\Models\PaginaModel;
 use CodeIgniter\Database\Seeder;
 use Exception;

@@ -14,5 +14,6 @@ class DataSeeder extends \CodeIgniter\Database\Seeder
         $this->call('EmpreendimentoSeeder');
         $this->call('PaginaSeeder');
         $this->call('BannerImagemSeeder');
+        $this->call('NoticiaSeeder');
     }
 }

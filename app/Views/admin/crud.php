@@ -160,10 +160,11 @@ Admin Maxplural
 <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 <ul class="menu">
     <li><a href="<?= site_url('admin/banners') ?>">Banners</a></li>
+    <li><a href="<?= site_url('admin/noticias') ?>">Notícias</a></li>
     <li><a href="<?= site_url('admin/paginas') ?>">Páginas</a></li>
     <li><a href="<?= site_url('admin/linhas') ?>">Linhas</a></li>
     <li><a href="<?= site_url('admin/empreendimentos') ?>">Empreendimentos</a></li>
-    <li><a href="<?= site_url('admin/caracteristicas') ?>">Características</a></li>
+    <li><a href="<?= site_url('admin/caracteristicas') ?>">Diferenciais</a></li>
     <li><a href="<?= site_url('admin/contatos') ?>">Contatos</a></li>
     <li><a href="<?= site_url('admin/admins') ?>">Admins</a></li>
     <li><a href="<?= site_url('admin/configuracoes') ?>">Configurações</a></li>

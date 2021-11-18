@@ -18,11 +18,12 @@ class Site extends BaseController
     public function index(): string
     {
         $banner = new \App\Models\BannerImagemModel();
-        $model = new \App\Models\EmpreendimentoModel();
+        $empreendimentos = new \App\Models\EmpreendimentoModel();
+        $noticias = new \App\Models\NoticiaModel();
         $data = [
             'banners' => $banner->orderBy('prioridade')->findAll(),
-            'destaques' => $model->paginate(4),
-            'empreendimentos' => $model->paginate(4, 'default', 2)
+            'destaques' => $empreendimentos->paginate(4),
+            'noticias' => $noticias->paginate(4)
         ];
         return $this->show('home', $data);
     }
@@ -49,35 +50,9 @@ class Site extends BaseController
         ]);
     }
 
-    private function getEmpreendimentos(int $page = 6): array
-    {
-        $model = new \App\Models\EmpreendimentoModel();
-        $search = $this->request->getGet('q');
-        if ($search == '') {
-            $empreendimentos = $model;
-        } else {
-            $empreendimentos = $model->select('*')
-                ->orLike('tipo', $search)
-                ->orLike('titulo', $search)
-                ->orLike('conteudo', $search);
-        }
-        return [
-            'empreendimentos' => $empreendimentos->paginate($page),
-            'pager' => $empreendimentos->pager,
-            'active' => $search
-        ];
-    }
-
     public function empreendimentos(): string
     {
         return $this->show('empreendimentos', $this->getEmpreendimentos());
-    }
-
-    private function saveForm(): bool
-    {
-        $data = $this->request->getPost();
-        $model = new \App\Models\ContatoModel();
-        return $data && (bool)$model->insert($data);
     }
 
     public function empreendimento(string $slug = '')
@@ -125,12 +100,13 @@ class Site extends BaseController
 
     public function noticias(): string
     {
-        return $this->show('noticias', $this->getEmpreendimentos(7));
+        return $this->show('noticias', $this->getNoticias(7));
     }
 
-    public function noticia_bkp(): string
+    public function noticia(string $slug = ''): string
     {
-        return $this->show('noticia.bkp');
+        $noticia = new \App\Models\NoticiaModel();
+        return $this->show('noticia', ['noticia' => $noticia->getBySlug($slug)]);
     }
 
     private function show(string $page, array $params = []): string
@@ -139,4 +115,51 @@ class Site extends BaseController
         $params['config'] = $config->first();
         return view('pages/' . $page, $params);
     }
+
+    private function getNoticias(int $page = 6): array
+    {
+        $model = new \App\Models\NoticiaModel();
+        $search = $this->request->getGet('q');
+        if ($search == '') {
+            $noticias = $model;
+        } else {
+            $noticias = $model->select('*')
+                ->orLike('categoria', $search)
+                ->orLike('titulo', $search)
+                ->orLike('conteudo', $search);
+        }
+        return [
+            'noticias' => $noticias->paginate($page),
+            'pager' => $noticias->pager,
+            'active' => $search
+        ];
+    }
+
+    private function getEmpreendimentos(int $page = 6): array
+    {
+        $model = new \App\Models\EmpreendimentoModel();
+        $search = $this->request->getGet('q');
+        if ($search == '') {
+            $empreendimentos = $model;
+        } else {
+            $empreendimentos = $model->select('*')
+                ->orLike('tipo', $search)
+                ->orLike('titulo', $search)
+                ->orLike('conteudo', $search);
+        }
+        return [
+            'empreendimentos' => $empreendimentos->paginate($page),
+            'pager' => $empreendimentos->pager,
+            'active' => $search
+        ];
+    }
+
+    private function saveForm(): bool
+    {
+        $data = $this->request->getPost();
+        $model = new \App\Models\ContatoModel();
+        return $data && (bool)$model->insert($data);
+    }
+
+
 }

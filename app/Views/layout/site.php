@@ -71,7 +71,7 @@
             <img class="icon-search" src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search"/>
             <?= form_open('site/noticias', ['method' => 'get']) ?>
                 <label for="headerSearchQuery" class="sr-only">Termo</label>
-                <input id="headerSearchQuery" type="text" placeholder="Procurando por algum empreendimento?" name="q"/>
+                <input id="headerSearchQuery" type="text" placeholder="O que você procura? Digite aqui." name="q"/>
                 <button type="submit">
                     <img src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search"/>
                 </button>

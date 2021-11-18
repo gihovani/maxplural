@@ -31,7 +31,7 @@
   transform: translateX(40px);
   position: relative;
   margin: .4em 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   width: calc(100% - 50px);
 }
 #content.empreendimentos .item a span p:after {
@@ -88,6 +88,29 @@
   box-shadow: 0 -15px 40px #00000044;
 }
 
+@media screen and (max-width: 1024px) {
+  #content.empreendimentos .item a span p {
+    font-size: .6rem;
+  }
+  #content.empreendimentos .item a span.info .info_nome:after {
+    background-image: none;
+  }
+  #content.empreendimentos .item a span.info .info_quartos:after {
+    background-image: none;
+  }
+  #content.empreendimentos .item a span.info .info_banheiros:after {
+    background-image: none;
+  }
+  #content.empreendimentos .item a span.info .info_garagens:after {
+    background-image: none;
+  }
+  #content.empreendimentos .item a span.info .info_statusObra:after {
+    background-image: none;
+  }
+  #content.empreendimentos .item a span.info .info_saibaMais:after {
+    background-image: none;
+  }
+}
 @media screen and (max-width: 415px) {
   #content.empreendimentos .container {
     margin: 0;
@@ -99,7 +122,7 @@
   #content.empreendimentos .tab-content > div {
     width: calc(81.5vw * 6);
     justify-content: space-evenly;
-    display: -webkit-inline-box;
+    display: -webkit-box;
   }
   #content.empreendimentos .item {
     max-width: 70vw;

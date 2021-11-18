@@ -98,7 +98,7 @@ Página Inicial
         </div>
     </div>
 </section>
-<?php if (isset($empreendimentos) && count($empreendimentos)): ?>
+<?php if (isset($noticias) && count($noticias)): ?>
     <section id="noticias" class="relative">
         <div class="container">
             <div class="noticias-header d-flex">
@@ -107,10 +107,10 @@ Página Inicial
             </div>
             <div class="noticias-content">
                 <div class="slider-3">
-                    <?php foreach ($empreendimentos as $emp): ?>
+                    <?php foreach ($noticias as $emp): ?>
                         <div>
-                            <a href="<?= base_url('site/empreendimento/' . $emp->slug) ?>">
-                                <img class="w-100" src="<?= base_url(\App\Models\EmpreendimentoModel::IMG_PATH . $emp->imagem) ?>" alt="<?= $emp->titulo ?>"/>
+                            <a href="<?= base_url('site/noticia/' . $emp->slug) ?>">
+                                <img class="w-100" src="<?= base_url(\App\Models\NoticiaModel::IMG_PATH . $emp->imagem) ?>" alt="<?= $emp->titulo ?>"/>
                                 <div class="noticias-content__box">
                                     <p class="noticias-content__title"><?= $emp->titulo ?></p>
                                     <p class="noticias-content__desc"><?= $emp->descricao ?></p>

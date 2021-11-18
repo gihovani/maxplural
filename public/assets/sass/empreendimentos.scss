@@ -1,16 +1,19 @@
 
-#content{
-  &.empreendimentos{
+#content {
+  &.empreendimentos {
     background-color: #fff;
-    *{
+
+    * {
       color: var(--main-bg-color);
     }
-    .item{
-      a{
+
+    .item {
+      a {
         display: flex;
         overflow: hidden;
         position: relative;
-        span{
+
+        span {
           width: 80%;
           padding: 15px;
           margin: auto;
@@ -23,17 +26,20 @@
           border-top-left-radius: 30px;
           border-top-right-radius: 30px;
           transform: translate(-50%, 100%);
-          img{
+
+          img {
             transform: scale(.85);
           }
-          p{
+
+          p {
             color: #fff;
             transform: translateX(40px);
             position: relative;
-            margin:.4em 0;
-            font-size: 1.2rem;
+            margin: .4em 0;
+            font-size: 1rem;
             width: calc(100% - 50px);
-            &:after{
+
+            &:after {
               content: '';
               position: absolute;
               top: 50%;
@@ -45,46 +51,54 @@
               background-position: center;
               background-repeat: no-repeat;
             }
-            &:not(:first-child){
-              &:after{
-                filter: brightness(0)contrast(100)invert(1);
+
+            &:not(:first-child) {
+              &:after {
+                filter: brightness(0) contrast(100) invert(1);
               }
             }
           }
 
-          &.info{
-            .info{
-              &_logo{
+          &.info {
+            .info {
+              &_logo {
                 width: 100%;
               }
-              &_nome{
+
+              &_nome {
                 color: #aaa;
-                &:after{
+
+                &:after {
                   background-image: url("../imgs/pin-icon.svg");
                 }
               }
-              &_quartos{
-                &:after{
+
+              &_quartos {
+                &:after {
                   background-image: url("../imgs/quartos-icon.svg");
                 }
               }
-              &_banheiros{
-                &:after{
+
+              &_banheiros {
+                &:after {
                   background-image: url("../imgs/toilett-icon.svg");
                 }
               }
-              &_garagens{
-                &:after{
+
+              &_garagens {
+                &:after {
                   background-image: url("../imgs/car-icon.svg");
                 }
               }
-              &_statusObra{
-                &:after{
+
+              &_statusObra {
+                &:after {
                   background-image: url("../imgs/bluePrint-icon.svg");
                 }
               }
-              &_saibaMais{
-                &:after{
+
+              &_saibaMais {
+                &:after {
                   background-image: url("../imgs/nextArrow.svg");
                   left: unset;
                   right: 0;
@@ -93,21 +107,24 @@
             }
           }
         }
-        &:hover{
-          span{
+
+        &:hover {
+          span {
             opacity: 1;
             transform: translate(-50%, 0);
           }
         }
       }
-      img{
-        filter: brightness(50%)grayscale(100%);
+
+      img {
+        filter: brightness(50%) grayscale(100%);
         transition: all .3s;
 
       }
-      &:hover{
-        img{
-          filter: brightness(1.0)grayscale(0);
+
+      &:hover {
+        img {
+          filter: brightness(1.0) grayscale(0);
           box-shadow: 0 -15px 40px #00000044;
         }
       }
@@ -115,43 +132,106 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  #content {
+    &.empreendimentos {
+      .item {
+        a {
+          span {
+            p {
+              font-size: .6rem;
+            }
 
-@media screen and (max-width: 415px){
-  #content{
-    &.empreendimentos{
-      .container{
+            &.info {
+              .info {
+                &_nome {
+                  &:after {
+                    background-image: none;
+                  }
+                }
+
+                &_quartos {
+                  &:after {
+                    background-image: none;
+                  }
+                }
+
+                &_banheiros {
+                  &:after {
+                    background-image: none;
+                  }
+                }
+
+                &_garagens {
+                  &:after {
+                    background-image: none;
+                  }
+                }
+
+                &_statusObra {
+                  &:after {
+                    background-image: none;
+                  }
+                }
+
+                &_saibaMais {
+                  &:after {
+                    background-image: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 415px) {
+  #content {
+    &.empreendimentos {
+      .container {
         margin: 0;
       }
-      .tab-content{
+
+      .tab-content {
         overflow-x: scroll;
         padding-top: 30px;
-        &>div{
+
+        & > div {
           width: calc(81.5vw * 6);
           justify-content: space-evenly;
-          display: -webkit-inline-box;
+          display: -webkit-box;
         }
       }
-      .item{
+
+      .item {
         max-width: 70vw;
         margin: 0 2.5vw 0 2.5vw;
-        &:first-child{
+
+        &:first-child {
           margin: 0 2.5vw 0 5vw;
         }
-        &:last-child{
+
+        &:last-child {
           margin: 0 5vw 0 2.5vw;
         }
-        img:hover{
+
+        img:hover {
           box-shadow: 0 -10px 20px #00000044;
         }
       }
     }
   }
 }
-@media screen and (max-width: 330px){
-  #content{
+
+
+@media screen and (max-width: 330px) {
+  #content {
     &.empreendimentos {
-      .tab-content{
-        &>div{
+      .tab-content {
+        & > div {
           width: calc(82.5vw * 6);
         }
       }
