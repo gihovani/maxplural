@@ -8,11 +8,105 @@
     .item{
       a{
         display: flex;
+        overflow: hidden;
+        position: relative;
+        span{
+          width: 80%;
+          padding: 15px;
+          margin: auto;
+          background-color: #000000bb;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transition: all .3s;
+          opacity: 0;
+          border-top-left-radius: 30px;
+          border-top-right-radius: 30px;
+          transform: translate(-50%, 100%);
+          img{
+            transform: scale(.85);
+          }
+          p{
+            color: #fff;
+            transform: translateX(40px);
+            position: relative;
+            margin:.4em 0;
+            font-size: 1.2rem;
+            width: calc(100% - 50px);
+            &:after{
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translate(-40px, -50%);
+              width: 25px;
+              height: 25px;
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+            &:not(:first-child){
+              &:after{
+                filter: brightness(0)contrast(100)invert(1);
+              }
+            }
+          }
+
+          &.info{
+            .info{
+              &_logo{
+                width: 100%;
+              }
+              &_nome{
+                color: #aaa;
+                &:after{
+                  background-image: url("../imgs/pin-icon.svg");
+                }
+              }
+              &_quartos{
+                &:after{
+                  background-image: url("../imgs/quartos-icon.svg");
+                }
+              }
+              &_banheiros{
+                &:after{
+                  background-image: url("../imgs/toilett-icon.svg");
+                }
+              }
+              &_garagens{
+                &:after{
+                  background-image: url("../imgs/car-icon.svg");
+                }
+              }
+              &_statusObra{
+                &:after{
+                  background-image: url("../imgs/bluePrint-icon.svg");
+                }
+              }
+              &_saibaMais{
+                &:after{
+                  background-image: url("../imgs/nextArrow.svg");
+                  left: unset;
+                  right: 0;
+                }
+              }
+            }
+          }
+        }
+        &:hover{
+          span{
+            opacity: 1;
+            transform: translate(-50%, 0);
+          }
+        }
       }
       img{
         filter: brightness(50%)grayscale(100%);
         transition: all .3s;
-        &:hover{
+
+      }
+      &:hover{
+        img{
           filter: brightness(1.0)grayscale(0);
           box-shadow: 0 -15px 40px #00000044;
         }
