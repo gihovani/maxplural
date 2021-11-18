@@ -31,14 +31,15 @@ Empreendimentos
                             <div class="w-30 pv-1 ph-1 item">
                                 <a href="<?= base_url('site/empreendimento/' . $emp->slug) ?>">
                                     <img class="w-100" src="<?= base_url(\App\Models\EmpreendimentoModel::IMG_PATH . $emp->imagem) ?>" alt="<?= $emp->titulo ?>"/>
-                                    <!--<h3><?= $emp->titulo; ?></h3> -->
                                     <span class="info">
-                                        <img class="info_logo" src="<?= base_url('assets/imgs/marcas/m-derby-logo.svg')?>">
-                                        <p class="info_nome">nome</p>
-                                        <p class="info_quartos">4 quartos</p>
-                                        <p class="info_banheiros">20 banheiros</p>
-                                        <p class="info_garagens">12 garagens</p>
-                                        <p class="info_statusObra">em obras</p>
+                                        <img class="info_logo" src="<?= base_url('assets/imgs/marcas/m-derby-logo.svg')?>" alt="Derby Logo">
+                                        <p class="info_nome"><?= $emp->titulo; ?></p>
+                                        <?php $caracteristicas = explode(',', $emp->palavras_chave) ?>
+                                        <?php foreach ($caracteristicas as $c) : ?>
+                                            <?php list($key, $value) = explode(':', $c); ?>
+                                            <p class="info_<?= $key; ?>"><?= $value; ?> <?= $key; ?></p>
+                                        <?php endforeach; ?>
+                                        <p class="info_statusObra"><?= $emp->tipo; ?></p>
                                         <p class="info_saibaMais">Saiba Mais </p>
                                     </span>
                                 </a>

@@ -58,7 +58,7 @@ Página Inicial
                         <ul class="desc">
                             <?php foreach ($caracteristicas as $c) : ?>
                                 <?php list($key, $value) = explode(':', $c); ?>
-                                <li class="<?= $key; ?> relative"><?= $value; ?></li>
+                                <li class="<?= $key; ?> relative"><?= $value; ?> <?= $key; ?></li>
                             <?php endforeach; ?>
                         </ul>
                         <a href="<?= base_url('site/empreendimento/' . $emp->slug) ?>" class="saiba-mais relative">Saiba mais <span class="nextArrow-icon"></span></a>
