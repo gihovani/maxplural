@@ -17,7 +17,7 @@ class Admins extends CrudAbstract
         $crud->uniqueFields(['login', 'email']);
         $crud->requiredFields(['nome', 'email', 'login', 'senha']);
         $crud->setFieldUpload('avatar', AdminModel::IMG_PATH, base_url(AdminModel::IMG_PATH));
-        $crud->setRule('login', 'lengthMax', ['10']);
+        $crud->setRule('login', 'lengthMax', ['20']);
         $crud->setRule('nome', 'lengthBetween', ['2', '100']);
         $crud->setRule('email', 'lengthMax', ['120']);
         $crud->setRule('email', 'email');
