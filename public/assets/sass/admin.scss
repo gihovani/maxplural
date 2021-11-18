@@ -1,5 +1,8 @@
 body,
 .gc-container{
+  .modal{
+    overflow: unset!important;
+  }
   .page-item .page-number-input{
     height: 38.76px;
     background-color: var(--gc-grid-background-color);

@@ -1,3 +1,7 @@
+body .modal,
+.gc-container .modal {
+  overflow: unset !important;
+}
 body .page-item .page-number-input,
 .gc-container .page-item .page-number-input {
   height: 38.76px;
