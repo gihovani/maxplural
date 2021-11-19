@@ -30,14 +30,17 @@ class Site extends BaseController
 
     public function sobre(): string
     {
-        $pagina = new \App\Models\PaginaModel();
-        return $this->show('sobre', ['pagina' => $pagina->getBySlug('sobre')]);
+        return $this->page('sobre');
     }
 
     public function privacidade(): string
     {
-        $pagina = new \App\Models\PaginaModel();
-        return $this->show('privacidade', ['pagina' => $pagina->getBySlug('privacidade')]);
+        return $this->page('privacidade');
+    }
+
+    public function offline(): string
+    {
+        return $this->page('offline');
     }
 
     public function linhas(): string
@@ -107,6 +110,47 @@ class Site extends BaseController
     {
         $noticia = new \App\Models\NoticiaModel();
         return $this->show('noticia', ['noticia' => $noticia->getBySlug($slug)]);
+    }
+
+    public function manifest(): ResponseInterface
+    {
+        $data = [
+            'theme_color' => '#111111',
+            'background_color' => '#1c1c1c',
+            'display' => 'fullscreen',
+            'scope' => '/',
+            'start_url' => '/',
+            'name' => 'Incorporadora Max Plural',
+            'short_name' => 'Max Plural',
+            'description' => 'Website da incorporadora Max Plural',
+            'icons' => [[
+                'src' => base_url('/favicon.ico'),
+                'type' => 'image/x-icon',
+            ], [
+                'src' => base_url('/assets/icons/icon-192x192.png'),
+                'sizes' => '192x192',
+                'type' => 'image/png',
+            ], [
+                'src' => base_url('/assets/icons/icon-256x256.png'),
+                'sizes' => '256x256',
+                'type' => 'image/png',
+            ], [
+                'src' => base_url('/assets/icons/icon-384x384.png'),
+                'sizes' => '384x384',
+                'type' => 'image/png',
+            ], [
+                'src' => base_url('/assets/icons/icon-512x512.png'),
+                'sizes' => '512x512',
+                'type' => 'image/png',
+            ]]
+        ];
+        return $this->response->setJSON($data);
+    }
+
+    private function page(string $slug): string
+    {
+        $pagina = new \App\Models\PaginaModel();
+        return $this->show($slug, ['pagina' => $pagina->getBySlug($slug)]);
     }
 
     private function show(string $page, array $params = []): string

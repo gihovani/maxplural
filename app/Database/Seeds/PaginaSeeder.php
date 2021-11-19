@@ -47,6 +47,15 @@ class PaginaSeeder extends Seeder
                 'conteudo' => "<div class='linhas-text text-center mv-3'>\r\n<h2 class='title'>Inscrição em nossa Newsletter</h2>\r\n</div>\r\n<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus venenatis molestie elit. Nulla tristique mi at ligula eleifend vitae tincidunt risus rutrum. Etiam mattis pellentesque dictum.\r\nMauris euismod sem est. Sed vehicula rutrum scelerisque. Proin vel maximus ipsum. Phasellus efficitur ipsum nec ullamcorper finibus. Morbi urna libero hendrerit id gravida quis accumsan ac\r\ntellus. Duis id lectus et augue volutpat feugiat.</p>",
                 'style' => '#content{background-color:#fff}#content.newsletter *{color:var(--main-bg-color)}',
                 'situacao' => 1
+            ],
+            [
+                'tipo' => 'Página',
+                'slug' => 'offline',
+                'titulo' => 'Página Offline',
+                'descricao' => 'Página offline para o site da incorporadora Max Plural .',
+                'conteudo' => "<div class='linhas-text text-center mv-3'>\r\n<h2 class='title'>Página Offline</h2>\r\n</div>\r\n<p>Você não está conectado com a Internet.</p><p>Verifique sua conexão de rede e tente novamente.</p>",
+                'style' => '#content{background-color:#fff}#content.offline *{color:var(--main-bg-color);text-align:center}',
+                'situacao' => 1
             ]
         ];
         foreach ($paginas as $data) {

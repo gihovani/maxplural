@@ -16,8 +16,14 @@ abstract class CrudAbstract extends BaseController
     protected $unsetFields = ['created_at', 'updated_at', 'deleted_at'];
     protected $unsetColumns = ['deleted_at'];
     abstract public function configureCrud(GroceryCrud $crud): void;
-    public function index(): string
+
+    public function index()
     {
+        $auth = service('myAuth');
+        if (!$auth->isLoggedIn()) {
+            return redirect()->to('/admin');
+        }
+
         try {
             $crud = $this->getGroceryCrudEnterprise();
         } catch (Exception $e) {

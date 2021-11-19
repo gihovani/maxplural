@@ -32,6 +32,8 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Site::index');
+$routes->get('/manifest.json', 'Site::manifest');
+$routes->get('/offline.html', 'Site::offline');
 $routes->get('/admin', 'Admin\Index::index');
 
 /*

@@ -94,8 +94,9 @@ function scrollPage(scroll, scrollPos) {
 function checkUrlToHeader() {
     let url = window.location.href;
     let scroll = $(window).scrollTop();
-    let baseUrl = $('#baseUrl').attr('href') + '/';
-    if ((url !== baseUrl) && (url !== baseUrl + '?')) {
+    let baseUrl = $('#baseUrl').attr('href');
+    let urls = [baseUrl, baseUrl + '/', baseUrl + '?', baseUrl + '/?'];
+    if (urls.indexOf(url) < 0) {
         let headerHeight = $('header').innerHeight() - 57;
         scrollPage(scroll, 0);
         $('.content').attr('style', 'padding-top:' + headerHeight + 'px;');

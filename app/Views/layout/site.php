@@ -2,7 +2,7 @@
 <html lang="pt-BR" dir="ltr">
 <head>
     <title><?= $this->renderSection('title') ?></title>
-    <base id="baseUrl" href="<?= base_url() ?>"/>
+    <base id="baseUrl" href="<?= base_url() ?>/"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?= $this->renderSection('meta') ?>
@@ -11,12 +11,18 @@
     <link rel="stylesheet" href="<?= base_url('assets/slick-1.8.1/slick/slick.css') ?> "/>
     <?= $this->renderSection('styles') ?>
 
+    <link rel="manifest" href="<?= base_url('manifest.json')?>" />
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,200&display=swap" rel="stylesheet"/>
     <link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico') ?>" />
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('favicon.ico') ?>" />
     <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/img/favicon.png') ?>" />
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+    </script>
 </head>
 <body id="topo" class="relative">
 <div class="loader"></div>
