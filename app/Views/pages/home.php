@@ -43,9 +43,9 @@ Página Inicial
 <?php if (isset($destaques) && count($destaques)): ?>
     <section id="empreendimentos" class="relative">
         <div class="navegacao">
-            <a class="relative" href="<?= site_url('site/noticias/?q=Lancamento') ?>">Lançamentos <span class="nextArrow-icon"></span></a>
-            <a class="relative" href="<?= site_url('site/noticias/?q=Entregue') ?>">Obras Entregues <span class="nextArrow-icon"></span></a>
-            <a class="relative" href="<?= site_url('site/noticias/?q=Construcao') ?>">Obras em Construção <span class="nextArrow-icon"></span></a>
+            <a class="relative" href="<?= site_url('site/empreendimentos/?q=Lancamento') ?>">Lançamentos <span class="nextArrow-icon"></span></a>
+            <a class="relative" href="<?= site_url('site/empreendimentos/?q=Entregue') ?>">Obras Entregues <span class="nextArrow-icon"></span></a>
+            <a class="relative" href="<?= site_url('site/empreendimentos/?q=Construcao') ?>">Obras em Construção <span class="nextArrow-icon"></span></a>
         </div>
         <div class="empreendimentos__box d-flex">
             <?php foreach ($destaques as $i => $emp): ?>

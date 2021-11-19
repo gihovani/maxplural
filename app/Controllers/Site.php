@@ -119,7 +119,7 @@ class Site extends BaseController
             'background_color' => '#1c1c1c',
             'display' => 'fullscreen',
             'scope' => '/',
-            'start_url' => '/',
+            'start_url' => base_url(),
             'name' => 'Incorporadora Max Plural',
             'short_name' => 'Max Plural',
             'description' => 'Website da incorporadora Max Plural',
