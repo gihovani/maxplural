@@ -1,7 +1,14 @@
 <?= $this->extend('layout/site') ?>
 
 <?= $this->section('title') ?>
-Empreendimentos
+Nossos Empreendimentos
+<?= $this->endSection() ?>
+
+<?= $this->section('meta') ?>
+<meta name="keywords" content="empreendimentos, valor apartamento, site de vendas de apartamentos, imóveis para comprar, apartamentos novos, apartamentos a venda, simular financiamento, recife, pernambuco, porto de galinhas, piedade" />
+<meta name="description" content="Se na hora de escolher um imóvel você não abre mão de sofisticação, exclusividade e design, você precisa conhecer os empreendimentos Maxplural. Encontre empreendimentos em um dos destinos mais procurados do litoral nordestino." />
+<meta itemprop="image" content="<?= base_url('assets/icons/icon-512x512.png')?>" />
+<link rel="canonical" href="<?= site_url('site/empreendimentos')?>" />
 <?= $this->endSection() ?>
 
 <?= $this->section('styles') ?>
@@ -29,7 +36,7 @@ Empreendimentos
                     <div class="d-flex">
                         <?php foreach ($empreendimentos as $emp): ?>
                             <div class="w-30 pv-1 ph-1 item">
-                                <a href="<?= base_url('site/empreendimento/' . $emp->slug) ?>">
+                                <a href="<?= site_url('site/empreendimento/' . $emp->slug) ?>">
                                     <img class="w-100" src="<?= base_url(\App\Models\EmpreendimentoModel::IMG_PATH . $emp->imagem) ?>" alt="<?= $emp->titulo ?>"/>
                                     <span class="info">
                                         <img class="info_logo" src="<?= base_url('assets/imgs/marcas/m-derby-logo.svg') ?>" alt="Derby Logo">

@@ -4,6 +4,13 @@
     Baixe as Tabelas
 <?= $this->endSection() ?>
 
+<?= $this->section('meta') ?>
+<meta name="keywords" content="Tabela de valores, valor apartamento, site de vendas de apartamentos, imóveis para comprar, apartamentos novos, apartamentos a venda, simular financiamento, recife, pernambuco, porto de galinhas, piedade" />
+<meta name="description" content="Se na hora de escolher um imóvel você não abre mão de sofisticação, exclusividade e design, você precisa conhecer os empreendimentos Maxplural. Baixa nossa tabela de valores dos empreendimentos em um dos destinos mais procurados do litoral nordestino." />
+<meta itemprop="image" content="<?= base_url('assets/icons/icon-512x512.png')?>" />
+<link rel="canonical" href="<?= site_url('site/tabelas-de-valores')?>" />
+<?= $this->endSection() ?>
+
 <?= $this->section('styles')?>
     <link rel="stylesheet" href="<?= base_url('assets/css/tabelas-de-valores.min.css')?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/form.min.css')?>" />

@@ -4,10 +4,26 @@
 <?= $pagina->titulo ?>
 <?= $this->endSection() ?>
 
+<?= $this->section('meta') ?>
+<?php $meta = $pagina;?>
+<?php if ($meta->palavras_chave) :?>
+    <meta name="keywords" content="<?= $meta->palavras_chave?>" />
+<?php endif;?>
+<?php if ($meta->descricao) :?>
+    <meta name="description" content="<?= $meta->descricao?>" />
+<?php endif;?>
+<?php if ($meta->imagem) :?>
+    <meta itemprop="image" content="<?= base_url(\App\Models\PaginaModel::IMG_PATH . $meta->imagem)?>" />
+<?php endif;?>
+<link rel="canonical" href="<?= site_url('site/offline')?>" />
+<?= $this->endSection() ?>
+
 <?= $this->section('styles')?>
-<style>
-    <?= $pagina->style ?>
-</style>
+<?php if (isset($pagina->style) && !empty($pagina->style)):?>
+    <style>
+        <?= $pagina->style ?>
+    </style>
+<?php endif;?>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
@@ -22,4 +38,12 @@
         <?= $pagina->conteudo ?>
     </div>
 </section>
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts')?>
+<?php if (isset($pagina->javascript) && !empty($pagina->javascript)):?>
+    <script>
+        <?= $pagina->javascript ?>
+    </script>
+<?php endif;?>
 <?= $this->endSection() ?>

@@ -4,11 +4,30 @@
 <?= $emp->titulo ?>
 <?= $this->endSection() ?>
 
+<?= $this->section('meta') ?>
+<?php $meta = $emp;?>
+<?php if ($meta->palavras_chave) :?>
+<meta name="keywords" content="<?= $meta->palavras_chave?>" />
+<?php endif;?>
+<?php if ($meta->descricao) :?>
+<meta name="description" content="<?= $meta->descricao?>" />
+<?php endif;?>
+<?php if ($meta->imagem) :?>
+<meta itemprop="image" content="<?= base_url(\App\Models\EmpreendimentoModel::IMG_PATH . $meta->imagem)?>" />
+<?php endif;?>
+<link rel="canonical" href="<?= site_url('site/empreendimento/'.$meta->slug)?>" />
+<?= $this->endSection() ?>
+
 <?= $this->section('styles')?>
     <link rel="stylesheet" href="<?= base_url('assets/css/projeto.min.css')?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/galeria.min.css')?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/form.min.css')?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/tabs.min.css')?>" />
+    <?php if (isset($emp->style) && !empty($emp->style)):?>
+        <style>
+            <?= $emp->style ?>
+        </style>
+    <?php endif;?>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
@@ -305,4 +324,9 @@
     <script type="text/javascript" src="<?= base_url('assets/js/progress-bar-min.js')?>" ></script>
     <script type="text/javascript" src="<?= base_url('assets/jquery/phone-mask.min.js')?>" ></script>
     <script type="text/javascript" src="<?= base_url('assets/js/form-min.js')?>" ></script>
+    <?php if (isset($emp->javascript) && !empty($emp->javascript)):?>
+        <script>
+            <?= $emp->javascript ?>
+        </script>
+    <?php endif;?>
 <?= $this->endSection() ?>

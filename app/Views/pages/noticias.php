@@ -4,6 +4,13 @@
     Notícias e novidades para você
 <?= $this->endSection() ?>
 
+<?= $this->section('meta') ?>
+<meta name="keywords" content="Notícias, novidades para você, valor apartamento, site de vendas de apartamentos, imóveis para comprar, apartamentos novos, apartamentos a venda, simular financiamento, recife, pernambuco, porto de galinhas, piedade" />
+<meta name="description" content="Notícias e novidades para ajudar você que quer escolher um imóvel e não abre mão de sofisticação, exclusividade e design. Encontre empreendimentos em um dos destinos mais procurados do litoral nordestino." />
+<meta itemprop="image" content="<?= base_url('assets/icons/icon-512x512.png')?>" />
+<link rel="canonical" href="<?= site_url('site/noticias')?>" />
+<?= $this->endSection() ?>
+
 <?= $this->section('styles')?>
     <link rel="stylesheet" href="<?= base_url('assets/css/noticias.min.css')?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/pagination.min.css') ?>"/>
@@ -43,19 +50,23 @@
                     <div class="post-descricao">
                         <div class="post-descricao__info d-flex">
                             <span class="cat"><?= $emp->categoria;?></span>
-                            <span class="data"><?= $emp->created_at; ?></span>
+                            <span class="data">
+                                <?php list($data, $hora) = explode(' ', $emp->created_at) ?>
+                                <?php list($ano, $mes, $dia)  = explode('-', $data); ?>
+                                <?=$dia?>/<?=$mes?>/<?=$ano?>
+                            </span>
                         </div>
                         <div class="post-descricao__content">
                             <h3><?= $emp->titulo?></h3>
                             <p class="truncate"><?= $emp->descricao ?></p>
-                            <a href="<?= base_url('site/noticia/'.$emp->slug) ?>" class="leia-mais">Leia mais</a>
+                            <a href="<?= site_url('site/noticia/'.$emp->slug) ?>" class="leia-mais">Leia mais</a>
                         </div>
                     </div>
                 </div>
             </div>
             <?php foreach ($noticias as $emp) : ?>
             <div class="post">
-                <a href="<?= base_url('site/noticia/'.$emp->slug) ?>">
+                <a href="<?= site_url('site/noticia/'.$emp->slug) ?>">
                     <div class="w-100 img-post2 d-flex">
                         <img src="<?= base_url(\App\Models\NoticiaModel::IMG_PATH . $emp->imagem)?>" alt="<?= $emp->titulo?>">
                     </div>

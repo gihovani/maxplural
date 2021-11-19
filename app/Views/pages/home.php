@@ -1,7 +1,14 @@
 <?= $this->extend('layout/site') ?>
 
 <?= $this->section('title') ?>
-Página Inicial
+Apartamentos Personalizados para Quem Busca um Morar Contemporâneo - Max Plural
+<?= $this->endSection() ?>
+
+<?= $this->section('meta') ?>
+<meta name="keywords" content="valor apartamento, site de vendas de apartamentos, imóveis para comprar, apartamentos novos, apartamentos a venda, recife, pernambuco, porto de galinhas, piedade" />
+<meta name="description" content="Apartamentos personalizados, para quem busca um morar contemporâneo. Imóveis com estrutura completa de lazer, localização estratégica e projetos únicos." />
+<meta itemprop="image" content="<?= base_url('assets/icons/icon-512x512.png')?>" />
+<link rel="canonical" href="<?= base_url()?>" />
 <?= $this->endSection() ?>
 
 <?= $this->section('styles') ?>
@@ -61,7 +68,7 @@ Página Inicial
                                 <li class="<?= $key; ?> relative"><?= $value; ?> <?= $key; ?></li>
                             <?php endforeach; ?>
                         </ul>
-                        <a href="<?= base_url('site/empreendimento/' . $emp->slug) ?>" class="saiba-mais relative">Saiba mais <span class="nextArrow-icon"></span></a>
+                        <a href="<?= site_url('site/empreendimento/' . $emp->slug) ?>" class="saiba-mais relative">Saiba mais <span class="nextArrow-icon"></span></a>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -93,8 +100,8 @@ Página Inicial
             </div>
         </div>
         <div class="links relative">
-            <a href="<?= base_url('site/sobre') ?>#historia" class="relative">Nossa História <span class="nextArrow-icon"></span></a>
-            <a href="<?= base_url('site/sobre') ?>#diferenciais" class="relative">Diferenciais <span class="nextArrow-icon"></span></a>
+            <a href="<?= site_url('site/sobre') ?>#historia" class="relative">Nossa História <span class="nextArrow-icon"></span></a>
+            <a href="<?= site_url('site/sobre') ?>#diferenciais" class="relative">Diferenciais <span class="nextArrow-icon"></span></a>
         </div>
     </div>
 </section>
@@ -103,14 +110,14 @@ Página Inicial
         <div class="container">
             <div class="noticias-header d-flex">
                 <h4 class="thin"><i>Novidades para você</i></h4>
-                <a href="<?= base_url('site/noticias') ?>" class="relative">Ir para o Blog <span class="nextArrow-icon dark"></span></a>
+                <a href="<?= site_url('site/noticias') ?>" class="relative">Ir para o Blog <span class="nextArrow-icon dark"></span></a>
             </div>
             <div class="noticias-content">
                 <div class="slider-3">
                     <?php foreach ($noticias as $emp): ?>
                         <div>
-                            <a href="<?= base_url('site/noticia/' . $emp->slug) ?>">
-                                <img class="w-100" src="<?= base_url(\App\Models\NoticiaModel::IMG_PATH . $emp->imagem) ?>" alt="<?= $emp->titulo ?>"/>
+                            <a href="<?= site_url('site/noticia/' . $emp->slug) ?>">
+                                <img class="w-100" src="<?= site_url(\App\Models\NoticiaModel::IMG_PATH . $emp->imagem) ?>" alt="<?= $emp->titulo ?>"/>
                                 <div class="noticias-content__box">
                                     <p class="noticias-content__title"><?= $emp->titulo ?></p>
                                     <p class="noticias-content__desc"><?= $emp->descricao ?></p>

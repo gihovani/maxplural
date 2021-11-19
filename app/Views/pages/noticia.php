@@ -4,9 +4,28 @@
 <?= $noticia->titulo?>
 <?= $this->endSection() ?>
 
+<?= $this->section('meta') ?>
+<?php $meta = $noticia;?>
+<?php if ($meta->palavras_chave) :?>
+    <meta name="keywords" content="<?= $meta->palavras_chave?>" />
+<?php endif;?>
+<?php if ($meta->descricao) :?>
+    <meta name="description" content="<?= $meta->descricao?>" />
+<?php endif;?>
+<?php if ($meta->imagem) :?>
+    <meta itemprop="image" content="<?= base_url(\App\Models\NoticiaModel::IMG_PATH . $meta->imagem)?>" />
+<?php endif;?>
+<link rel="canonical" href="<?= site_url('site/noticia/' . $meta->slug)?>" />
+<?= $this->endSection() ?>
+
 <?= $this->section('styles')?>
     <link rel="stylesheet" href="<?= base_url('assets/css/noticia.min.css')?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/form.min.css')?>" />
+    <?php if (isset($noticia->style) && !empty($noticia->style)):?>
+        <style>
+            <?= $noticia->style ?>
+        </style>
+    <?php endif;?>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
@@ -98,5 +117,9 @@
     <script type="text/javascript" src="<?= base_url('assets/js/tabelas-de-valores-min.js')?>" ></script>
     <script type="text/javascript" src="<?= base_url('assets/js/noticia-min.js')?>" ></script>
     <script type="text/javascript" src="<?= base_url('assets/js/form-min.js')?>" ></script>
-
+    <?php if (isset($noticia->javascript) && !empty($noticia->javascript)):?>
+        <script>
+            <?= $noticia->javascript ?>
+        </script>
+    <?php endif;?>
 <?= $this->endSection() ?>

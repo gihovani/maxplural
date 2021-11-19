@@ -1,7 +1,14 @@
 <?= $this->extend('layout/site') ?>
 
 <?= $this->section('title') ?>
-Fale Conosco
+Fale Conosco - Max Plural
+<?= $this->endSection() ?>
+
+<?= $this->section('meta') ?>
+<meta name="keywords" content="valor apartamento, site de vendas de apartamentos, imóveis para comprar, apartamentos novos, apartamentos a venda, simular financiamento, recife, pernambuco, porto de galinhas, piedade" />
+<meta name="description" content="Tirar dúvidas, faça orçamentos, simule financiamento com a Max Plural. Entrar em contato com a Ouvidoria da Incorporadora Max Plural." />
+<meta itemprop="image" content="<?= base_url('assets/icons/icon-512x512.png')?>" />
+<link rel="canonical" href="<?= site_url('site/contato')?>" />
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>

@@ -3,8 +3,9 @@
 <head>
     <title><?= $this->renderSection('title') ?></title>
     <base id="baseUrl" href="<?= base_url() ?>/"/>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta content="dark" name="color-scheme" />
     <?= $this->renderSection('meta') ?>
     <link rel="stylesheet" href="<?= base_url('assets/css/newsletter.min.css') ?>"/>
     <link rel="stylesheet" href="<?= base_url('assets/css/master.css') ?>"/>
@@ -68,7 +69,7 @@
             </a>
         </div>
         <div class="central">
-            <a href="<?= base_url('site/contato') ?>">
+            <a href="<?= site_url('site/contato') ?>">
                 <h4>Central de Vendas</h4>
                 <h5 class="thin">(Fale conosco)</h5>
             </a>
@@ -89,13 +90,13 @@
 <nav>
     <ul class="no-style text-center">
         <li class="closeMenu"><a href="<?= base_url() ?>">INÍCIO</a></li>
-        <li class="closeMenu"><a href="<?= base_url('site/sobre') ?>">A MAXPLURAL</a></li>
-        <li class="closeMenu"><a href="<?= base_url('site/linhas') ?>">NOSSAS LINHAS</a></li>
-        <li class="closeMenu"><a href="<?= base_url('site/empreendimentos') ?>">EMPREENDIMENTOS</a></li>
-        <li class="closeMenu"><a href="<?= base_url('site/noticias') ?>">NOTÍCIAS</a></li>
-        <!--<li class="closeMenu"><a href="<?= base_url('site/projeto') ?>">PROJETOS</a></li>-->
-        <li class="closeMenu"><a href="<?= base_url('site/tabelas-de-valores') ?>">TABELAS DE VALORES</a></li>
-        <li class="closeMenu"><a href="<?= base_url('site/contato') ?>">CONTATO</a></li>
+        <li class="closeMenu"><a href="<?= site_url('site/sobre') ?>">A MAXPLURAL</a></li>
+        <li class="closeMenu"><a href="<?= site_url('site/linhas') ?>">NOSSAS LINHAS</a></li>
+        <li class="closeMenu"><a href="<?= site_url('site/empreendimentos') ?>">EMPREENDIMENTOS</a></li>
+        <li class="closeMenu"><a href="<?= site_url('site/noticias') ?>">NOTÍCIAS</a></li>
+        <!--<li class="closeMenu"><a href="<?= site_url('site/projeto') ?>">PROJETOS</a></li>-->
+        <li class="closeMenu"><a href="<?= site_url('site/tabelas-de-valores') ?>">TABELAS DE VALORES</a></li>
+        <li class="closeMenu"><a href="<?= site_url('site/contato') ?>">CONTATO</a></li>
     </ul>
     <span class="closeMenu"></span>
 </nav>
@@ -179,13 +180,13 @@
             <div class="w-25 text-center v-divider">
                 <ul class="no-style">
                     <li><a href="<?= base_url() ?>">INÍCIO</a></li>
-                    <li><a href="<?= base_url('site/sobre') ?>">A MAXPLURAL</a></li>
-                    <li><a href="<?= base_url('site/linhas') ?>">NOSSAS LINHAS</a></li>
-                    <li><a href="<?= base_url('site/empreendimentos') ?>">EMPREENDIMENTOS</a></li>
-                    <li><a href="<?= base_url('site/noticias') ?>">NOTÍCIAS</a></li>
-                    <!--<li><a href="<?= base_url('site/projeto') ?>">PROJETOS</a></li>-->
-                    <li><a href="<?= base_url('site/tabelas-de-valores') ?>">TABELAS DE VALORES</a></li>
-                    <li><a href="<?= base_url('site/contato') ?>">CONTATO</a></li>
+                    <li><a href="<?= site_url('site/sobre') ?>">A MAXPLURAL</a></li>
+                    <li><a href="<?= site_url('site/linhas') ?>">NOSSAS LINHAS</a></li>
+                    <li><a href="<?= site_url('site/empreendimentos') ?>">EMPREENDIMENTOS</a></li>
+                    <li><a href="<?= site_url('site/noticias') ?>">NOTÍCIAS</a></li>
+                    <!--<li><a href="<?= site_url('site/projeto') ?>">PROJETOS</a></li>-->
+                    <li><a href="<?= site_url('site/tabelas-de-valores') ?>">TABELAS DE VALORES</a></li>
+                    <li><a href="<?= site_url('site/contato') ?>">CONTATO</a></li>
                 </ul>
             </div>
             <div class="w-30 text-center">
@@ -196,7 +197,7 @@
     </div>
     <div class="linha-3">
         <div class="container d-flex">
-            <div class="w-50">© MaxPlural - Todos os direitos reservados | <a href="<?= base_url('site/privacidade') ?>" class="destaque">Termos de Privacidade</a></div>
+            <div class="w-50">© MaxPlural - Todos os direitos reservados | <a href="<?= site_url('site/privacidade') ?>" class="destaque">Termos de Privacidade</a></div>
             <div class="w-40 d-flex">
                 <img class="mh-1" src="<?= base_url('assets/imgs/logo-2.svg') ?>" alt="Logo Explay"> Certificado e desenvolvido por
                 <a href="https://www.explay.com.br/" class="destaque mh-1" target="_blank"> Explay Web Agency</a>
