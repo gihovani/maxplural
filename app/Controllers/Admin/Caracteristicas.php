@@ -15,6 +15,7 @@ class Caracteristicas extends CrudAbstract
         $crud->uniqueFields(['titulo']);
         $crud->requiredFields(['titulo']);
         $crud->setFieldUpload('imagem', CaracteristicaModel::IMG_PATH, base_url(CaracteristicaModel::IMG_PATH));
+        $crud->displayAs('imagem', 'Imagem (45x45px)');
         $crud->setRule('titulo', 'lengthBetween', ['2', '100']);
         $crud->displayAs('titulo', 'Título');
         $crud->callbackBeforeInsert(function ($stateParameters) {

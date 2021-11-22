@@ -19,13 +19,13 @@ class Empreendimentos extends CrudAbstract
         $crud->uniqueFields(['slug']);
         $crud->requiredFields(['titulo', 'descricao', 'conteudo']);
         $crud->setFieldUpload('imagem', EmpreendimentoModel::IMG_PATH, base_url(EmpreendimentoModel::IMG_PATH));
+        $crud->displayAs('imagem', 'Imagem (480x850px)');
         $crud->setRelation('linha_id','linha','titulo');
         $crud->setRelationNtoN('caracteristicas', 'empreendimento_caracteristica', 'caracteristica', 'empreendimento_id', 'caracteristica_id', 'titulo');
         $crud->setRule('titulo', 'lengthBetween', ['1', '100']);
         $crud->displayAs('titulo', 'Título');
         $crud->setRule('descricao', 'lengthBetween', ['1', '200']);
         $crud->displayAs('descricao', 'Descrição');
-        $crud->setRule('conteudo', 'lengthMin', ['1']);
         $crud->setTexteditor(['conteudo', 'especificacoes_tecnicas']);
         $crud->displayAs('conteudo', 'Conteúdo');
         $crud->displayAs('especificacoes_tecnicas', 'Especificações Técnicas');

@@ -17,12 +17,13 @@ class Paginas extends CrudAbstract
         $crud->uniqueFields(['slug']);
         $crud->requiredFields(['slug', 'titulo', 'descricao', 'conteudo']);
         $crud->setFieldUpload('imagem', PaginaModel::IMG_PATH, base_url(PaginaModel::IMG_PATH));
+        $crud->displayAs('imagem', 'Imagem (1200x620px)');
         $crud->setRule('titulo', 'lengthBetween', ['1', '100']);
         $crud->displayAs('titulo', 'Título');
         $crud->setRule('descricao', 'lengthBetween', ['1', '200']);
         $crud->displayAs('descricao', 'Descrição');
         $crud->fieldType('conteudo', 'text');
-        $crud->setRule('conteudo', 'lengthMin', ['1']);
+        $crud->setTexteditor(['conteudo']);
         $crud->displayAs('conteudo', 'Conteúdo');
         $crud->displayAs('situacao', 'Situação');
         $crud->fieldType('situacao', 'dropdown', ['Inativo', 'Ativo']);

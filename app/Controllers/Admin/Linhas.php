@@ -15,6 +15,7 @@ class Linhas extends CrudAbstract
         $crud->uniqueFields(['titulo']);
         $crud->requiredFields(['titulo']);
         $crud->setFieldUpload('imagem', LinhaModel::IMG_PATH, base_url(LinhaModel::IMG_PATH));
+        $crud->displayAs('imagem', 'Imagem (240x70px)');
         $crud->setRule('titulo', 'lengthBetween', ['2', '100']);
         $crud->setRule('descricao', 'lengthMax', ['65000']);
         $crud->displayAs('titulo', 'Título');

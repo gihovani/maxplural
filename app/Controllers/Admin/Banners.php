@@ -18,8 +18,9 @@ class Banners extends CrudAbstract
         $crud->setFieldUpload('imagem_mobile', BannerImagemModel::IMG_PATH, base_url(BannerImagemModel::IMG_PATH));
         $crud->setRule('titulo', 'lengthBetween', ['1', '100']);
         $crud->displayAs('titulo', 'Título');
-        $crud->fieldType('conteudo', 'text');
-        $crud->setRule('conteudo', 'lengthMin', ['1']);
+        $crud->displayAs('imagem', 'Imagem (1920x840px)');
+        $crud->displayAs('imagem_mobile', 'Imagem Mob (680x1010px)');
         $crud->displayAs('conteudo', 'Conteúdo');
+        $crud->setTexteditor(['conteudo']);
     }
 }
