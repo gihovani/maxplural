@@ -154,7 +154,7 @@ Admin Maxplural
 <?= $this->endSection() ?>
 
 <?= $this->section('header') ?>
-<a href="" class="logo"><img src="<?= base_url('/assets/imgs/admin/admin-logo.svg')?>" alt=""></a>
+<a href="<?= site_url('admin')?>" class="logo"><img src="<?= base_url('/assets/imgs/admin/admin-logo.svg')?>" alt="Logo"></a>
 <input class="menu-btn" type="checkbox" id="menu-btn" />
 <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 <ul class="menu">

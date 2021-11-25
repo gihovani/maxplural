@@ -59,7 +59,9 @@ Apartamentos Personalizados para Quem Busca um Morar Contemporâneo - Max Plural
                 <div class="item relative" data-item="item<?= $i ?>">
                     <img src="<?= base_url(\App\Models\EmpreendimentoModel::IMG_PATH . $emp->imagem) ?>" alt="<?= $emp->titulo ?>"/>
                     <div class="hover">
-                        <!--                <img src="<?= base_url('assets/imgs/marcas/m-derby-logo.svg') ?>" alt="Derby Logo" />-->
+                        <?php if (($l = $linha->getById($emp->linha_id)) && $l->imagem):?>
+                            <img src="<?= base_url(\App\Models\LinhaModel::IMG_PATH . $l->imagem)?>" alt="<?=$l->titulo?>">
+                        <?php endif;?>
                         <div class="local relative"><i><?= $emp->titulo ?></i></div>
                         <?php $caracteristicas = explode(',', $emp->palavras_chave) ?>
                         <ul class="desc">

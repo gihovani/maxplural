@@ -29,6 +29,11 @@ class LinhaModel extends BaseModel
         ],
     ];
 
+    public function getById(string $id)
+    {
+        return $this->where(['id' => $id])->first();
+    }
+
     public function defineValor(array $data): array
     {
         $data = parent::defineValor($data);

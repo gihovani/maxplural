@@ -23,7 +23,9 @@ class Site extends BaseController
         $data = [
             'banners' => $banner->orderBy('prioridade')->findAll(),
             'destaques' => $empreendimentos->paginate(4),
-            'noticias' => $noticias->paginate(4)
+            'noticias' => $noticias->paginate(4),
+            'linha' => new \App\Models\LinhaModel()
+
         ];
         return $this->show('home', $data);
     }
