@@ -42,7 +42,7 @@ section{
     padding: 50px 0;
     background-color: #FFF;
     &:not(#newsletter){
-      h1,h2,h3,h4,h5,h6,span,p,div{
+      h1,h2,h3,h4,h5,h6,span,p,div,strong{
         color: #000;
       }
       &.bg-dark{
@@ -377,6 +377,7 @@ section{
       background-repeat: no-repeat;
       justify-content: flex-end;
       padding: 80px 0;
+      min-height: 550px;
       &>div{
         margin-right: 100px;
         .title{

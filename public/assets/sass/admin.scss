@@ -8,6 +8,7 @@ body,
     background-color: var(--gc-grid-background-color);
   }
   header{
+    z-index: 20;
     .logo{
       width: 300px;
       img{
