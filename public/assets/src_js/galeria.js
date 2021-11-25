@@ -46,7 +46,7 @@ function desmontaModal() {
     $('.zoomModal').remove();
 }
 
-function montaModal(srcImg) {
+function montaModal(srcImg,section) {
     let body = $('body');
     body.remove('.zoomModal');
     body.append('<div class="zoomModal d-flex">' +
@@ -63,20 +63,29 @@ function montaModal(srcImg) {
         '</div>' +
         '</div>' +
         '</div>');
+    if(section === 'planta'){
+        $('#'+section+' .filter-box-content-item').each(function(){
+            let imgThumb = $(this).find('img').attr('src');
+            let thumb = '<img src="' + imgThumb + '" alt="thumb" />';
+            $('.zoomModalBox .thumbs .thumbs-box').append(thumb);
+        });
+    }else{
+        $('#'+section+' .filter-box-content-item.show').each(function () {
+            let imgThumb = $(this).find('img').attr('src');
+            let thumb = '<img src="' + imgThumb + '" alt="thumb" />';
+            $('.zoomModalBox .thumbs .thumbs-box').append(thumb);
+        });
+    }
 
-    $('.filter-box-content-item.show').each(function () {
-        let imgThumb = $(this).find('img').attr('src');
-        let thumb = '<img src="' + imgThumb + '" alt="thumb" />';
-        $('.zoomModalBox .thumbs .thumbs-box').append(thumb);
-    });
     ativaThumb(srcImg, changeShowcase);
     thumbNavigate();
 }
 
 function zoom() {
     $('.filter-box-content-item').click(function () {
+        let section = $(this).closest('section').attr('id');
         let srcImg = $(this).find('img').attr('src');
-        montaModal(srcImg);
+        montaModal(srcImg, section);
     });
 }
 

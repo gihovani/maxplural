@@ -39,7 +39,7 @@ section:not(:first-child) {
   padding: 50px 0;
   background-color: #FFF;
 }
-section:not(:first-child):not(#newsletter) h1, section:not(:first-child):not(#newsletter) h2, section:not(:first-child):not(#newsletter) h3, section:not(:first-child):not(#newsletter) h4, section:not(:first-child):not(#newsletter) h5, section:not(:first-child):not(#newsletter) h6, section:not(:first-child):not(#newsletter) span, section:not(:first-child):not(#newsletter) p, section:not(:first-child):not(#newsletter) div {
+section:not(:first-child):not(#newsletter) h1, section:not(:first-child):not(#newsletter) h2, section:not(:first-child):not(#newsletter) h3, section:not(:first-child):not(#newsletter) h4, section:not(:first-child):not(#newsletter) h5, section:not(:first-child):not(#newsletter) h6, section:not(:first-child):not(#newsletter) span, section:not(:first-child):not(#newsletter) p, section:not(:first-child):not(#newsletter) div, section:not(:first-child):not(#newsletter) strong {
   color: #000;
 }
 section:not(:first-child):not(#newsletter).bg-dark {
@@ -346,6 +346,7 @@ section#download-e-orcamento .download-content {
   background-repeat: no-repeat;
   justify-content: flex-end;
   padding: 80px 0;
+  min-height: 550px;
 }
 section#download-e-orcamento .download-content > div {
   margin-right: 100px;

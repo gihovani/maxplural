@@ -146,10 +146,10 @@
                 <span class="prev">
                     <img class="w-100" src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt="Slide Anterior">
                 </span>
-                <div class="slider-1">
+                <div class="slider-1 ">
                     <?php if (isset($emp->imagens['Especificação']) && count($emp->imagens['Especificação'])):?>
                         <?php foreach ($emp->imagens['Especificação'] as $b):?>
-                            <div>
+                            <div class="filter-box-content-item">
                                 <img class="w-100" src="<?= base_url(\App\Models\EmpreendimentoImagemModel::IMG_PATH . $b->imagem)?>" alt="<?= $b->titulo ?>">
                                 <span><?= $b->titulo ?></span>
                             </div>
