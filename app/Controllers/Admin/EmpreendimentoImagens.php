@@ -28,7 +28,6 @@ class EmpreendimentoImagens extends CrudAbstract
 
         $crud->setTable('empreendimento_imagem');
         $crud->setSubject('Empreendimento Imagem' . $titulo, 'Empreendimento Imagens' . $titulo);
-        $crud->uniqueFields(['titulo']);
         $crud->requiredFields(['titulo']);
         $crud->setFieldUpload('imagem', EmpreendimentoImagemModel::IMG_PATH, base_url(EmpreendimentoImagemModel::IMG_PATH));
         $crud->displayAs('imagem', 'Imagem (1920x1080px)');
