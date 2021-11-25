@@ -45,7 +45,7 @@
     <section id="desc">
         <div class="container relative">
             <div class="title-section d-flex w-100">
-                <div class="logo" style="background-color: white">
+                <div class="logo" >
                     <img src="<?= base_url(\App\Models\LinhaModel::IMG_PATH . $emp->linha->imagem)?>" alt="<?=$emp->linha->titulo?>">
                 </div>
                 <div class="titulo-box">
@@ -126,6 +126,7 @@
                 </div>
             </div>
             <?php if (isset($emp->video) && $emp->video):?>
+            <hr>
             <div class="titulo">
                 <h2 class="text-center">TOUR VIRTUAL 360º</h2>
             </div>
@@ -142,28 +143,33 @@
             <h2 class="text-center">PLANTAS E ESPECIFICAÇÕES TÉCNICAS</h2>
         </div>
         <div class="d-flex container">
-            <div class="w-40 planta-slider-box">
-                <span class="prev">
-                    <img class="w-100" src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt="Slide Anterior">
-                </span>
-                <div class="slider-1 ">
-                    <?php if (isset($emp->imagens['Especificação']) && count($emp->imagens['Especificação'])):?>
-                        <?php foreach ($emp->imagens['Especificação'] as $b):?>
-                            <div class="filter-box-content-item">
-                                <img class="w-100" src="<?= base_url(\App\Models\EmpreendimentoImagemModel::IMG_PATH . $b->imagem)?>" alt="<?= $b->titulo ?>">
-                                <span><?= $b->titulo ?></span>
-                            </div>
-                        <?php endforeach;?>
-                    <?php endif; ?>
+            <?php if (isset($emp->imagens['Especificação']) && count($emp->imagens['Especificação'])):?>
+                <div class="w-40 planta-slider-box">
+                    <span class="prev">
+                        <img class="w-100" src="<?= base_url('assets/imgs/prevArrow.svg')?>" alt="Slide Anterior">
+                    </span>
+                    <div class="slider-1 ">
+                            <?php foreach ($emp->imagens['Especificação'] as $b):?>
+                                <div class="filter-box-content-item">
+                                    <img class="w-100" src="<?= base_url(\App\Models\EmpreendimentoImagemModel::IMG_PATH . $b->imagem)?>" alt="<?= $b->titulo ?>">
+                                    <span><?= $b->titulo ?></span>
+                                </div>
+                            <?php endforeach;?>
+                    </div>
+                    <span class="next">
+                        <img class="w-100" src="<?= base_url('assets/imgs/nextArrow.svg')?>" alt="Slide Próximo">
+                    </span>
                 </div>
-                <span class="next">
-                    <img class="w-100" src="<?= base_url('assets/imgs/nextArrow.svg')?>" alt="Slide Próximo">
-                </span>
-            </div>
             <div class="w-40 planta-content">
                 <h2 class="subtitle">ESPECIFICAÇÕES<br />TÉCNICAS</h2>
                 <?= $emp->especificacoes_tecnicas ?>
             </div>
+            <?php else: ?>
+                <div class="w-40 planta-content m-auto">
+                    <h2 class="subtitle">ESPECIFICAÇÕES<br />TÉCNICAS</h2>
+                    <?= $emp->especificacoes_tecnicas ?>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
     <?php if (isset($emp->status) && $emp->status):?>

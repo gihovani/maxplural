@@ -14,11 +14,14 @@ section#title-page h1 {
   color: var(--main-bg-color);
 }
 #content.linhas .linhas-cards .linhas-cards__card {
-  background-color: #F5F5F5;
+  background-color: #cacaca;
   border-radius: 80px;
   width: 27%;
   margin: 1.5%;
   transition: all .3s;
+}
+#content.linhas .linhas-cards .linhas-cards__card p {
+  color: #fff;
 }
 #content.linhas .linhas-cards .linhas-cards__card:hover {
   box-shadow: 0 20px 40px #00000044;

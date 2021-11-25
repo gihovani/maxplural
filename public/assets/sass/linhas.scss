@@ -16,11 +16,15 @@ section{
     }
     .linhas-cards{
       .linhas-cards__card{
-        background-color: #F5F5F5;
+        //background-color: #F5F5F5;
+        background-color: #cacaca;
         border-radius: 80px;
         width: 27%;
         margin: 1.5%;
         transition: all .3s;
+        p{
+          color:#fff;
+        }
         &:hover{
           box-shadow: 0 20px 40px #00000044;
         }

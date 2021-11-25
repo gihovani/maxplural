@@ -144,10 +144,6 @@ section:not(.bg-dark, .bg-white) .titulo *:after {
   box-shadow: 0 10px 20px #aaaaaa;
 }
 
-section#galeria .filter-box {
-  border-bottom: 1px solid #ffffff66;
-}
-
 .video-container {
   overflow: hidden;
   position: relative;
@@ -198,6 +194,9 @@ section#planta .slider-1 span:after {
 }
 section#planta .planta-slider-box {
   position: relative;
+}
+section#planta .planta-slider-box img {
+  cursor: pointer;
 }
 section#planta .slick-arrow {
   position: absolute;

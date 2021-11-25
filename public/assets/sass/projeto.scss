@@ -158,11 +158,6 @@ section:not(.bg-dark,.bg-white){
     }
   }
 }
-section#galeria{
-  .filter-box{
-    border-bottom: 1px solid #ffffff66;
-  }
-}
 
 .video-container {
   overflow: hidden;
@@ -217,6 +212,9 @@ section#planta{
   }
   .planta-slider-box{
     position: relative;
+    img{
+      cursor:pointer;
+    }
   }
   .slick-arrow{
     position: absolute;

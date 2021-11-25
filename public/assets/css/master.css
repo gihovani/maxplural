@@ -36,6 +36,10 @@ body {
   border: 0;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .mob-d-block {
   display: none;
 }
