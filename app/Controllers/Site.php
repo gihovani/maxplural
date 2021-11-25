@@ -194,6 +194,7 @@ class Site extends BaseController
                 ->orLike('conteudo', $search);
         }
         return [
+            'linha' => new \App\Models\LinhaModel(),
             'empreendimentos' => $empreendimentos->paginate($page),
             'pager' => $empreendimentos->pager,
             'active' => $search
