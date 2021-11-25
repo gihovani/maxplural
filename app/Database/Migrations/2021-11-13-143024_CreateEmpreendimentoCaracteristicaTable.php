@@ -33,7 +33,8 @@ class CreateEmpreendimentoCaracteristicaTable extends Migration
                 'type' => 'INT',
                 'constraint' => 11,
                 'unsigned' => true,
-                'null' => false
+                'null' => false,
+                'default' => 0
             ],
             'updated_at datetime default current_timestamp on update current_timestamp',
             'created_at datetime default current_timestamp',

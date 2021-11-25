@@ -11,22 +11,27 @@ class EmpreendimentoImagens extends CrudAbstract
 {
     public function configureCrud(GroceryCrud $crud): void
     {
-        $empreendimento = new EmpreendimentoModel();
-        $id = (int)$this->request->getUri()->getSegment(4, '0');
         $where = [];
-        if ($empreendimento->getWhere(['id' => $id])->getFirstRow()) {
+        $titulo = '';
+        $id = (int)$this->request->getUri()->getSegment(4, '0');
+        $empreendimento = new EmpreendimentoModel();
+        if ($emp = $empreendimento->getWhere(['id' => $id])->getFirstRow()) {
+            $titulo = ' - ' . $emp->titulo;
             $crud->where(['empreendimento_id' => $id]);
             $where = ['id' => $id];
             $crud->unsetSearchColumns(['empreendimento_id']);
         }
 
+        if (!in_array($this->request->getPost('action'), ['remove', 'remove-multiple'])) {
+            $crud->setRelation('empreendimento_id', 'empreendimento', 'titulo', $where);
+        }
+
         $crud->setTable('empreendimento_imagem');
-        $crud->setSubject('Empreendimento Imagem', 'Empreendimento Imagens');
+        $crud->setSubject('Empreendimento Imagem' . $titulo, 'Empreendimento Imagens' . $titulo);
         $crud->uniqueFields(['titulo']);
         $crud->requiredFields(['titulo']);
         $crud->setFieldUpload('imagem', EmpreendimentoImagemModel::IMG_PATH, base_url(EmpreendimentoImagemModel::IMG_PATH));
         $crud->displayAs('imagem', 'Imagem (1920x1080px)');
-        $crud->setRelation('empreendimento_id','empreendimento','titulo', $where);
         $crud->setRule('titulo', 'lengthBetween', ['2', '100']);
         $crud->displayAs('titulo', 'Título');
         $crud->callbackBeforeInsert(function ($stateParameters) {
