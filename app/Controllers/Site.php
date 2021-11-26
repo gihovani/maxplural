@@ -208,5 +208,18 @@ class Site extends BaseController
         return $data && (bool)$model->insert($data);
     }
 
+    public function checkImages()
+    {
+        $end = ' <br />' . PHP_EOL;
+        $model = new \App\Models\EmpreendimentoImagemModel();
+        print $model::IMG_PATH . $end;
+        foreach ($model->findAll() as $img) {
+            if (!file_exists($model::IMG_PATH . $img->imagem)) {
+//                print $img->empreendimento_id . ' - ' . $img->tipo . ' - '.
+                print $img->imagem . $end;
+            }
+        }
+        print '';
+    }
 
 }

@@ -13,7 +13,9 @@ class EmpreendimentoImagens extends CrudAbstract
     {
         $where = [];
         $titulo = '';
-        $id = (int)$this->request->getUri()->getSegment(4, '0');
+        $id = (int)$this->request->getUri()
+            ->setSilent()
+            ->getSegment(4, '0');
         $empreendimento = new EmpreendimentoModel();
         if ($emp = $empreendimento->getWhere(['id' => $id])->getFirstRow()) {
             $titulo = ' - ' . $emp->titulo;
