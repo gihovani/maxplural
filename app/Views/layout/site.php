@@ -41,14 +41,14 @@
                 <img src="<?= base_url('assets/imgs/logo.svg') ?>" alt="Logo Max Plural"/>
             </a>
         </div>
-        <a class="contact" href="<?= $config->whatsapp ?>" target="_blank">
+        <a class="contact" href="<?= $config->whatsapp_vendas ?>" target="_blank">
             <div>
                 <img src="<?= base_url('assets/imgs/whatsapp-64.png') ?>" alt="Logo WhatsApp"/>
             </div>
             <div class="contact__text-number">
-                <h4>Fale Conosco</h4>
+                <h4>Central Vendas</h4>
                 <h4>
-                    <?php list($ddd, $phone) = explode(' ', $config->telefone_whatsapp) ?>
+                    <?php list($ddd, $phone) = explode(' ', $config->telefone_vendas_whatsapp) ?>
                     <?= sprintf('<span class="thin">%s</span> <strong>%s</strong>', $ddd, $phone) ?>
                 </h4>
             </div>
@@ -69,7 +69,7 @@
         </div>
         <div class="central">
             <a href="<?= site_url('site/contato') ?>">
-                <h4>Central de Vendas</h4>
+                <h4>Central de Atendimento</h4>
                 <h5 class="thin">(Fale conosco)</h5>
             </a>
         </div>
@@ -139,7 +139,9 @@
             <div class="w-30 text-center">
                 <p class="destaque">PLANTÃO DE VENDAS</p>
                 <h4>
-                    <?php list($ddd, $phone) = explode(' ', $config->telefone_fixo) ?>
+                    <?php list($ddd, $phone) = explode(' ', $config->telefone_vendas_fixo) ?>
+                    <?= sprintf('<span class="thin">%s</span> <strong>%s</strong>', $ddd, $phone) ?><br />
+                    <?php list($ddd, $phone) = explode(' ', $config->telefone_vendas_whatsapp) ?>
                     <?= sprintf('<span class="thin">%s</span> <strong>%s</strong>', $ddd, $phone) ?>
                 </h4>
             </div>

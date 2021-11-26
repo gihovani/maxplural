@@ -46,7 +46,7 @@ Nossos Empreendimentos
                                         <?php $caracteristicas = explode(',', $emp->palavras_chave) ?>
                                         <?php foreach ($caracteristicas as $c) : ?>
                                             <?php list($key, $value) = explode(':', $c); ?>
-                                            <p class="info_<?= $key; ?>"><?= $value; ?> <?= $key; ?></p>
+                                            <p class="info_<?= $key; ?>"><?= $value; ?></p>
                                         <?php endforeach; ?>
                                         <p class="info_statusObra"><?= $emp->tipo; ?></p>
                                         <p class="info_saibaMais">Saiba Mais </p>

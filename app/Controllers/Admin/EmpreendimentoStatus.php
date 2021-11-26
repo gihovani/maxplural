@@ -24,7 +24,10 @@ class EmpreendimentoStatus extends CrudAbstract
             $crud->where(['empreendimento_id' => $id]);
             $crud->unsetSearchColumns(['empreendimento_id']);
             $count = new EmpreendimentoStatusModel();
-            $count = $count->countAllResults();
+            $count = $count
+                ->where(['empreendimento_id' => $id])
+                ->countAllResults();
+
             if ($count > 0) {
                 $crud->unsetAdd();
             }

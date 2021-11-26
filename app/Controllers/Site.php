@@ -22,8 +22,12 @@ class Site extends BaseController
         $noticias = new \App\Models\NoticiaModel();
         $data = [
             'banners' => $banner->orderBy('prioridade')->findAll(),
-            'destaques' => $empreendimentos->paginate(4),
-            'noticias' => $noticias->paginate(4),
+            'destaques' => $empreendimentos
+                ->orderBy('updated_at', 'desc')
+                ->paginate(4),
+            'noticias' => $noticias
+                ->orderBy('updated_at', 'desc')
+                ->paginate(4),
             'linha' => new \App\Models\LinhaModel()
 
         ];
@@ -50,7 +54,8 @@ class Site extends BaseController
         $linha = new \App\Models\LinhaModel();
         $pagina = new \App\Models\PaginaModel();
         return $this->show('linhas', [
-            'linhas' => $linha->getWhere(['situacao' => 1])->getResult(),
+            'linhas' => $linha->orderBy('prioridade')
+                ->getWhere(['situacao' => 1])->getResult(),
             'pagina' => $pagina->getBySlug('linhas')
         ]);
     }
@@ -175,7 +180,9 @@ class Site extends BaseController
                 ->orLike('conteudo', $search);
         }
         return [
-            'noticias' => $noticias->paginate($page),
+            'noticias' => $noticias
+                ->orderBy('updated_at', 'desc')
+                ->paginate($page),
             'pager' => $noticias->pager,
             'active' => $search
         ];
@@ -195,7 +202,9 @@ class Site extends BaseController
         }
         return [
             'linha' => new \App\Models\LinhaModel(),
-            'empreendimentos' => $empreendimentos->paginate($page),
+            'empreendimentos' => $empreendimentos
+                ->orderBy('updated_at', 'desc')
+                ->paginate($page),
             'pager' => $empreendimentos->pager,
             'active' => $search
         ];

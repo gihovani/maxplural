@@ -32,6 +32,16 @@ class CreateConfiguracaoTable extends Migration
                 'constraint' => '200',
                 'null' => true
             ],
+            'telefone_vendas_fixo' => [
+                'type' => 'VARCHAR',
+                'constraint' => '200',
+                'null' => true
+            ],
+            'telefone_vendas_whatsapp' => [
+                'type' => 'VARCHAR',
+                'constraint' => '200',
+                'null' => true
+            ],
             'facebook' => [
                 'type' => 'VARCHAR',
                 'constraint' => '200',
@@ -53,6 +63,11 @@ class CreateConfiguracaoTable extends Migration
                 'null' => true
             ],
             'whatsapp' => [
+                'type' => 'VARCHAR',
+                'constraint' => '200',
+                'null' => true
+            ],
+            'whatsapp_vendas' => [
                 'type' => 'VARCHAR',
                 'constraint' => '200',
                 'null' => true

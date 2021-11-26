@@ -67,7 +67,7 @@ Apartamentos Personalizados para Quem Busca um Morar Contemporâneo - Max Plural
                         <ul class="desc">
                             <?php foreach ($caracteristicas as $c) : ?>
                                 <?php list($key, $value) = explode(':', $c); ?>
-                                <li class="<?= $key; ?> relative"><?= $value; ?> <?= $key; ?></li>
+                                <li class="<?= $key; ?> relative"><?= $value; ?></li>
                             <?php endforeach; ?>
                         </ul>
                         <a href="<?= site_url('site/empreendimento/' . $emp->slug) ?>" class="saiba-mais relative">Saiba mais <span class="nextArrow-icon"></span></a>
@@ -82,7 +82,7 @@ Apartamentos Personalizados para Quem Busca um Morar Contemporâneo - Max Plural
         <div class="texto d-flex">
             <div>
                 <h4 class="title">A MAXPLURAL</h4>
-                <p>A MaxPlural no desenvolvimento de soluções imobiliárias, tem por compromisso ser uma empresa diligente, com cultura organizacional bem definida, entregando produtos de alto valor agregado, a partir de soluções flexíveis com tecnologia, sustentabilidade nos canteiros de obras, colaboradores comprometidos em aprimorar os processos do sistema de qualidade, atendendo aos requisitos legais, garantindo a satisfação dos nossos clientes e acionistas. </p>
+                <p>Desde 2005 temos feito a diferença no mercado imobiliário de Pernambuco. Unimos incorporação, engenharia e design para criar experiências. Com a busca incessante pelo melhor, investimos na qualidade e inovação sem deixar de atender as necessidades essenciais de cada morador. Com empreendimentos em localizações nobres como Boa Viagem, Piedade, Porto de Galinhas, Serrambi, entre outros, buscamos oferecer em cada produto um morar diferenciado, unindo design e funcionalidade.</p>
             </div>
             <div class="d-flex w-100 sobre-marcas">
                 <div class="w-30 text-center">

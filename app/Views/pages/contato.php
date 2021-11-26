@@ -27,37 +27,30 @@ Fale Conosco - Max Plural
     <div class="container">
         <div class="d-flex conato-wrapper">
             <div class="corretor">
-                <h2 class="text-center">CONVERSE AGOR COM<br />UM CORRETOR MAXPLURAL</h2>
+                <h2 class="text-center">CONVERSE AGORA COM<br />A MAXPLURAL</h2>
                 <div class="contato-btns">
-                    <a href="<?= $config->whatsapp ?>" class="contato d-flex" target="_blank">
+                    <a href="<?= $config->whatsapp_vendas ?>" class="contato d-flex" target="_blank">
                         <img class="icon-invert" src="<?= base_url('assets/imgs/whatsapp-64.png')?>" alt="whatsapp">
                         <div>
-                            <h4>Whatsapp:</h4>
-                            <p><?= $config->telefone_whatsapp ?></p>
+                            <h4>Fale com um vendedor:</h4>
+                            <p><?= $config->telefone_vendas_fixo ?></p>
+                            <p><?= $config->telefone_vendas_whatsapp ?></p>
                         </div>
                     </a>
                 </div>
                 <div class="contato-btns">
-                    <a href="<?= $config->chat_online ?>" class="contato d-flex" target="_blank">
+                    <a href="<?= $config->whatsapp ?>" class="contato d-flex" target="_blank">
                         <img src="<?= base_url('assets/imgs/chat-icon.svg')?>" alt="chat">
                         <div class="relative">
-                            <h4>Chat Online:</h4>
-                            <p>Fale com um<br/>atendente</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="contato-btns">
-                    <a href="<?= $config->central_vendas ?>" class="contato d-flex" target="_blank">
-                        <img src="<?= base_url('assets/imgs/contato/atendente-icon.svg')?>" alt="atendente">
-                        <div>
-                            <h4>Central de Vendas:</h4>
-                            <p>Nós ligamos pra você</p>
+                            <h4>Fale com um atendente:</h4>
+                            <p><?= $config->telefone_fixo ?></p>
+                            <p><?= $config->telefone_whatsapp ?></p>
                         </div>
                     </a>
                 </div>
             </div>
             <div class="form">
-                <h2 class="text-center">Fale com a gente</h2>
+                <h2 class="text-center">FALE COM A GENTE</h2>
                 <?php if (!$success):?>
                 <h3 class="text-center thin">Envie sua mensagem no formulário a seguir</h3>
                 <?= form_open('site/contato#form', ['class' => 'd-flex', 'name' => 'form']) ?>
