@@ -82,9 +82,7 @@ Apartamentos Personalizados para Quem Busca um Morar Contemporâneo - Max Plural
         <div class="texto d-flex">
             <div>
                 <h4 class="title">A MAXPLURAL</h4>
-                <p>Lorem Ipsum is simply dummy text of it to make a type specimen book. It has survived specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                    remaining essentially unchanged. It was popularised in the 1960s with the release</p>
-                <p>of Letraset sheets containing Lorem more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>A MaxPlural no desenvolvimento de soluções imobiliárias, tem por compromisso ser uma empresa diligente, com cultura organizacional bem definida, entregando produtos de alto valor agregado, a partir de soluções flexíveis com tecnologia, sustentabilidade nos canteiros de obras, colaboradores comprometidos em aprimorar os processos do sistema de qualidade, atendendo aos requisitos legais, garantindo a satisfação dos nossos clientes e acionistas. </p>
             </div>
             <div class="d-flex w-100 sobre-marcas">
                 <div class="w-30 text-center">
@@ -102,8 +100,8 @@ Apartamentos Personalizados para Quem Busca um Morar Contemporâneo - Max Plural
             </div>
         </div>
         <div class="links relative">
-            <a href="<?= site_url('site/sobre') ?>#historia" class="relative">Nossa História <span class="nextArrow-icon"></span></a>
-            <a href="<?= site_url('site/sobre') ?>#diferenciais" class="relative">Diferenciais <span class="nextArrow-icon"></span></a>
+            <a href="<?= site_url('site/sobre') ?>" class="relative">Nossa História <span class="nextArrow-icon"></span></a>
+            <a href="<?= site_url('site/linhas') ?>" class="relative">Nossas Linhas <span class="nextArrow-icon"></span></a>
         </div>
     </div>
 </section>

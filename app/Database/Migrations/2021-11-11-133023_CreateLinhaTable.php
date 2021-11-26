@@ -37,6 +37,11 @@ class CreateLinhaTable extends Migration
                 'constraint' => 11,
                 'null' => false
             ],
+            'situacao' => [
+                'type' => 'ENUM',
+                'constraint' => ['1', '0'],
+                'default' => '1',
+            ],
             'updated_at datetime default current_timestamp on update current_timestamp',
             'created_at datetime default current_timestamp',
             'deleted_at datetime default null'

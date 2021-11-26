@@ -20,6 +20,9 @@ class Linhas extends CrudAbstract
         $crud->setRule('descricao', 'lengthMax', ['65000']);
         $crud->displayAs('titulo', 'Título');
         $crud->displayAs('descricao', 'Descrição');
+        $crud->displayAs('situacao', 'Situação');
+        $crud->fieldType('situacao', 'dropdown', ['Esconder', 'Mostrar']);
+        $crud->setRule('situacao', 'in', [[0, 1]]);
         $crud->callbackBeforeInsert(function ($stateParameters) {
             $admin = new LinhaModel();
             $stateParameters->data = $admin->defineValor((array) $stateParameters)['data'];

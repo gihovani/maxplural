@@ -8,7 +8,7 @@ class LinhaModel extends BaseModel
     const IMG_PATH = 'assets' . DIRECTORY_SEPARATOR . 'imgs' . DIRECTORY_SEPARATOR . 'linhas' . DIRECTORY_SEPARATOR;
 
     protected $table = 'linha';
-    protected $allowedFields = ['imagem', 'titulo', 'descricao', 'prioridade'];
+    protected $allowedFields = ['imagem', 'titulo', 'descricao', 'prioridade', 'situacao'];
 
     protected $validationRules = [
         'imagem' => [
@@ -27,6 +27,10 @@ class LinhaModel extends BaseModel
             'label' => 'Prioridade',
             'rules' => 'permit_empty|integer'
         ],
+        'situacao' => [
+            'label' => 'Situação',
+            'rules' => 'permit_empty|in_list[0,1]'
+        ],
     ];
 
     public function getById(string $id)
@@ -37,6 +41,7 @@ class LinhaModel extends BaseModel
     public function defineValor(array $data): array
     {
         $data = parent::defineValor($data);
+        $data['data']['situacao'] = $data['data']['situacao'] ?? '0';
         $data['data']['prioridade'] = $data['data']['prioridade'] ?? '0';
         return $data;
     }

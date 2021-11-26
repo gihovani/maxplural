@@ -21,6 +21,5 @@ class Banners extends CrudAbstract
         $crud->displayAs('imagem', 'Imagem (1920x840px)');
         $crud->displayAs('imagem_mobile', 'Imagem Mob (680x1010px)');
         $crud->displayAs('conteudo', 'Conteúdo');
-        $crud->setTexteditor(['conteudo']);
     }
 }

@@ -50,7 +50,7 @@ class Site extends BaseController
         $linha = new \App\Models\LinhaModel();
         $pagina = new \App\Models\PaginaModel();
         return $this->show('linhas', [
-            'linhas' => $linha->findAll(),
+            'linhas' => $linha->getWhere(['situacao' => 1])->getResult(),
             'pagina' => $pagina->getBySlug('linhas')
         ]);
     }

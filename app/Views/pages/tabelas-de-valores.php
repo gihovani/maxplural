@@ -25,7 +25,7 @@
                     <?php if (!$success):?>
                     <h4>Preencha o fomrulário e baixe nossas tabelas</h4>
                     <?= form_open('site/tabelas-de-valores', ['name' => 'form', 'target' => '_blank']) ?>
-                        <input type="hidden" class="select-input-1" id="tabela" name="assunto">
+                        <input type="hidden" class="select-input-1" id="tabela" name="assunto" value="Tabelas-de Valores">
                         <div class="input-group">
                             <label for="form-nome">NOME:</label>
                             <input type="text" id="form-nome" name="nome" required>
