@@ -435,9 +435,12 @@ nav span {
   height: 50px;
   border-radius: 50%;
   color: #000;
-  background-size: 40%;
   background: #fff url(../imgs/close-dark.svg) no-repeat center;
+  background-size: 40%;
   transition: transform .5s;
+}
+nav span.closeMenu {
+  background-size: 30%;
 }
 
 nav span:hover {

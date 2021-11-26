@@ -8,9 +8,11 @@ function checkFilteredPhotos() {
 function filtrar(item) {
     let itens = $('.filter-box-content-item');
     itens.removeClass('show');
+    itens.attr('data-show',false);
     itens.each(function () {
         if ($(this).data('filtered') === item) {
             $(this).addClass('show');
+            $(this).attr('data-show',true);
         }
     });
     $('.filter-box-nav span').click(function () {

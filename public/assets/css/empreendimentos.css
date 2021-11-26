@@ -50,7 +50,7 @@
   filter: brightness(0) contrast(100) invert(1);
 }
 #content.empreendimentos .item a span.info .info_logo {
-  width: 100%;
+  max-width: 100%;
 }
 #content.empreendimentos .item a span.info .info_nome {
   color: #aaa;

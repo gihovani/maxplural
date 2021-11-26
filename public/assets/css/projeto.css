@@ -62,7 +62,7 @@ section#desc .title-section .logo {
   box-shadow: 0 7px 15px #777777cc;
 }
 section#desc .title-section .logo img {
-  width: 160px;
+  max-width: 160px;
 }
 section#desc .title-section .titulo-box .nome {
   background: #fff;

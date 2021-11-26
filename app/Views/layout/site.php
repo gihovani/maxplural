@@ -18,7 +18,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,200&display=swap" rel="stylesheet"/>
     <link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico') ?>" />
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('favicon.ico') ?>" />
-    <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/img/favicon.png') ?>" />
     <script type="module">
         import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
         const el = document.createElement('pwa-update');
