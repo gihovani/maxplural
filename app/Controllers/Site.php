@@ -164,7 +164,7 @@ class Site extends BaseController
     {
         $config = new \App\Models\ConfiguracaoModel();
         $params['config'] = $config->first();
-        $params['version'] = '1.0.5a';
+        $params['version'] = '1.0.6';
         return view('pages/' . $page, $params);
     }
 
