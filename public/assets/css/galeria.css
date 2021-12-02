@@ -117,6 +117,9 @@ section#galeria .filter-box-content-item {
   height: 100%;
   justify-content: space-evenly;
 }
+.zoomModal.planta #zoomModalWrapper {
+  max-width: 450px;
+}
 
 .backdrop {
   top: 0;
