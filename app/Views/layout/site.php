@@ -64,6 +64,9 @@
             <a href="<?= $config->linkedin ?>" target="_blank">
                 <img src="<?= base_url('assets/imgs/linkedin-64.svg') ?>" alt="Logo Linkedin"/>
             </a>
+            <a href="<?= $config->youtube ?>" target="_blank">
+                <img src="<?= base_url('assets/imgs/youtube-64.svg') ?>" alt="Logo Youtube"/>
+            </a>
         </div>
 
         <a class="contact" href="<?= $config->whatsapp ?>" target="_blank">

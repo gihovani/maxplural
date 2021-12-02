@@ -96,6 +96,17 @@ section#galeria .filter-box-content-item {
   overflow: hidden;
 }
 
+.clearfix {
+  overflow: auto;
+  width: 100%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .zoomModal {
   position: fixed;
   top: 50%;
@@ -160,6 +171,7 @@ section#galeria .filter-box-content-item {
   top: 0;
   transform: translate(50%, -50%);
   background-color: #fff;
+  color: #000;
   border-radius: 50%;
   width: 40px;
   height: 40px;

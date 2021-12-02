@@ -101,6 +101,9 @@ section#desc .title-section .titulo-box .endereco:after {
 section#desc .descricao-box {
   padding: 100px 0 50px;
 }
+section#desc .descricao-box ul li .text-center {
+  font-size: .7em;
+}
 
 section:not(.bg-dark, .bg-white) .titulo {
   position: relative;

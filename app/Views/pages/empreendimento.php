@@ -88,14 +88,18 @@
             </div>
             <div class="filter-box">
                 <div class="filter-box-nav d-flex mv-3">
+                    <?php $active = 'class="active"'; ?>
                     <?php if (isset($emp->imagens['Fachada']) && count($emp->imagens['Fachada'])):?>
-                    <span data-filter="fachada">FACHADA</span>
+                        <span <?= $active;?> data-filter="fachada">FACHADA</span>
+                        <?php $active = ''; ?>
                     <?php endif; ?>
                     <?php if (isset($emp->imagens['Área de Lazer']) && count($emp->imagens['Área de Lazer'])):?>
-                    <span class="active" data-filter="areas">ÁREAS DE LAZER / ÁREAS COMUNS</span>
+                        <span <?= $active;?> data-filter="areas">ÁREAS DE LAZER / ÁREAS COMUNS</span>
+                        <?php $active = ''; ?>
                     <?php endif; ?>
                     <?php if (isset($emp->imagens['Decorado']) && count($emp->imagens['Decorado'])):?>
-                    <span data-filter="decorado">DECORADO</span>
+                        <span <?= $active;?> data-filter="decorado">DECORADO</span>
+                        <?php $active = ''; ?>
                     <?php endif; ?>
                 </div>
                 <div class="filter-box-content d-flex mv-3 pv-3">
@@ -106,6 +110,7 @@
                                 <span><?= $b->titulo?></span>
                             </div>
                         <?php endforeach;?>
+                        <div class="clearfix"></div>
                     <?php endif; ?>
                     <?php if (isset($emp->imagens['Área de Lazer']) && count($emp->imagens['Área de Lazer'])):?>
                         <?php foreach ($emp->imagens['Área de Lazer'] as $b):?>
@@ -114,6 +119,7 @@
                                 <span><?= $b->titulo?></span>
                             </div>
                         <?php endforeach;?>
+                        <div class="clearfix"></div>
                     <?php endif; ?>
                     <?php if (isset($emp->imagens['Decorado']) && count($emp->imagens['Decorado'])):?>
                         <?php foreach ($emp->imagens['Decorado'] as $b):?>
@@ -122,6 +128,7 @@
                                 <span><?= $b->titulo?></span>
                             </div>
                         <?php endforeach;?>
+                        <div class="clearfix"></div>
                     <?php endif; ?>
                 </div>
             </div>
