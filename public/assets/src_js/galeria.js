@@ -47,41 +47,6 @@ function thumbNavigate() {
 function desmontaModal() {
     $('.zoomModal').remove();
 }
-// function hoverzoom(){
-//     var showCase = $('.zoomModal.planta .showcase');
-//     $('div.hoverZoom').remove();
-//     showCase.append('<div class="hoverZoom"><img></div>');
-//     var hoverZoom = $('.hoverZoom');
-//     showCase.mouseover(function(e){
-//         var imageToZoom = showCase.find('img').attr('src');
-//         $('.hoverZoom img').attr('src',imageToZoom);
-//     });
-//     showCase.mousemove(function(e){
-//         var showcaseWidthLimit = showCase.innerWidth();
-//         var showcaseHeightLimit  = showCase.innerHeight();
-//         var coordX = e.clientX - showCase[0].getBoundingClientRect().left;
-//         var coordY = e.clientY - showCase[0].getBoundingClientRect().top;
-//         var bgMousePositionX = Math.floor((coordX/showcaseWidthLimit)*100);
-//         var bgMousePositionY = Math.floor((coordY/showcaseHeightLimit)*100);
-//         // hoverZoom.attr('style','left:'+coordX+'px; top:'+coordY+'px;');
-//         hoverZoom.addClass('active');
-//         $('.zoomModalBox').addClass('hovered');
-//         bgMousePositionX = ((bgMousePositionX < 25) ? 25 : bgMousePositionX);
-//         bgMousePositionX = ((bgMousePositionX > 75) ? 75 : bgMousePositionX);
-//         bgMousePositionY = ((bgMousePositionY < 10) ? 10 : bgMousePositionY);
-//         bgMousePositionY = ((bgMousePositionY > 75) ? 75 : bgMousePositionY);
-//         $('.hoverZoom img').attr('style','transform:scale(2) translate(-'+bgMousePositionX+'%, -'+bgMousePositionY+'%)');
-//         if((coordX < 0 || coordX > showcaseWidthLimit) || (coordY < 0 || coordY > showcaseHeightLimit)){
-//             hoverZoom.removeClass('active');
-//             $('.zoomModalBox').removeClass('hovered');
-//         }
-//     });
-//     showCase.mouseenter(function(){
-//         hoverZoom.addClass('active');
-//     }).mouseleave(function(){
-//         hoverZoom.removeClass('active');
-//     });
-// }
 function imageZoom(imgID, resultID) {
     var img, lens, result, cx, cy;
     img = document.getElementById(imgID);

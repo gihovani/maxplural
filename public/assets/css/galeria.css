@@ -195,8 +195,8 @@ section#galeria .filter-box-content-item {
 .img-zoom-lens {
   position: absolute;
   /*set the size of the lens:*/
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   transform: translate(60px, 20px);
 }
 
