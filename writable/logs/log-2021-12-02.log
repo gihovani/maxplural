@@ -1,0 +1,74 @@
+ERROR - 2021-12-02 09:34:38 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: NO)
+ERROR - 2021-12-02 09:35:11 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: NO)
+ERROR - 2021-12-02 09:35:50 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: NO)
+ERROR - 2021-12-02 09:37:15 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: NO)
+ERROR - 2021-12-02 09:38:41 --> Unknown column 'situacao' in 'field list'
+ERROR - 2021-12-02 09:38:41 --> Unknown column 'situacao' in 'field list'
+ERROR - 2021-12-02 09:38:41 --> Unknown column 'situacao' in 'field list'
+ERROR - 2021-12-02 09:38:41 --> Unknown column 'situacao' in 'field list'
+ERROR - 2021-12-02 09:38:41 --> Unknown column 'situacao' in 'field list'
+ERROR - 2021-12-02 09:38:41 --> Duplicate entry 'Localização privilegiada' for key 'caracteristica.titulo'
+ERROR - 2021-12-02 09:38:41 --> Duplicate entry 'Fechadura<br />digital' for key 'caracteristica.titulo'
+ERROR - 2021-12-02 09:38:41 --> Duplicate entry 'Lavanderia compartilhada' for key 'caracteristica.titulo'
+ERROR - 2021-12-02 09:38:41 --> Duplicate entry 'Pet Place' for key 'caracteristica.titulo'
+ERROR - 2021-12-02 09:38:41 --> Duplicate entry 'Bicicletário' for key 'caracteristica.titulo'
+ERROR - 2021-12-02 09:38:41 --> Duplicate entry 'Academia' for key 'caracteristica.titulo'
+ERROR - 2021-12-02 09:38:41 --> Duplicate entry 'Piscina<br />panorâmica' for key 'caracteristica.titulo'
+ERROR - 2021-12-02 09:38:41 --> Duplicate entry 'Work zone' for key 'caracteristica.titulo'
+ERROR - 2021-12-02 09:38:41 --> Duplicate entry 'Áreas gourmet individuais' for key 'caracteristica.titulo'
+CRITICAL - 2021-12-02 09:42:10 --> Undefined offset: 1
+#0 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/app/Views/layout/site.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/View/View.php(214): include('/home/kleverton...')
+#2 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/View/View.php(230): CodeIgniter\View\View->render()
+#4 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/Common.php(1097): CodeIgniter\View\View->render()
+#5 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/app/Controllers/Site.php(167): view()
+#6 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/app/Controllers/Site.php(34): App\Controllers\Site->show()
+#7 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/CodeIgniter.php(824): App\Controllers\Site->index()
+#8 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController()
+#9 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/home/kleverton...')
+#12 {main}
+CRITICAL - 2021-12-02 09:42:26 --> Undefined offset: 1
+#0 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/app/Views/layout/site.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/View/View.php(214): include('/home/kleverton...')
+#2 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/View/View.php(230): CodeIgniter\View\View->render()
+#4 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/Common.php(1097): CodeIgniter\View\View->render()
+#5 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/app/Controllers/Site.php(167): view()
+#6 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/app/Controllers/Site.php(34): App\Controllers\Site->show()
+#7 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/CodeIgniter.php(824): App\Controllers\Site->index()
+#8 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController()
+#9 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/home/kleverton...')
+#12 {main}
+CRITICAL - 2021-12-02 09:42:40 --> Undefined offset: 1
+#0 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/app/Views/layout/site.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/View/View.php(214): include('/home/kleverton...')
+#2 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/View/View.php(230): CodeIgniter\View\View->render()
+#4 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/Common.php(1097): CodeIgniter\View\View->render()
+#5 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/app/Controllers/Site.php(167): view()
+#6 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/app/Controllers/Site.php(34): App\Controllers\Site->show()
+#7 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/CodeIgniter.php(824): App\Controllers\Site->index()
+#8 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController()
+#9 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/home/kleverton...')
+#12 {main}
+CRITICAL - 2021-12-02 09:42:43 --> Undefined offset: 1
+#0 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/app/Views/layout/site.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/View/View.php(214): include('/home/kleverton...')
+#2 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/View/View.php(230): CodeIgniter\View\View->render()
+#4 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/Common.php(1097): CodeIgniter\View\View->render()
+#5 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/app/Controllers/Site.php(167): view()
+#6 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/app/Controllers/Site.php(34): App\Controllers\Site->show()
+#7 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/CodeIgniter.php(824): App\Controllers\Site->index()
+#8 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController()
+#9 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /home/klevertonkulmann/Documentos/DS_environment/app/maxplural/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/home/kleverton...')
+#12 {main}

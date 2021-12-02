@@ -29,7 +29,7 @@ section#blog-box .filtros_e_buscas #searchPost input {
   width: calc(100% - 80px);
   font-size: .9rem;
   padding: 15px 10px;
-  color: #111;
+  color: #FFF;
 }
 section#blog-box .filtros_e_buscas #searchPost button {
   width: 40px;

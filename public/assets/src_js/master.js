@@ -81,7 +81,6 @@ function hoverEmpreendimentos() {
 
 function toggleMenu() {
     $('.hamburguerMenu,.closeMenu,.closeMenu .anchor').click(function () {
-        $('body').toggleClass('scrollYLock');
         $('nav').toggleClass('actived');
     });
 }

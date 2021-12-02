@@ -126,6 +126,7 @@ section#galeria .filter-box-content-item {
   width: unset;
   margin: auto;
   display: block;
+  max-height: 75vh;
 }
 
 .thumbs {

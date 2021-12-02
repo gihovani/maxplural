@@ -35,24 +35,25 @@
                 <li>&nbsp;</li>
             </ul>
             <span>MENU</span>
+
+            <nav>
+                <ul class="no-style text-center">
+                    <li class="closeMenu"><a href="<?= base_url() ?>">INÍCIO</a></li>
+                    <li class="closeMenu"><a href="<?= site_url('site/sobre') ?>">A MAXPLURAL</a></li>
+                    <li class="closeMenu"><a href="<?= site_url('site/linhas') ?>">NOSSAS LINHAS</a></li>
+                    <li class="closeMenu"><a href="<?= site_url('site/empreendimentos') ?>">EMPREENDIMENTOS</a></li>
+                    <li class="closeMenu"><a href="<?= site_url('site/noticias') ?>">NOTÍCIAS</a></li>
+                    <!--<li class="closeMenu"><a href="<?= site_url('site/projeto') ?>">PROJETOS</a></li>-->
+                    <li class="closeMenu"><a href="<?= site_url('site/tabelas-de-valores') ?>">TABELAS DE VALORES</a></li>
+                    <li class="closeMenu"><a href="<?= site_url('site/contato') ?>">CONTATO</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="logo">
             <a href="<?= base_url() ?>">
                 <img src="<?= base_url('assets/imgs/logo.svg') ?>" alt="Logo Max Plural"/>
             </a>
         </div>
-        <a class="contact" href="<?= $config->whatsapp_vendas ?>" target="_blank">
-            <div>
-                <img src="<?= base_url('assets/imgs/whatsapp-64.png') ?>" alt="Logo WhatsApp"/>
-            </div>
-            <div class="contact__text-number">
-                <h4>Central Vendas</h4>
-                <h4>
-                    <?php list($ddd, $phone) = explode(' ', $config->telefone_vendas_whatsapp) ?>
-                    <?= sprintf('<span class="thin">%s</span> <strong>%s</strong>', $ddd, $phone) ?>
-                </h4>
-            </div>
-        </a>
         <div class="social d-flex">
             <a href="<?= $config->facebook ?>" target="_blank">
                 <img src="<?= base_url('assets/imgs/facebook-64.svg') ?>" alt="Logo Facebook"/>
@@ -63,42 +64,33 @@
             <a href="<?= $config->linkedin ?>" target="_blank">
                 <img src="<?= base_url('assets/imgs/linkedin-64.svg') ?>" alt="Logo Linkedin"/>
             </a>
-            <a href="<?= $config->youtube ?>" target="_blank">
-                <img src="<?= base_url('assets/imgs/youtube-64.svg') ?>" alt="Logo Youtube"/>
-            </a>
         </div>
-        <div class="central">
-            <a href="<?= site_url('site/contato') ?>">
-                <h4>Central de Atendimento</h4>
-                <h5 class="thin">(Fale conosco)</h5>
-            </a>
-        </div>
+
+        <a class="contact" href="<?= $config->whatsapp ?>" target="_blank">
+            <div>
+                <img src="<?= base_url('assets/imgs/whatsapp-green-64.png') ?>" alt="Logo WhatsApp"/>
+            </div>
+            <div class="contact__text-number">
+                <h4>Vamos conversar?</h4>
+                <h4>
+                    <?php list($ddd, $phone) = explode(' ', $config->telefone_whatsapp) ?>
+                    <?= sprintf('<span class="thin">%s</span> <strong>%s</strong>', $ddd, $phone) ?>
+                </h4>
+            </div>
+        </a>
         <div id="headerSearch" class="search">
             <img class="icon-search" src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search"/>
             <?= form_open('site/noticias', ['method' => 'get']) ?>
-                <label for="headerSearchQuery" class="sr-only">Termo</label>
-                <input id="headerSearchQuery" type="text" placeholder="O que você procura? Digite aqui." name="q"/>
-                <button type="submit">
-                    <img src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search"/>
-                </button>
+            <label for="headerSearchQuery" class="sr-only">Termo</label>
+            <input id="headerSearchQuery" type="text" placeholder="O que você procura? Digite aqui." name="q"/>
+            <button type="submit">
+                <img src="<?= base_url('assets/imgs/search-96.svg') ?>" alt="Ícone Search"/>
+            </button>
             <?= form_close() ?>
         </div>
     </div>
     <?= $this->renderSection('header') ?>
 </header>
-<nav>
-    <ul class="no-style text-center">
-        <li class="closeMenu"><a href="<?= base_url() ?>">INÍCIO</a></li>
-        <li class="closeMenu"><a href="<?= site_url('site/sobre') ?>">A MAXPLURAL</a></li>
-        <li class="closeMenu"><a href="<?= site_url('site/linhas') ?>">NOSSAS LINHAS</a></li>
-        <li class="closeMenu"><a href="<?= site_url('site/empreendimentos') ?>">EMPREENDIMENTOS</a></li>
-        <li class="closeMenu"><a href="<?= site_url('site/noticias') ?>">NOTÍCIAS</a></li>
-        <!--<li class="closeMenu"><a href="<?= site_url('site/projeto') ?>">PROJETOS</a></li>-->
-        <li class="closeMenu"><a href="<?= site_url('site/tabelas-de-valores') ?>">TABELAS DE VALORES</a></li>
-        <li class="closeMenu"><a href="<?= site_url('site/contato') ?>">CONTATO</a></li>
-    </ul>
-    <span class="closeMenu"></span>
-</nav>
 
 <!-- CONTENT -->
 <main>
@@ -117,8 +109,8 @@
                 <input type="hidden" name="assunto" value="Inscrição NewsLetter" />
                 <input type="hidden" name="nome" value="Guest" />
                 <label for="newsBoxEmail" class="sr-only">E-mail</label>
-                    <input type="email" id="newsBoxEmail" placeholder="exemplo@dominio.com" name="email">
-                    <button type="submit">Enviar</button>
+                <input type="email" id="newsBoxEmail" placeholder="exemplo@dominio.com" name="email">
+                <button type="submit">Enviar</button>
                 <?= form_close() ?>
             </div>
         </div>
@@ -139,9 +131,7 @@
             <div class="w-30 text-center">
                 <p class="destaque">PLANTÃO DE VENDAS</p>
                 <h4>
-                    <?php list($ddd, $phone) = explode(' ', $config->telefone_vendas_fixo) ?>
-                    <?= sprintf('<span class="thin">%s</span> <strong>%s</strong>', $ddd, $phone) ?><br />
-                    <?php list($ddd, $phone) = explode(' ', $config->telefone_vendas_whatsapp) ?>
+                    <?php list($ddd, $phone) = explode(' ', $config->telefone_fixo) ?>
                     <?= sprintf('<span class="thin">%s</span> <strong>%s</strong>', $ddd, $phone) ?>
                 </h4>
             </div>

@@ -89,7 +89,7 @@ section#post-content .coluna-direita .busca #busca-texto input {
   font-size: 2rem;
   width: calc(100% - 32px);
 }
-section#post-content .coluna-direita .busca form button {
+section#post-content .coluna-direita .busca #busca-texto button {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,16 +97,16 @@ section#post-content .coluna-direita .busca form button {
   border: 0 solid;
   float: left;
 }
-section#post-content .coluna-direita .busca form button img {
+section#post-content .coluna-direita .busca #busca-texto button img {
   width: 24px;
   margin: 0 15px 0 0;
 }
-section#post-content .coluna-direita .busca form button:hover {
+section#post-content .coluna-direita .busca #busca-texto button:hover {
   background-color: #fff;
   color: #111 !important;
   box-shadow: 0 5px 15px #00000033;
 }
-section#post-content .coluna-direita .busca form button:hover img {
+section#post-content .coluna-direita .busca #busca-texto button:hover img {
   filter: invert(1);
 }
 section#post-content .coluna-direita .busca .busca_por-select form {
@@ -138,11 +138,6 @@ section#post-content .coluna-direita .busca .busca_por-select form label {
 section#post-content .coluna-direita .busca .busca_por-select form select {
   font-size: .9rem;
   width: 100%;
-  padding: 15px;
-}
-section#post-content .coluna-direita .busca .busca_por-select form input {
-  font-size: .9rem;
-  width: calc(100% - 32px);
   padding: 15px;
 }
 
