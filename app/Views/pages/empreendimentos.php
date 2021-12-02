@@ -12,9 +12,9 @@ Nossos Empreendimentos
 <?= $this->endSection() ?>
 
 <?= $this->section('styles') ?>
-<link rel="stylesheet" href="<?= base_url('assets/css/empreendimentos.min.css') ?>"/>
-<link rel="stylesheet" href="<?= base_url('assets/css/pagination.min.css') ?>"/>
-<link rel="stylesheet" href="<?= base_url('assets/css/tabs.min.css') ?>"/>
+<link rel="stylesheet" href="<?= base_url('assets/css/empreendimentos.min.css') ?>?v=<?= $version?>"/>
+<link rel="stylesheet" href="<?= base_url('assets/css/pagination.min.css') ?>?v=<?= $version?>"/>
+<link rel="stylesheet" href="<?= base_url('assets/css/tabs.min.css') ?>?v=<?= $version?>"/>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>

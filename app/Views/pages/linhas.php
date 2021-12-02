@@ -19,7 +19,7 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
-<link rel="stylesheet" href="<?= base_url('assets/css/linhas.min.css') ?>"/>
+<link rel="stylesheet" href="<?= base_url('assets/css/linhas.min.css') ?>?v=<?= $version?>"/>
 <?php if (isset($pagina->style) && !empty($pagina->style)):?>
     <style>
         <?= $pagina->style ?>

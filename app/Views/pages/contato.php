@@ -12,8 +12,8 @@ Fale Conosco - Max Plural
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
-<link rel="stylesheet" href="<?= base_url('assets/css/contato.min.css')?>" />
-<link rel="stylesheet" href="<?= base_url('assets/css/form.min.css')?>" />
+<link rel="stylesheet" href="<?= base_url('assets/css/contato.min.css')?>?v=<?= $version?>" />
+<link rel="stylesheet" href="<?= base_url('assets/css/form.min.css')?>?v=<?= $version?>" />
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
@@ -106,8 +106,8 @@ Fale Conosco - Max Plural
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts')?>
-<script type="text/javascript" src="<?= base_url('assets/jquery/phone-mask.min.js')?>" ></script>
-<script type="text/javascript" src="<?= base_url('assets/js/form-min.js')?>" ></script>
-<script type="text/javascript" src="<?= base_url('assets/js/mask-min.js')?>" ></script>
-<script type="text/javascript" src="<?= base_url('assets/js/tabelas-de-valores-min.js')?>" ></script>
+<script type="text/javascript" src="<?= base_url('assets/jquery/phone-mask.min.js')?>?v=<?= $version?>" ></script>
+<script type="text/javascript" src="<?= base_url('assets/js/form-min.js')?>?v=<?= $version?>" ></script>
+<script type="text/javascript" src="<?= base_url('assets/js/mask-min.js')?>?v=<?= $version?>" ></script>
+<script type="text/javascript" src="<?= base_url('assets/js/tabelas-de-valores-min.js')?>?v=<?= $version?>" ></script>
 <?= $this->endSection() ?>

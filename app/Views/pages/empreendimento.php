@@ -19,10 +19,10 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
-    <link rel="stylesheet" href="<?= base_url('assets/css/projeto.min.css')?>" />
-    <link rel="stylesheet" href="<?= base_url('assets/css/galeria.min.css')?>" />
-    <link rel="stylesheet" href="<?= base_url('assets/css/form.min.css')?>" />
-    <link rel="stylesheet" href="<?= base_url('assets/css/tabs.min.css')?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/projeto.min.css')?>?v=<?= $version?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/galeria.min.css')?>?v=<?= $version?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/form.min.css')?>?v=<?= $version?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/tabs.min.css')?>?v=<?= $version?>" />
     <?php if (isset($emp->style) && !empty($emp->style)):?>
         <style>
             <?= $emp->style ?>
@@ -326,10 +326,10 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts')?>
-    <script type="text/javascript" src="<?= base_url('assets/js/galeria-min.js')?>" ></script>
-    <script type="text/javascript" src="<?= base_url('assets/js/progress-bar-min.js')?>" ></script>
-    <script type="text/javascript" src="<?= base_url('assets/jquery/phone-mask.min.js')?>" ></script>
-    <script type="text/javascript" src="<?= base_url('assets/js/form-min.js')?>" ></script>
+    <script type="text/javascript" src="<?= base_url('assets/js/galeria-min.js')?>?v=<?= $version?>" ></script>
+    <script type="text/javascript" src="<?= base_url('assets/js/progress-bar-min.js')?>?v=<?= $version?>" ></script>
+    <script type="text/javascript" src="<?= base_url('assets/jquery/phone-mask.min.js')?>?v=<?= $version?>" ></script>
+    <script type="text/javascript" src="<?= base_url('assets/js/form-min.js')?>?v=<?= $version?>" ></script>
     <?php if (isset($emp->javascript) && !empty($emp->javascript)):?>
         <script>
             <?= $emp->javascript ?>

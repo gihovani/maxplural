@@ -19,7 +19,7 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
-    <link rel="stylesheet" href="<?= base_url('assets/css/tabs.min.css')?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/tabs.min.css')?>?v=<?= $version?>" />
     <?php if (isset($pagina->style) && !empty($pagina->style)):?>
         <style>
             <?= $pagina->style ?>
@@ -42,7 +42,7 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts')?>
-    <script type="text/javascript" src="<?= base_url('assets/js/tabsController-min.js')?>" ></script>
+    <script type="text/javascript" src="<?= base_url('assets/js/tabsController-min.js')?>?v=<?= $version?>" ></script>
     <?php if (isset($pagina->javascript) && !empty($pagina->javascript)):?>
         <script>
             <?= $pagina->javascript ?>

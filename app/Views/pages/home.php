@@ -12,7 +12,7 @@ Apartamentos Personalizados para Quem Busca um Morar Contemporâneo - Max Plural
 <?= $this->endSection() ?>
 
 <?= $this->section('styles') ?>
-<link rel="stylesheet" href="<?= base_url('assets/css/home.min.css') ?>"/>
+<link rel="stylesheet" href="<?= base_url('assets/css/home.min.css') ?>?v=<?= $version?>"/>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>

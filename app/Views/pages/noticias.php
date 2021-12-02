@@ -12,8 +12,8 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('styles')?>
-    <link rel="stylesheet" href="<?= base_url('assets/css/noticias.min.css')?>" />
-    <link rel="stylesheet" href="<?= base_url('assets/css/pagination.min.css') ?>"/>
+    <link rel="stylesheet" href="<?= base_url('assets/css/noticias.min.css')?>?v=<?= $version?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/pagination.min.css') ?>?v=<?= $version?>"/>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
@@ -97,5 +97,5 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts')?>
-<script type="text/javascript" src="<?= base_url('assets/js/noticia-min.js')?>" ></script>
+<script type="text/javascript" src="<?= base_url('assets/js/noticia-min.js')?>?v=<?= $version?>" ></script>
 <?= $this->endSection() ?>
