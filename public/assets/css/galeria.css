@@ -104,6 +104,7 @@ section#galeria .filter-box-content-item {
   z-index: 40;
   width: 100%;
   height: 100%;
+  justify-content: space-evenly;
 }
 
 .backdrop {
@@ -176,31 +177,27 @@ section#galeria .filter-box-content-item {
   margin: 10px;
 }
 
-.hoverZoom {
+.img-zoom-lens {
   position: absolute;
-  height: 400px;
-  width: 400px;
-  top: 181px;
-  left: 667px;
-  transform: translate(-50%, -50%);
-  z-index: -10;
+  /*set the size of the lens:*/
+  width: 120px;
+  height: 120px;
+  transform: translate(60px, 20px);
+}
+
+#zoomedImg {
+  top: 50%;
   opacity: 0;
+  z-index: 0;
+  width: 600px;
+  height: 600px;
+  position: relative;
   transition: opacity .3s;
+  transform: translate(-10%, -55%);
 }
-.hoverZoom.active {
-  opacity: 1;
+#zoomedImg.active {
   z-index: 20;
-  background-color: aliceblue;
-  overflow: hidden;
-}
-.hoverZoom.active img {
-  width: 100%;
-  display: block;
-  position: absolute;
-  transform: scale(2);
-  left: 100%;
-  top: 100%;
-  transition: all .1s linear;
+  opacity: 1;
 }
 
 @media screen and (max-width: 1201px) {

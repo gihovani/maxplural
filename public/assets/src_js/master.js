@@ -6,7 +6,8 @@ function initSlider() {
         dots: false,
         prevArrow: $('.prev'),
         nextArrow: $('.next'),
-        infinite: false
+        infinite: false,
+        adaptiveHeight: true
     });
     $('.slider-1__only-dots').slick({
         slidesToShow: 1,
