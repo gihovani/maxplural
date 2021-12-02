@@ -135,6 +135,9 @@ section#galeria{
   padding: 15px 15px 5px;
   position: relative;
   z-index: 15;
+  &.hovered{
+    z-index: 17;
+  }
   .showcase{
     img{
       width: unset;
@@ -184,6 +187,32 @@ section#galeria{
   img{
     width: 20px;
     margin: 10px;
+  }
+}
+.hoverZoom{
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  top: 181px;
+  left: 667px;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+  opacity: 0;
+  transition: opacity .3s;
+  &.active{
+    opacity: 1;
+    z-index: 20;
+    background-color: aliceblue;
+    overflow: hidden;
+    img{
+      width: 100%;
+      display: block;
+      position: absolute;
+      transform: scale(2);
+      left: 100%;
+      top: 100%;
+      transition: all .1s linear;
+    }
   }
 }
 @media screen and (max-width: 1201px){
@@ -282,5 +311,10 @@ section#galeria{
         }
       }
     }
+  }
+
+  .hoverZoom{
+    width: 350px;
+    height: 350px;
   }
 }

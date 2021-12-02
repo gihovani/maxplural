@@ -47,11 +47,39 @@ function thumbNavigate() {
 function desmontaModal() {
     $('.zoomModal').remove();
 }
-
+function hoverzoom(){
+    var showCase = $('.zoomModal.planta .showcase');
+    var imageToZoom = showCase.find('img').attr('src');
+    $('div.hoverZoom').remove();
+    showCase.append('<div class="hoverZoom"><img></div>');
+    var hoverZoom = $('.hoverZoom');
+    showCase.mousemove(function(e){
+        var showcaseWidthLimit = showCase.innerWidth();
+        var showcaseHeightLimit  = showCase.innerHeight();
+        var coordX = e.clientX - showCase[0].getBoundingClientRect().left;
+        var coordY = e.clientY - showCase[0].getBoundingClientRect().top;
+        var bgMousePositionX = Math.floor((coordX/showcaseWidthLimit)*100);
+        var bgMousePositionY = Math.floor((coordY/showcaseHeightLimit)*100);
+        hoverZoom.attr('style','left:'+coordX+'px; top:'+coordY+'px;');
+        hoverZoom.addClass('active');
+        $('.zoomModalBox').addClass('hovered');
+        $('.hoverZoom img').attr('style','transform:scale(2) translate(-'+bgMousePositionX+'%, -'+bgMousePositionY+'%)');
+        if((coordX < 0 || coordX > showcaseWidthLimit) || (coordY < 0 || coordY > showcaseHeightLimit)){
+            hoverZoom.removeClass('active');
+            $('.zoomModalBox').removeClass('hovered');
+        }
+    });
+    showCase.mouseenter(function(){
+        hoverZoom.addClass('active');
+        $('.hoverZoom img').attr('src',imageToZoom);
+    }).mouseleave(function(){
+        hoverZoom.removeClass('active');
+    });
+}
 function montaModal(srcImg,section) {
     let body = $('body');
     body.remove('.zoomModal');
-    body.append('<div class="zoomModal d-flex">' +
+    body.append('<div class="zoomModal d-flex '+section+'">' +
         '<div class="backdrop" onclick="desmontaModal()"></div>' +
         '<div class="container relative" id="zoomModalWrapper">' +
         '<span class="closeModal" onclick="desmontaModal()"><img src="../assets/imgs/close-dark.svg" alt=""></span>' +
@@ -71,6 +99,7 @@ function montaModal(srcImg,section) {
             let thumb = '<img src="' + imgThumb + '" alt="thumb" />';
             $('.zoomModalBox .thumbs .thumbs-box').append(thumb);
         });
+        hoverzoom();
     }else{
         $('#'+section+' .filter-box-content-item.show').each(function () {
             let imgThumb = $(this).find('img').attr('src');

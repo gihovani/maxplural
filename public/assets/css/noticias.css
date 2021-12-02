@@ -144,8 +144,14 @@ section#blog-box .conteudo .leia-mais:hover:after {
 }
 
 @media screen and (max-width: 1201px) {
+  section#blog-box .conteudo .post-destaque .img-post {
+    height: 365px;
+  }
   section#blog-box .conteudo .post-destaque .img-post img {
     transform: scale(1.4);
+    min-height: 100%;
+    width: unset;
+    max-width: unset;
   }
 }
 @media screen and (max-width: 1025px) {
