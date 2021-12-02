@@ -1,3 +1,9 @@
+.contact {
+  background: var(--main-bg-color);
+  padding: 15px 0 15px 40px;
+  border-radius: 50px;
+}
+
 section {
   background-color: #333;
 }
