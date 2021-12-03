@@ -109,7 +109,7 @@ function montaModal(srcImg,section) {
     body.append('<div class="zoomModal d-flex '+section+'">' +
         '<div class="backdrop" onclick="desmontaModal()"></div>' +
         '<div class="container relative" id="zoomModalWrapper">' +
-        '<span class="closeModal" onclick="desmontaModal()"><img src="../assets/imgs/close-dark.svg" alt=""></span>' +
+        '<span class="closeModal" onclick="desmontaModal()"><img src="./assets/imgs/close-dark.svg" alt=""></span>' +
         '<div class="zoomModalBox" >' +
         '<div class="showcase">' +
         '<img id="imgRef" class="w-100" src="' + srcImg + '" alt="">' +
