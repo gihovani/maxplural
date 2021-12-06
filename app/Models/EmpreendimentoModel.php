@@ -67,6 +67,22 @@ class EmpreendimentoModel extends BaseModel
             'label' => 'Especificações Técnicas',
             'rules' => 'permit_empty'
         ],
+        'tipologia' => [
+            'label' => 'Tipologia',
+            'rules' => 'permit_empty|max_length[50]'
+        ],
+        'bairro' => [
+            'label' => 'Bairro',
+            'rules' => 'permit_empty|max_length[100]'
+        ],
+        'cidade' => [
+            'label' => 'Cidade',
+            'rules' => 'permit_empty|max_length[100]'
+        ],
+        'estado' => [
+            'label' => 'Estado',
+            'rules' => 'permit_empty|max_length[2]'
+        ],
         'endereco' => [
             'label' => 'Endereço',
             'rules' => 'permit_empty'
@@ -88,6 +104,21 @@ class EmpreendimentoModel extends BaseModel
             'rules' => 'permit_empty|in_list[0,1]'
         ],
     ];
+
+    public function getCities(string $search): array
+    {
+        $empreendimentos = $this->select('cidade')
+            ->orLike('tipo', $search)
+            ->orLike('titulo', $search)
+            ->orLike('conteudo', $search)
+            ->groupBy(['cidade'])->findAll();
+        $ret = [];
+        foreach ($empreendimentos as $empreendimento)
+        {
+            $ret[] = $empreendimento->cidade;
+        }
+        return $ret;
+    }
 
     public function getBySlug(string $slug, bool $allRelations = true)
     {

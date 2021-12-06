@@ -66,7 +66,7 @@ section#desc .title-section .logo img {
 }
 section#desc .title-section .titulo-box .nome {
   background: #fff;
-  padding: 20px 40px 40px 60px;
+  padding: 20px 40px 10px 50px;
   border: 1px solid #acacac;
   border-bottom-right-radius: 90px;
   border-top-right-radius: 90px;
@@ -78,6 +78,9 @@ section#desc .title-section .titulo-box .nome h1 {
   position: relative;
   font-size: 1.8rem;
   font-weight: 700;
+}
+section#desc .title-section .titulo-box .nome p {
+  text-align: right;
 }
 section#desc .title-section .titulo-box .endereco {
   position: absolute;
@@ -108,7 +111,7 @@ section#desc .descricao-box ul li .text-center {
 section:not(.bg-dark, .bg-white) .titulo {
   position: relative;
 }
-section:not(.bg-dark, .bg-white) .titulo *:after {
+section:not(.bg-dark, .bg-white) .titulo h1:after {
   content: '';
   width: 75px;
   height: 3px;
@@ -487,7 +490,7 @@ section#download-e-orcamento .orcamento-form a:hover {
     width: 80px;
   }
   section#desc .container .title-section .titulo-box .nome {
-    padding: 20px 20px 40px 20px;
+    padding: 5px 20px 0 20px;
     margin-left: -10px;
   }
   section#desc .container .title-section .titulo-box .nome h1 {
@@ -545,7 +548,7 @@ section#download-e-orcamento .orcamento-form a:hover {
     transform: translate(-50%, -60px);
   }
   section#desc .container .title-section .titulo-box .nome {
-    padding: 10px 10px 20px 10px;
+    padding: 5px 10px 0 10px;
   }
   section#desc .container .title-section .titulo-box .nome h1 {
     font-size: 1rem;

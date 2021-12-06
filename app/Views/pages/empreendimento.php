@@ -51,8 +51,9 @@
                 <div class="titulo-box">
                     <div class="nome titulo">
                         <h1><?= $emp->titulo?></h1>
+                        <p><?= $emp->tipologia ?></p>
                     </div>
-                    <h5 class="endereco"><?= $emp->descricao?></h5>
+                    <h5 class="endereco"><?= $emp->bairro ?> - <?= $emp->cidade?>/<?= $emp->estado ?></h5>
                 </div>
             </div>
             <div class="d-flex descricao-box">

@@ -164,7 +164,7 @@ class Site extends BaseController
     {
         $config = new \App\Models\ConfiguracaoModel();
         $params['config'] = $config->first();
-        $params['version'] = '1.0.6a';
+        $params['version'] = '1.0.11';
         return view('pages/' . $page, $params);
     }
 
@@ -191,23 +191,35 @@ class Site extends BaseController
 
     private function getEmpreendimentos(int $page = 6): array
     {
+        $cidades = [];
         $model = new \App\Models\EmpreendimentoModel();
         $search = $this->request->getGet('q');
         if ($search == '') {
             $empreendimentos = $model;
         } else {
+            $cidades = $model->getCities($search);
             $empreendimentos = $model->select('*')
-                ->orLike('tipo', $search)
-                ->orLike('titulo', $search)
-                ->orLike('conteudo', $search);
+                ->groupStart()
+                ->like('tipo', $search)
+                ->orLike('titulo', $search, )
+                ->orLike('conteudo', $search)
+                ->groupEnd();
+
+        }
+
+        $city = $this->request->getGet('c');
+        if ($city) {
+            $empreendimentos = $model->like('cidade', $city);
         }
         return [
             'linha' => new \App\Models\LinhaModel(),
+            'cidades' => $cidades,
             'empreendimentos' => $empreendimentos
                 ->orderBy('updated_at', 'desc')
                 ->paginate($page),
             'pager' => $empreendimentos->pager,
-            'active' => $search
+            'active' => $search,
+            'city' => $city
         ];
     }
 

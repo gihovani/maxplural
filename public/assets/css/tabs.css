@@ -1,4 +1,4 @@
-section #tabs .tab {
+section .tabs-container .tab {
   margin: 15px 25px;
   padding: 15px 15px;
   text-align: center;
@@ -10,20 +10,20 @@ section #tabs .tab {
   cursor: pointer;
   transition: all .3s;
 }
-section #tabs .tab a {
-  color: #FFF;
+section .tabs-container .tab a {
+  color: #FFF !important;
 }
-section #tabs .tab:not(.active):hover {
+section .tabs-container .tab:not(.active):hover {
   box-shadow: 0 5px 10px #00000077;
   background-color: #333;
 }
-section #tabs .tab.active {
+section .tabs-container .tab.active {
   color: #000;
   background-color: #E3E3E3;
   box-shadow: 0 10px 20px #00000077;
 }
-section #tabs .tab.active a {
-  color: #000;
+section .tabs-container .tab.active a {
+  color: #000 !important;
 }
 section div.tab-content:not(.active) {
   position: absolute;

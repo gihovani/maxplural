@@ -25,11 +25,18 @@ Nossos Empreendimentos
 </section>
 <section id="content" class="pv-3 empreendimentos">
     <div class="container">
-        <div id="tabs" class="empreendimentos__tabs d-flex">
+        <div class="tabs-container empreendimentos__tabs d-flex">
             <div class="tab <?= $active === 'Lancamento' ? 'active' : ''; ?>"><a href="<?= site_url('site/empreendimentos/?q=Lancamento') ?>">Lançamentos</a></div>
             <div class="tab <?= $active === 'Entregue' ? 'active' : ''; ?>"><a href="<?= site_url('site/empreendimentos/?q=Entregue') ?>">Entregues</a></div>
             <div class="tab <?= $active === 'Construcao' ? 'active' : ''; ?>"><a href="<?= site_url('site/empreendimentos/?q=Construcao') ?>">Em Construção</a></div>
         </div>
+        <?php if ($cidades):?>
+        <div class="tabs-container empreendimentos__tabs d-flex">
+            <?php foreach ($cidades as $cidade):?>
+            <div class="tab <?= $cidade === $city ? 'active' : ''; ?>"><a href="<?= site_url('site/empreendimentos/?q='.$active.'&c=' . $cidade) ?>"><?= $cidade;?></a></div>
+            <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
         <?php if (isset($empreendimentos) && count($empreendimentos)): ?>
             <div class="empreendimentos__contents pv-3">
                 <div class="empreendimentos__contents--content tab-content active">

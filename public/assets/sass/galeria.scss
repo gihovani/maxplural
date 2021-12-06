@@ -225,6 +225,12 @@ section#galeria{
     opacity: 1;
   }
 }
+@media screen and (min-width: 1600px) {
+  #zoomedImg {
+    top: 30%;
+    right: 10%;
+  }
+}
 @media screen and (max-width: 1201px){
   section#galeria{
     .filter-box{

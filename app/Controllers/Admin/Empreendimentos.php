@@ -30,6 +30,10 @@ class Empreendimentos extends CrudAbstract
         $crud->displayAs('conteudo', 'Conteúdo');
         $crud->displayAs('especificacoes_tecnicas', 'Especificações Técnicas');
         $crud->displayAs('endereco', 'Endereço');
+        $crud->setRule('tipologia', 'lengthMax', ['50']);
+        $crud->setRule('bairro', 'lengthMax', ['100']);
+        $crud->setRule('cidade', 'lengthMax', ['100']);
+        $crud->setRule('estado', 'lengthMax', ['2']);
         $crud->displayAs('situacao', 'Situação');
         $crud->fieldType('situacao', 'dropdown', ['Inativo', 'Ativo']);
         $crud->setRule('situacao', 'in', [[0, 1]]);
